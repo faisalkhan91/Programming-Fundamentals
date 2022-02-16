@@ -1,11 +1,13 @@
+# This is the sample for O(1) - Constant Time Complexity
 
-
-def findNemo(nemo):
-    for i in range(0, len(nemo)):
+# Method definitions
+def find_nemo(nemo):
+    for i in nemo[:1]:  # It will only run the first one regardless of the input n
         if i == 'nemo':
-            print(i)
             print('Found NEMO!')
 
 
-nemo = ['nemo']
-findNemo(nemo)
+# Variables and method calls
+
+nemo = ['nemo', 'nemo', 'dory']
+find_nemo(nemo)
