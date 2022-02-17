@@ -7,7 +7,6 @@ function anotherFunChallenge(input) {
     let x = i + 1; // O(n)
     let y = i + 2; // O(n)
     let z = i + 3; // O(n)
-
   }
   for (let j = 0; j < input; j++) { // O(n)
     let p = j * 2; // O(n)
