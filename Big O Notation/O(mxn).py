@@ -11,7 +11,7 @@
 # return true or false
 
 # Function Definition
-def find_common(list1, list2):
+def find_common(list_1, list_2):
     for i in list1:  # O(m)
         for j in list2:  # O(n)
             if i == j:
