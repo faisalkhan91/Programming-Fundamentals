@@ -31,9 +31,15 @@ def reverse_string_2(string_input):
     return ''.join(backwards)
 
 
+# Reverse string function using inbuilt functions and in a more pythony way.
+def reverse_string_3(string_input):
+    return ''.join(reversed(list(string_input)))
+
+
 # Declarations
 to_reverse = 'hello'
 # reverse_string(to_reverse)
-string = reverse_string_2(to_reverse)
+# string = reverse_string_2(to_reverse)
+string = reverse_string_3(to_reverse)
 
 print(string)
