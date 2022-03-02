@@ -10,18 +10,17 @@ For Example:
 # Initial attempt to write a function that returns a sorted array. The output is NOT CORRECT.
 def merge_sorted_arrays(array_1, array_2):
     merged = []
-    length = len(array_1)+len(array_2)
     i = 0
     j = 0
 
     while len(array_1) > i and len(array_2) > j:
-        if array_1[i] < array_2[j]:
+        if array_1[i] < array_2[j]:  # If value in array 1 is less than value in array 2.
             merged.append(array_1[i])
             i += 1
-        elif array_1[i] > array_2[j]:
+        elif array_1[i] > array_2[j]:  # If value in array 2 is less than value in array 1.
             merged.append(array_2[j])
             j += 1
-        elif array_1[i] == array_2[j]:
+        elif array_1[i] == array_2[j]: # If value in array 1 is equal to value in array 2.
             merged.append(array_2[j])
             merged.append(array_1[i])
             i += 1
