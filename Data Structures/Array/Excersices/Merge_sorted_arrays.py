@@ -13,6 +13,7 @@ def merge_sorted_arrays(array_1, array_2):
     i = 0
     j = 0
 
+    # O(m+n)
     while len(array_1) > i and len(array_2) > j:
         if array_1[i] < array_2[j]:  # If value in array 1 is less than value in array 2.
             merged.append(array_1[i])
