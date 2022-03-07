@@ -26,7 +26,7 @@ def merge_sorted_arrays(array_1, array_2):
             merged.append(array_1[i])
             i += 1
             j += 1
-    return merged + array_1[i:] + array_2[j:]
+    return merged + array_1[i:] + array_2[j:]  # Join the array that has not been emptied since all elements are sorted.
 
 
 # This is the method based on Andrei's solution.
