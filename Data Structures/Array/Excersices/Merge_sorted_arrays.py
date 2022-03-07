@@ -41,20 +41,19 @@ def merge_sorted_arrays_2(array_1, array_2):
         return 'No values in array!'
     elif len(array_1) <= 0 or len(array_2) <= 0:
         return array_1 + array_2
-    # if type(array_1) or type(array_2) != list:
-    #     return "Unsupported type!"
 
-    while array_1_item or array_2_item:
-        print(not array_1_item)
-        if not array_1_item or array_1_item < array_2_item:
-            merged_array.append(array_1_item)
-            array_1_item = array_1[i]
-            i += 1
-        else:
-            merged_array.append(array_2_item)
-            array_2_item = array_2[j]
-            j += 1
-
+    try:
+        while array_1_item or array_2_item:
+            if array_1_item < array_2_item:
+                merged_array.append(array_1_item)
+                i += 1
+                array_1_item = array_1[i]
+            else:
+                merged_array.append(array_2_item)
+                j += 1
+                array_2_item = array_2[j]
+    except IndexError:
+        merged_array = merged_array + array_1[i:] + array_2[j:]
     return merged_array
 
 
