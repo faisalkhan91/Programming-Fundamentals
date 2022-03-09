@@ -12,7 +12,7 @@ class HashTable:
     def hash(self, key):
         hash_value = 0
         for i in range(len(key)):
-            hash_value = (hash_value + key.chr(i) * i) % len(self.data)
+            hash_value = (hash_value + chr(key[i]) * i) % len(self.data)
 
         return hash_value
 
