@@ -67,17 +67,21 @@ class HashTable:
         values_array = []
         for index in range(len(self.data)):
             if self.data[index] is not None:
-                values_array.append(self.data[index][0][1])
+                if len(self.data[index]) > 1:
+                    for i in range(len(self.data[index])):
+                        values_array.append(self.data[index][0][1])
+                else:
+                    values_array.append(self.data[index][0][1])
         return values_array
 
 
 # Declaration
-hash_table = HashTable(size=10)
+hash_table = HashTable(size=2)
 hash_table.set('grapes', 1000)
 hash_table.set('orange', 5)
-# print(hash_table)
-# print(hash_table.get('grapes'))
+print(hash_table)
+print(hash_table.get('grapes'))
 hash_table.set('apple', 7)
-# print(hash_table)
+print(hash_table)
 print(hash_table.keys())
 print(hash_table.values())
