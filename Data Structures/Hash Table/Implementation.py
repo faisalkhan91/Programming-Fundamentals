@@ -50,27 +50,35 @@ class HashTable:
         current_bucket = self.data[address]
         if current_bucket is not None:  # If there is data in the bucket.
             for data in current_bucket:
-                if data[0] == key:
+                if data[0] == key:  # Check to see if key value matches the one stored in the hash table.
                     return data[1]
         return None
 
     # This method returns all the keys in the hash table.
     def keys(self):
-        keys_array = []
+        keys_array = []  # This array (or list) will store all the keys.
         for index in range(len(self.data)):
             if self.data[index] is not None:
-                keys_array.append(self.data[index][0][0])
+                # This part of the if else statement takes hash collisions into account and loops through sub array that
+                # has length greater than 1.
+                if len(self.data[index]) > 1:
+                    for i in range(len(self.data[index])):
+                        keys_array.append(self.data[index][i][0])
+                else:  # If the length is not greater than 1 then key is added to the list that will be returned.
+                    keys_array.append(self.data[index][0][0])
         return keys_array
 
     # This method returns all the values in the hash table.
     def values(self):
-        values_array = []
+        values_array = []  # This array (or list) will store all the values.
         for index in range(len(self.data)):
             if self.data[index] is not None:
+                # This part of the if else statement takes hash collisions into account and loops through sub array that
+                # has length greater than 1.
                 if len(self.data[index]) > 1:
                     for i in range(len(self.data[index])):
-                        values_array.append(self.data[index][0][1])
-                else:
+                        values_array.append(self.data[index][i][1])
+                else:  # If the length is not greater than 1 then value is added to the list that will be returned.
                     values_array.append(self.data[index][0][1])
         return values_array
 
