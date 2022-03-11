@@ -4,8 +4,11 @@ be used whenever hash table is needed.
 """
 
 
+# Function definition
+
 # Class containing the data initialization to store the information in a hash table.
 class HashTable:
+    # This constructor takes size as value and initializes an array in a hash table structure.
     def __init__(self, size):
         self.data = [None] * size  # This will create a list (or array) of given size and initialize all slots to None.
 
@@ -23,6 +26,8 @@ class HashTable:
     def _hash(self, key):
         hash_value = 0
         for i in range(len(key)):
+            # This loop takes ASCII value and multiples by index and modulates with length of data.
+            # Modulating with the length of data makes sure the hash value does not exceed the size of data array.
             hash_value = (hash_value + ord(key[i]) * i) % len(self.data)
         return hash_value
 
@@ -43,16 +48,40 @@ class HashTable:
     def get(self, key):
         address = self._hash(key)
         current_bucket = self.data[address]
-        if current_bucket is not None:
+        if current_bucket is not None:  # If there is data in the bucket.
             for data in current_bucket:
                 if data[0] == key:
                     return data[1]
         return None
+
+    # This method returns all the keys in the hash table.
+    def keys(self):
+        keys_array = []
+        for index in range(len(self.data)):
+            if self.data[index] is not None:
+                keys_array.append(self.data[index][0][0])
+        return keys_array
+
+    # This method returns all the values in the hash table.
+    def values(self):
+        values_array = []
+        for index in range(len(self.data)):
+            if self.data[index] is not None:
+                if len(self.data[index]) > 1:
+                    for i in range(len(self.data[index])):
+                        values_array.append(self.data[index][0][1])
+                else:
+                    values_array.append(self.data[index][0][1])
+        return values_array
 
 
 # Declaration
 hash_table = HashTable(size=2)
 hash_table.set('grapes', 1000)
 hash_table.set('orange', 5)
-# print(hash_table)
+print(hash_table)
 print(hash_table.get('grapes'))
+hash_table.set('apple', 7)
+print(hash_table)
+print(hash_table.keys())
+print(hash_table.values())
