@@ -10,20 +10,6 @@ array d = [2,5,5,2,3,5,1,2,4], in this case we should return 5.
 
 # Function definition
 
-def first_recurring_character(array):
-    first_recurring = 0
-    array_map = {}
-    for i in range(len(array)):
-        if array[i] not in array_map:
-            array_map[array[i]] = 1
-        else:
-            first_recurring = array[i]
-            break
-    if first_recurring > 0:
-        return first_recurring
-    else:
-        return None
-
 
 # The below function has a time complexity of O(n^2) since we are looping through the array twice.
 def naive_first_recurring_character(array):
@@ -34,9 +20,39 @@ def naive_first_recurring_character(array):
     return None
 
 
+# This is my first attempt to solve the problem using hash table.
+# The time complexity of the below algorithm is O(n). Space complexity is O(1).
+def first_recurring_character(array):
+    first_recurring = 0  # Initialize the variable that will store the recurring element.
+    array_map = {}  # Create a dictionary to store array in hash table data structure.
+    for i in range(len(array)):
+        if array[i] not in array_map:  # If the element in the array is not in dictionary add to dictionary.
+            array_map[array[i]] = 1  # Here 1 is indicated for number of times present in dictionary.
+        else:
+            first_recurring = array[i]  # If the array is in dictionary, this means it is first recurring.
+            break  # Stop processing.
+    if first_recurring > 0:
+        return first_recurring
+    else:
+        return None
+
+
+# This is Andrei's attempt using hash table. The time complexity of the method is O(n) and the space complexity is O(n)
+def first_recurring_character_2(array):
+    array_map = dict()  # Can also be declared using {}.
+    for i in range(len(array)):
+        if array[i] in array_map:
+            return array[i]
+        else:
+            array_map[array[i]] = i
+        print(array_map)
+    return None
+
+
 # Declaration
 
 arr = [2, 5, 1, 2, 3, 5, 1, 2, 4]
+# character = naive_first_recurring_character(arr)
 # character = first_recurring_character(arr)
-character = naive_first_recurring_character(arr)
+character = first_recurring_character_2(arr)
 print(character)
