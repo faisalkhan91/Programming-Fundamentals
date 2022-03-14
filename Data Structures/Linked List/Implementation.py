@@ -13,6 +13,7 @@ class LinkedList:
     def hello(self):
         print('hello')
 
+    # Function for linked list
     def linked(self):
         pass
 
