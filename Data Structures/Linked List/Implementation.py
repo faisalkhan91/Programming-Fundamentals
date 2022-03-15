@@ -14,7 +14,6 @@ class LinkedList:
         print('hello')
 
     # Function for linked list
-    #TEst
     def linked(self):
         pass
 
