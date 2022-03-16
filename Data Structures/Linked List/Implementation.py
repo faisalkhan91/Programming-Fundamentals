@@ -6,18 +6,17 @@ Implementation of Linked List Data Structure in python.
 # Function Definition
 
 class LinkedList:
-
     def __init__(self):
-        print("Hello")
+        self.head = None
+        self.tail = None
+        self.length = 1
 
-    def hello(self):
-        print('hello')
+    def __str__(self):
+        return str(self.__dict__)
 
-    # Function for linked list
-    def linked(self):
-        pass
+    
 
 
 # Declaration
-linked = LinkedList
-linked.hello(self=1)
+linked = LinkedList()
+print(linked)
