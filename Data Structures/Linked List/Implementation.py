@@ -25,18 +25,17 @@ class LinkedList:
 
     def append(self, value):
         node = Node(value)
-
         if self.head is None:
             self.head = node
             self.tail = self.head
+            self.length += 1
             return
-
         current_node = self.head
         while True:
             if current_node.next is None:
                 current_node.next = node
-                self.tail = current_node
-                
+                self.tail = current_node.next
+                self.length += 1
                 break
             current_node = current_node.next
 
@@ -51,7 +50,8 @@ class LinkedList:
 # Declaration
 linked = LinkedList()
 linked.append(20)
+linked.append(30)
+linked.append(15)
 linked.append(10)
 linked.print_list()
 print(linked.tail)
-
