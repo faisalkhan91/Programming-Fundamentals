@@ -39,6 +39,22 @@ class LinkedList:
                 break
             current_node = current_node.next
 
+    def prepend(self, value):
+        node = Node(value)
+        if self.head is None:
+            self.head = node
+            self.tail = self.head
+            self.length += 1
+            return
+        current_node = self.head
+        while True:
+            if current_node.next is None:
+                current_node.next = node
+                self.tail = current_node.next
+                self.length += 1
+                break
+            current_node = current_node.next
+
     def print_list(self):
         current_node = self.head
         while current_node is not None:
