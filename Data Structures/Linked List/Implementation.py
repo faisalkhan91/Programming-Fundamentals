@@ -23,6 +23,7 @@ class LinkedList:
     def __str__(self):
         return str(self.__dict__)
 
+    # Method to append (add at the end) node to the linked list.
     def append(self, value):
         node = Node(value)
         if self.head is None:
@@ -39,6 +40,7 @@ class LinkedList:
                 break
             current_node = current_node.next
 
+    # Method to add node at the beginning of the linked list.
     def prepend(self, value):
         node = Node(value)
         if self.head is None:
