@@ -23,7 +23,7 @@ class LinkedList:
     def __str__(self):
         return str(self.__dict__)
 
-    # Method to append (add at the end) node to the linked list.
+    # Method to append (add at the end) node to the linked list. Time complexity is O(1).
     def append(self, value):
         new_node = Node(value)  # Take the value and create a new node.
         # If linked list doesn't have any node, add the first node as the head.
@@ -33,8 +33,9 @@ class LinkedList:
             self.length += 1  # Increase the length.
             # return  # Only used when we were using the while loop traversal below.
         else:
-            self.tail.next = new_node
-            self.length += 1
+            self.tail.next = new_node  # Point the current tail node to the new node.
+            self.tail = new_node  # Make the new node the tail.
+            self.length += 1  # Increment tail by 1.
         '''
         # The while loop below traverses the linked list to find the tail node and add a new node at the end.
         # The time complexity of this is O(n), therefore tail pointer is being used to track the last node so as to
