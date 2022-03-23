@@ -25,33 +25,42 @@ class LinkedList:
 
     # Method to append (add at the end) node to the linked list.
     def append(self, value):
-        node = Node(value)
+        new_node = Node(value)  # Take the value and create a new node.
+        # If linked list doesn't have any node, add the first node as the head.
         if self.head is None:
-            self.head = node
-            self.tail = self.head
+            self.head = new_node
+            self.tail = self.head  # Tail will be same as head since there is only one node.
+            self.length += 1  # Increase the length.
+            # return  # Only used when we were using the while loop traversal below.
+        else:
+            self.tail.next = new_node
             self.length += 1
-            return
-        current_node = self.head
+        '''
+        # The while loop below traverses the linked list to find the tail node and add a new node at the end.
+        # The time complexity of this is O(n), therefore tail pointer is being used to track the last node so as to
+        # make adding the new node O(1).
+        current_node = self.head  # Set the current node to the head node.
         while True:
-            if current_node.next is None:
-                current_node.next = node
-                self.tail = current_node.next
-                self.length += 1
+            if current_node.next is None:  # If current node pointer is None, i.e. the last node in the list is found.
+                current_node.next = new_node  # Set the pointer of the last node to the new node.
+                self.tail = current_node.next  # Set the tail as the pointer to the new node.
+                self.length += 1  # Increment length by 1.
                 break
-            current_node = current_node.next
+            current_node = current_node.next  # Move to the next node in the list.
+        '''
 
     # Method to add node at the beginning of the linked list.
     def prepend(self, value):
-        node = Node(value)
+        new_node = Node(value)
         if self.head is None:
-            self.head = node
+            self.head = new_node
             self.tail = self.head
             self.length += 1
             return
         current_node = self.head
         while True:
             if current_node.next is None:
-                current_node.next = node
+                current_node.next = new_node
                 self.tail = current_node.next
                 self.length += 1
                 break
