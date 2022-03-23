@@ -50,27 +50,42 @@ class LinkedList:
             current_node = current_node.next  # Move to the next node in the list.
         '''
 
-    # Method to add node at the beginning of the linked list.
+    # Method to add a node at the beginning of the linked list.
     def prepend(self, value):
-        new_node = Node(value)
+        new_node = Node(value)  # Create a node with the given value.
+        # If there is no node in the list, add the node to the list.
         if self.head is None:
             self.head = new_node
             self.tail = self.head
             self.length += 1
+        else:
+            new_node.next = self.head  # Set the pointer of the new node to point at the current head node.
+            self.head = new_node  # Set the new node as the head node.
+            self.length += 1  # Increment length by 1.
+
+    def delete(self, value):
+        if self.head is None:
+            print("Cannot perform delete since linked list is empty.")
             return
-        current_node = self.head
-        while True:
-            if current_node.next is None:
-                current_node.next = new_node
-                self.tail = current_node.next
-                self.length += 1
-                break
+        elif self.head == value:
+            current_node = self.head
+            self.head = current_node.next
+            del current_node
+        elif self.tail == value:
+            current_node = self.tail
+
+
+        for i in range(self.length):
+            if current_node.next == value:
+                pass
+            print(current_node.next)
             current_node = current_node.next
 
+    # Method to print the values in the linked list.
     def print_list(self):
         current_node = self.head
         while current_node is not None:
-            print(current_node.data, "->",)
+            print(current_node.data, "->", end=" ")  # Print list nodes in the same line.
             current_node = current_node.next
         print("None")
 
@@ -81,5 +96,9 @@ linked.append(20)
 linked.append(30)
 linked.append(15)
 linked.append(10)
+linked.prepend(7)
+linked.prepend(100)
+linked.prepend(1)
+linked.delete(20)
 linked.print_list()
 print(linked.tail)
