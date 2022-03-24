@@ -63,6 +63,7 @@ class LinkedList:
             self.head = new_node  # Set the new node as the head node.
             self.length += 1  # Increment length by 1.
 
+    # This method will insert a node at a given index.
     def insert(self, value, index):
         new_node = Node(value)
         current_node = self.head
@@ -70,6 +71,10 @@ class LinkedList:
             print("Index out of range. Appending node to the list.")
             self.tail.next = new_node
             self.tail = new_node
+            self.length += 1
+        elif index == 0:
+            new_node.next = self.head
+            self.head = new_node
             self.length += 1
         else:
             for i in range(index):
@@ -115,8 +120,10 @@ linked.append(10)
 linked.prepend(7)
 linked.prepend(100)
 linked.prepend(1)
-# linked.delete(20)
 linked.insert(4, 4)
 linked.insert(9, 0)
+linked.insert(1000, 1000)
+linked.delete(9)
 linked.print_list()
 # print(linked.tail)
+# print(linked.head)
