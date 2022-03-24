@@ -10,6 +10,8 @@ class Node:
         self.data = data
         self.next = None
 
+    # Returning data so that when we refer the object of the node it will always return the data in the node.
+    # Below we can use current_node same as current_node.data due to changing our return.
     def __str__(self):
         return str(self.data)
 
@@ -86,23 +88,38 @@ class LinkedList:
         return
 
     def delete(self, value=None, index=None):
+        print(value, index)
         current_node = self.head
         if current_node is None:
             print("Cannot perform delete since linked list is empty.")
-        elif current_node.data == value:
+        elif current_node.data == value or index == 0:
             current_node = self.head
             self.head = current_node.next
+            print(current_node, "has been deleted from the list.")
             del current_node
             self.length -= 1
-            print(value, "has been deleted from the list.")
+        # elif index is None:
+        #     for i in range(self.length-1):
+        #         # print(current_node.next, value)
+        #         if current_node.next.data == value:
+        #             current_node.next = current_node.next.next
+        #             if current_node.next is None:
+        #                 self.tail = current_node
+        #             print(current_node, "has been deleted from the list.")
+        #             del current_node
+        #             self.length -= 1
+        #             break
+        #         elif current_node.next is not None:
+        #             current_node = current_node.next
         else:
-            for i in range(self.length):
-                # print(current_node.next, value)
-                if current_node.next.data == value:
+            for i in range(index):
+                if i == index-1:
                     current_node.next = current_node.next.next
+                    if current_node.next is None:
+                        self.tail = current_node
+                    print(current_node, "has been deleted from the list.")
                     del current_node
                     self.length -= 1
-                    print(value, "has been deleted from the list.")
                     break
                 elif current_node.next is not None:
                     current_node = current_node.next
@@ -134,7 +151,7 @@ linked.prepend(1)
 linked.insert(4, 4)
 linked.insert(9, 0)
 linked.insert(1000, 1000)
-linked.delete(1000)
+linked.delete(index=1)
 linked.print_list()
 # print(linked.tail)
 # print(linked.head)
