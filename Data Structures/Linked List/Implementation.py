@@ -63,6 +63,16 @@ class LinkedList:
             self.head = new_node  # Set the new node as the head node.
             self.length += 1  # Increment length by 1.
 
+    def insert(self, value, index):
+        new_node = Node(value)
+        current_node = self.head
+        for i in range(index):
+            if i == index-2:
+                new_node.next = current_node.next
+                current_node.next = new_node
+            current_node = current_node.next
+        return
+
     def delete(self, value):
         if self.head is None:
             print("Cannot perform delete since linked list is empty.")
@@ -73,8 +83,7 @@ class LinkedList:
             del current_node
         elif self.tail == value:
             current_node = self.tail
-
-
+        current_node = self.head
         for i in range(self.length):
             if current_node.next == value:
                 pass
@@ -99,6 +108,7 @@ linked.append(10)
 linked.prepend(7)
 linked.prepend(100)
 linked.prepend(1)
-linked.delete(20)
+# linked.delete(20)
+linked.insert(4, 4)
 linked.print_list()
-print(linked.tail)
+# print(linked.tail)
