@@ -66,11 +66,18 @@ class LinkedList:
     def insert(self, value, index):
         new_node = Node(value)
         current_node = self.head
-        for i in range(index):
-            if i == index-2:
-                new_node.next = current_node.next
-                current_node.next = new_node
-            current_node = current_node.next
+        if index > self.length:
+            print("Index out of range. Appending node to the list.")
+            self.tail.next = new_node
+            self.tail = new_node
+            self.length += 1
+        else:
+            for i in range(index):
+                if i == index-2:
+                    new_node.next = current_node.next
+                    current_node.next = new_node
+                    self.length += 1
+                current_node = current_node.next
         return
 
     def delete(self, value):
@@ -110,5 +117,6 @@ linked.prepend(100)
 linked.prepend(1)
 # linked.delete(20)
 linked.insert(4, 4)
+linked.insert(9, 0)
 linked.print_list()
 # print(linked.tail)
