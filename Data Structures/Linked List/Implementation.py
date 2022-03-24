@@ -78,37 +78,48 @@ class LinkedList:
             self.length += 1
         else:
             for i in range(index):
-                if i == index-2:
+                if i == index-1:
                     new_node.next = current_node.next
                     current_node.next = new_node
                     self.length += 1
                 current_node = current_node.next
         return
 
-    def delete(self, value):
-        if self.head is None:
+    def delete(self, value=None, index=None):
+        current_node = self.head
+        if current_node is None:
             print("Cannot perform delete since linked list is empty.")
-            return
-        elif self.head == value:
+        elif current_node.data == value:
             current_node = self.head
             self.head = current_node.next
             del current_node
-        elif self.tail == value:
-            current_node = self.tail
-        current_node = self.head
-        for i in range(self.length):
-            if current_node.next == value:
-                pass
-            print(current_node.next)
-            current_node = current_node.next
+            self.length -= 1
+            print(value, "has been deleted from the list.")
+        else:
+            for i in range(self.length):
+                # print(current_node.next, value)
+                if current_node.next.data == value:
+                    current_node.next = current_node.next.next
+                    del current_node
+                    self.length -= 1
+                    print(value, "has been deleted from the list.")
+                    break
+                elif current_node.next is not None:
+                    current_node = current_node.next
 
     # Method to print the values in the linked list.
     def print_list(self):
         current_node = self.head
+        counter = 0
         while current_node is not None:
             print(current_node.data, "->", end=" ")  # Print list nodes in the same line.
             current_node = current_node.next
+            counter = counter + 1
         print("None")
+        print("Number of nodes in printed list is: ", counter)
+        print("Value of the LENGTH of the list is: ", self.length)
+        print("Value of the HEAD node of the list is: ", self.head)
+        print("Value of the TAIL node of the list is: ", self.tail)
 
 
 # Declaration
@@ -123,7 +134,7 @@ linked.prepend(1)
 linked.insert(4, 4)
 linked.insert(9, 0)
 linked.insert(1000, 1000)
-linked.delete(9)
+linked.delete(1000)
 linked.print_list()
 # print(linked.tail)
 # print(linked.head)
