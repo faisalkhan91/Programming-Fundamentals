@@ -58,6 +58,7 @@ class LinkedList:
             self.length += 1
         else:
             new_node.next = self.head  # Set the pointer of the new node to point at the current head node.
+            self.head.previous = new_node  # Point the current head node previous to the new node.
             self.head = new_node  # Set the new node as the head node.
             self.length += 1  # Increment length by 1.
 
@@ -75,6 +76,7 @@ class LinkedList:
         # If the index is 0, set the new node as the head in a similar fashion to prepending a node to the linked list.
         elif index == 0:
             new_node.next = self.head  # Set the pointer of the new node to the current head node.
+            self.head.previous = new_node  # Point the current head node previous to the new node.
             self.head = new_node  # Make the new node as the new head.
             self.length += 1  # Increment the length by 1.
         else:
@@ -109,6 +111,7 @@ class LinkedList:
                 if current_node.next.data == value:
                     print(current_node.next, "has been deleted from the list.")
                     current_node.next = current_node.next.next  # Set the pointer from the next node to the node after.
+                    current_node.next.previous = current_node  # Point the new next node previous to the current node.
                     # If there is no node at the end, set the tail to the current node.
                     if current_node.next is None:
                         self.tail = current_node
@@ -125,6 +128,7 @@ class LinkedList:
                 if i == index-1:
                     print(current_node.next, "has been deleted from the list.")
                     current_node.next = current_node.next.next  # Remove the node at the index position.
+                    current_node.next.previous = current_node  # Point the new next node previous to the current node.
                     # If there is no next node, set the current node to tail node.
                     if current_node.next is None:
                         self.tail = current_node
@@ -138,11 +142,26 @@ class LinkedList:
     def print_list(self):
         current_node = self.head
         counter = 0  # To count the number of nodes in the list.
+        print("Data in the list:")
         while current_node is not None:
             print(current_node.data, "->", end=" ")  # Print list nodes in the same line.
             current_node = current_node.next
             counter = counter + 1
         print("None")
+        print("Next pointer pointing to in the list:")
+        current_node = self.head
+        while current_node is not None:
+            print(current_node.next, "->", end=" ")  # Print list nodes in the same line.
+            current_node = current_node.next
+            counter = counter + 1
+        print(end="\n")
+        print("Previous pointer pointing to in the list:")
+        current_node = self.head
+        while current_node is not None:
+            print(current_node.previous, "->", end=" ")  # Print list nodes in the same line.
+            current_node = current_node.next
+            counter = counter + 1
+        print(end="\n")
         print("Number of nodes in printed list is: ", counter)
         print("Value of the LENGTH of the list is: ", self.length)
         print("Value of the HEAD node of the list is: ", self.head)
