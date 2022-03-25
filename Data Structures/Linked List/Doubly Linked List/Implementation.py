@@ -1,5 +1,9 @@
 """
-Implementation of Linked List Data Structure in python.
+Implementation of Doubly Linked List Data Structure in python. There is not an equivalent datastructure in python that
+is built in to be used as a doubly linked list.
+
+In Doubly Linked List, a node contains memory for data, next pointer and an extra to this type of datastructure is a
+pointer pointing to the previous node called 'previous'.
 """
 
 
@@ -9,6 +13,7 @@ class Node:
     def __init__(self, data=None):
         self.data = data
         self.next = None
+        self.previous = None
 
     # Returning data so that when we refer the object of the node it will always return the data in the node.
     # Below we can use current_node same as current_node.data due to changing our return.
@@ -39,21 +44,9 @@ class LinkedList:
             # return  # Only used when we were using the while loop traversal below.
         else:
             self.tail.next = new_node  # Point the current tail node to the new node.
+            new_node.previous = self.tail  # Point the previous pointer to the previous node.
             self.tail = new_node  # Make the new node the tail.
             self.length += 1  # Increment tail by 1.
-        '''
-        # The while loop below traverses the linked list to find the tail node and add a new node at the end.
-        # The time complexity of this is O(n), therefore tail pointer is being used to track the last node so as to
-        # make adding the new node O(1).
-        current_node = self.head  # Set the current node to the head node.
-        while True:
-            if current_node.next is None:  # If current node pointer is None, i.e. the last node in the list is found.
-                current_node.next = new_node  # Set the pointer of the last node to the new node.
-                self.tail = current_node.next  # Set the tail as the pointer to the new node.
-                self.length += 1  # Increment length by 1.
-                break
-            current_node = current_node.next  # Move to the next node in the list.
-        '''
 
     # Method to add a node at the beginning of the linked list.
     def prepend(self, value):
@@ -76,6 +69,7 @@ class LinkedList:
         if index > self.length:
             print("Index out of range. Appending node to the list.")
             self.tail.next = new_node  # Set the current tail node pointer to the new node.
+            new_node.previous = self.tail  # Point the previous pointer to the previous node.
             self.tail = new_node  # Set the new node as the tail.
             self.length += 1  # Increment the length by 1.
         # If the index is 0, set the new node as the head in a similar fashion to prepending a node to the linked list.
@@ -88,6 +82,8 @@ class LinkedList:
                 if i == index-1:  # When the index position has been reached.
                     new_node.next = current_node.next  # Copy pointer of the node before index position.
                     current_node.next = new_node  # Point the previous node to the new node.
+                    new_node.previous = current_node  # Set the previous pointer of the new node to the previous node.
+                    new_node.next.previous = new_node  # Set the previous pointer of the next node to the new node.
                     self.length += 1  # Increment length by 1.
                 current_node = current_node.next
         return
@@ -102,6 +98,7 @@ class LinkedList:
         # If the first node matches the value or if the given index is 0, then we remove the node.
         elif current_node.data == value or index == 0:
             self.head = current_node.next  # Make the next node as the head node.
+            current_node.next.previous = None  # Set the next nodes previous pointer to None since it will be the head.
             print(current_node, "has been deleted from the list.")
             del current_node  # Delete the node.
             self.length -= 1
