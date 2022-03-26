@@ -1,5 +1,5 @@
 """
-Reverse the linked list so that the last node is the first node
+Reverse the linked list so that the last node is the first node and the first node is the last node.
 """
 
 
@@ -151,26 +151,26 @@ class LinkedList:
         print("Value of the HEAD node of the list is: ", self.head)
         print("Value of the TAIL node of the list is: ", self.tail)
 
+    # This function reverses the linked list.
     def reverse(self):
-        if self.length == 0:
+        if self.length == 0:  # If there is no node in the list.
             print("List is empty.")
             return
-        # If there is only one node in the list, condition can also be 'if self.head.next == None'
+        # If there is only one node in the list, condition can also be 'if self.head.next == None'.
         elif self.length == 1:
             print(self.head.data)
             return
         else:
-            first_node = self.head
-            second_node = first_node.next
-            self.tail = self.head
-            while second_node is not None:
-                temp = second_node.next
-                second_node.next = first_node
-                first_node = second_node
-                second_node = temp
+            first_node = self.head  # The first node is the head node.
+            second_node = first_node.next  # The second node is the second node in the list.
+            self.tail = self.head  # The tail pointer is the head pointer now as the list is being reversed.
+            while second_node is not None:  # While the second node is not None, i.e. not end of the list.
+                temp = second_node.next  # Store the pointer to the third node.
+                second_node.next = first_node  # Point the second node to the first node.
+                first_node = second_node  # Make the second node as the first node.
+                second_node = temp  # Make the third node as the second node.
             self.head.next = None
-            self.head = first_node
-
+            self.head = first_node  # Make the last node as the first node.
             ''' 
             This is my first attempt to print the reverse of the list, here i loop through the linked list and store all
             the data in an array and then reverse the array and then prin the reversed array. In this way the actual
