@@ -1,9 +1,5 @@
 """
-Implementation of Doubly Linked List Data Structure in python. There is not an equivalent datastructure in python that
-is built in to be used as a doubly linked list.
-
-In Doubly Linked List, a node contains memory for data, next pointer and an extra to this type of datastructure is a
-pointer pointing to the previous node called 'previous'.
+Reverse the linked list so that the last node is the first node and the first node is the last node.
 """
 
 
@@ -13,7 +9,6 @@ class Node:
     def __init__(self, data=None):
         self.data = data
         self.next = None
-        self.previous = None
 
     # Returning data so that when we refer the object of the node it will always return the data in the node.
     # Below we can use current_node same as current_node.data due to changing our return.
@@ -44,9 +39,21 @@ class LinkedList:
             # return  # Only used when we were using the while loop traversal below.
         else:
             self.tail.next = new_node  # Point the current tail node to the new node.
-            new_node.previous = self.tail  # Point the previous pointer to the previous node.
             self.tail = new_node  # Make the new node the tail.
             self.length += 1  # Increment tail by 1.
+        '''
+        # The while loop below traverses the linked list to find the tail node and add a new node at the end.
+        # The time complexity of this is O(n), therefore tail pointer is being used to track the last node so as to
+        # make adding the new node O(1).
+        current_node = self.head  # Set the current node to the head node.
+        while True:
+            if current_node.next is None:  # If current node pointer is None, i.e. the last node in the list is found.
+                current_node.next = new_node  # Set the pointer of the last node to the new node.
+                self.tail = current_node.next  # Set the tail as the pointer to the new node.
+                self.length += 1  # Increment length by 1.
+                break
+            current_node = current_node.next  # Move to the next node in the list.
+        '''
 
     # Method to add a node at the beginning of the linked list.
     def prepend(self, value):
@@ -58,7 +65,6 @@ class LinkedList:
             self.length += 1
         else:
             new_node.next = self.head  # Set the pointer of the new node to point at the current head node.
-            self.head.previous = new_node  # Point the current head node previous to the new node.
             self.head = new_node  # Set the new node as the head node.
             self.length += 1  # Increment length by 1.
 
@@ -70,13 +76,11 @@ class LinkedList:
         if index > self.length:
             print("Index out of range. Appending node to the list.")
             self.tail.next = new_node  # Set the current tail node pointer to the new node.
-            new_node.previous = self.tail  # Point the previous pointer to the previous node.
             self.tail = new_node  # Set the new node as the tail.
             self.length += 1  # Increment the length by 1.
         # If the index is 0, set the new node as the head in a similar fashion to prepending a node to the linked list.
         elif index == 0:
             new_node.next = self.head  # Set the pointer of the new node to the current head node.
-            self.head.previous = new_node  # Point the current head node previous to the new node.
             self.head = new_node  # Make the new node as the new head.
             self.length += 1  # Increment the length by 1.
         else:
@@ -84,8 +88,6 @@ class LinkedList:
                 if i == index-1:  # When the index position has been reached.
                     new_node.next = current_node.next  # Copy pointer of the node before index position.
                     current_node.next = new_node  # Point the previous node to the new node.
-                    new_node.previous = current_node  # Set the previous pointer of the new node to the previous node.
-                    new_node.next.previous = new_node  # Set the previous pointer of the next node to the new node.
                     self.length += 1  # Increment length by 1.
                 current_node = current_node.next
         return
@@ -100,7 +102,6 @@ class LinkedList:
         # If the first node matches the value or if the given index is 0, then we remove the node.
         elif current_node.data == value or index == 0:
             self.head = current_node.next  # Make the next node as the head node.
-            current_node.next.previous = None  # Set the next nodes previous pointer to None since it will be the head.
             print(current_node, "has been deleted from the list.")
             del current_node  # Delete the node.
             self.length -= 1
@@ -111,7 +112,6 @@ class LinkedList:
                 if current_node.next.data == value:
                     print(current_node.next, "has been deleted from the list.")
                     current_node.next = current_node.next.next  # Set the pointer from the next node to the node after.
-                    current_node.next.previous = current_node  # Point the new next node previous to the current node.
                     # If there is no node at the end, set the tail to the current node.
                     if current_node.next is None:
                         self.tail = current_node
@@ -128,7 +128,6 @@ class LinkedList:
                 if i == index-1:
                     print(current_node.next, "has been deleted from the list.")
                     current_node.next = current_node.next.next  # Remove the node at the index position.
-                    current_node.next.previous = current_node  # Point the new next node previous to the current node.
                     # If there is no next node, set the current node to tail node.
                     if current_node.next is None:
                         self.tail = current_node
@@ -142,30 +141,49 @@ class LinkedList:
     def print_list(self):
         current_node = self.head
         counter = 0  # To count the number of nodes in the list.
-        print("Data in the list:")
         while current_node is not None:
             print(current_node.data, "->", end=" ")  # Print list nodes in the same line.
             current_node = current_node.next
             counter = counter + 1
         print("None")
-        print("Next pointer pointing to in the list:")
-        current_node = self.head
-        while current_node is not None:
-            print(current_node.next, "->", end=" ")  # Print list nodes in the same line.
-            current_node = current_node.next
-            counter = counter + 1
-        print(end="\n")
-        print("Previous pointer pointing to in the list:")
-        current_node = self.head
-        while current_node is not None:
-            print(current_node.previous, "->", end=" ")  # Print list nodes in the same line.
-            current_node = current_node.next
-            counter = counter + 1
-        print(end="\n")
         print("Number of nodes in printed list is: ", counter)
         print("Value of the LENGTH of the list is: ", self.length)
         print("Value of the HEAD node of the list is: ", self.head)
         print("Value of the TAIL node of the list is: ", self.tail)
+
+    # This function reverses the linked list.
+    def reverse(self):
+        if self.length == 0:  # If there is no node in the list.
+            print("List is empty.")
+            return
+        # If there is only one node in the list, condition can also be 'if self.head.next == None'.
+        elif self.length == 1:
+            print(self.head.data)
+            return
+        else:
+            first_node = self.head  # The first node is the head node.
+            second_node = first_node.next  # The second node is the second node in the list.
+            self.tail = self.head  # The tail pointer is the head pointer now as the list is being reversed.
+            while second_node is not None:  # While the second node is not None, i.e. not end of the list.
+                temp = second_node.next  # Store the pointer to the third node.
+                second_node.next = first_node  # Point the second node to the first node.
+                first_node = second_node  # Make the second node as the first node.
+                second_node = temp  # Make the third node as the second node.
+            self.head.next = None
+            self.head = first_node  # Make the last node as the first node.
+            ''' 
+            This is my first attempt to print the reverse of the list, here i loop through the linked list and store all
+            the data in an array and then reverse the array and then prin the reversed array. In this way the actual
+            list is not reversed. The code above actually reverses the list.        
+            '''
+            # arr = []
+            # rev_arr = []
+            # while current_node is not None:
+            #     arr.append(current_node.data)
+            #     current_node = current_node.next
+            # for i in reversed(range(len(arr))):
+            #     rev_arr.append(arr[i])
+            # print(rev_arr)
 
 
 # Declaration
@@ -180,6 +198,8 @@ linked.prepend(1)
 linked.insert(4, 4)
 linked.insert(9, 0)
 linked.insert(1000, 1000)
-linked.delete(index=2)  # Delete based on the index.
-linked.delete(20)  # Delete based on value, the value parameter can be given as 'value='.
+# linked.delete(index=2)  # Delete based on the index.
+# linked.delete(20)  # Delete based on value, the value parameter can be given as 'value='.
+# linked.print_list()
+linked.reverse()
 linked.print_list()
