@@ -1,5 +1,6 @@
 """
-Reverse the linked list so that the last node is the first node and the first node is the last node.
+Reverse the linked list so that the last node is the first node and the first node is the last node. The reverse
+function is the solution to this exercise, rest of the code is the implementation of a linked list.
 """
 
 
