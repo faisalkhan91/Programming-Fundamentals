@@ -10,6 +10,9 @@ class Node:
         self.data = data
         self.next = None
 
+    def __str__(self):
+        return str(self.data)
+
 
 class Stack:
     def __init__(self):
@@ -17,5 +20,19 @@ class Stack:
         self.bottom = None
         self.length = 0
 
+    def __str__(self):
+        return str(self.__dict__)
+
+    def peek(self):
+        pass
+
+    def push(self, value):
+        pass
+
+    def pop(self):
+        pass
+
+
 # Main
+my_stack = Stack()
 
