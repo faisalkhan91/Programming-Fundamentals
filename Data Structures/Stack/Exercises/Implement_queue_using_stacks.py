@@ -44,3 +44,85 @@ Follow-up: Can you implement the queue such that each operation is amortized O(1
 performing n operations will take overall O(n) time even if one of those operations may take longer.
 """
 
+
+
+class MyQueue:
+
+    def __init__(self):
+        self.input_stack = []
+        self.output_stack = []
+
+    def __str__(self):
+        return str.__dict__
+
+    def push(self, x: int) -> None:
+        self.input_stack.append(x)
+
+    def pop(self) -> int:
+        if not self.input_stack:
+            return None
+        else:
+            length = len(self.input_stack)
+            for i in range(length):
+                self.output_stack.append(self.input_stack.pop())
+            popped = self.output_stack.pop()
+            for i in range(length-1):
+                self.input_stack.append(self.output_stack.pop())
+            return popped
+
+    def peek(self) -> int:
+        if not self.input_stack:
+            return None
+        else:
+            length = len(self.input_stack)
+            for i in range(length):
+                self.output_stack.append(self.input_stack.pop())
+            popped = self.output_stack.pop()
+            for i in range(length-1):
+                self.input_stack.append(self.output_stack.pop())
+            return popped
+
+    def empty(self) -> bool:
+        if self.input_stack == [] and self.output_stack == []:
+            return True
+        else:
+            return False
+
+
+# Declaration
+
+myQueue = MyQueue()
+myQueue.push(1)  # queue is: [1]
+myQueue.push(2)  # queue is: [1, 2] (leftmost is front of the queue)
+myQueue.push(3)
+myQueue.peek()  # return 1
+myQueue.peek()  # return 1
+myQueue.pop()  # return 1, queue is [2]
+myQueue.empty()  # return false
+print(myQueue.input_stack)
+print(myQueue.output_stack)
+
+
+# This is the implementation with one stack but not used here as the problem requires us to use 2 stacks to implement a
+# queue.
+# class MyQueue:
+#
+#     def __init__(self):
+#         self.data = []
+#
+#     def push(self, x: int) -> None:
+#         self.data.append(x)
+#
+#     def pop(self) -> int:
+#         to_return = self.data[0]
+#         self.data.pop(0)
+#         return to_return
+#
+#     def peek(self) -> int:
+#         return self.data[0]
+#
+#     def empty(self) -> bool:
+#         if self.data == 0:
+#             return True
+#         else:
+#             return False
