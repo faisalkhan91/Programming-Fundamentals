@@ -45,43 +45,56 @@ performing n operations will take overall O(n) time even if one of those operati
 """
 
 
+"""
+This is the implementation of a queue using 2 stacks. Using 2 stacks is not uncommon in the industry as this can speed
+up the performance in case of read and write, specially if one of the stack is in use.
 
+In this solution the queue can be implemented using 2 stacks but either one of the operations i.e. enqueue or dequeue,
+depending on how the solution is implemented will be O(n). In the solution below the dequeue (pop) is implemented as
+O(n).
+"""
+
+
+# Implementation of myqueue class.
 class MyQueue:
-
     def __init__(self):
-        self.input_stack = []
-        self.output_stack = []
+        self.input_stack = []  # Initialization of the stack that will hold all the data.
+        self.output_stack = []  # Initialization of the stack that will be used during dequeue operation.
 
     def __str__(self):
         return str.__dict__
 
+    # Enqueue into the input stack.
     def push(self, x: int) -> None:
         self.input_stack.append(x)
 
+    # Dequeue the stack by pushing all the popped elements from the input stack into the output stack and then popping
+    # the last element of the output stack which is basically the first item in the queue and then pushing all the
+    # elements back into the input stack.
     def pop(self) -> int:
-        if not self.input_stack:
+        if not self.input_stack:  # If the input stack is empty.
             return None
         else:
             length = len(self.input_stack)
+            # In this loop move all the elements from input stack to output stack, so that the first pushed item becomes
+            # the top.
             for i in range(length):
                 self.output_stack.append(self.input_stack.pop())
-            popped = self.output_stack.pop()
+            popped = self.output_stack.pop()  # Pop the top element
+            # Move all the elements back into the input stack in the original order minus the popped item.
             for i in range(length-1):
                 self.input_stack.append(self.output_stack.pop())
             return popped
 
+    # Method to peek into the queue, we are just using the array index to see the first item in the queue.
     def peek(self) -> int:
         if not self.input_stack:
             return None
         else:
-            length = len(self.input_stack)
-            for i in range(length):
-                self.output_stack.append(self.input_stack.pop())
-            popped = self.output_stack.pop()
-            for i in range(length-1):
-                self.input_stack.append(self.output_stack.pop())
-            return popped
+            print("Peek:", self.input_stack[0])
+            return self.input_stack[0]
 
+    # Method to check if the queue is empty.
     def empty(self) -> bool:
         if self.input_stack == [] and self.output_stack == []:
             return True
