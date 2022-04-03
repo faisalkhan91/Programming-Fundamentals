@@ -14,8 +14,12 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None
 
-    def insert(self):
-        pass
+    def insert(self, value):
+        new_node = Node(value)
+        if self.root is None:
+            self.root = new_node
+        else:
+            pass
 
     def delete(self):
         pass
