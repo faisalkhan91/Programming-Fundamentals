@@ -23,14 +23,14 @@ class BinarySearchTree:
             self.root = new_node
         else:
             current_node = self.root
-            while current_node.left is not None or current_node.right is not None:
+            while current_node.data is not None:
                 if new_node.data > current_node.data:
                     current_node = current_node.right
                 elif new_node.data < current_node.data:
                     current_node = current_node.left
             if current_node.left is None:
                 current_node.left = new_node
-            else:
+            elif current_node.right is None:
                 current_node.right = new_node
 
     def delete(self):
