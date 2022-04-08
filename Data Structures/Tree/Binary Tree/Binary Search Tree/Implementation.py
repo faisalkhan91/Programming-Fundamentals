@@ -64,6 +64,7 @@ class BinarySearchTree:
     #         current_node = current_node
 
 
+    # This function is to print the tree.
     def print_tree(self, root, val="data", left="left", right="right"):
         def display(root, val=val, left=left, right=right):
             """Returns list of strings, width, height, and horizontal coordinate of the root."""
