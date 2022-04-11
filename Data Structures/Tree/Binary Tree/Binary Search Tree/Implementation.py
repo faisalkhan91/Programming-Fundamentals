@@ -24,13 +24,13 @@ class BinarySearchTree:
         else:
             current_node = self.root
             while current_node is not None:
-                if new_node.data <= current_node.data:
+                if new_node.data < current_node.data:
                     if current_node.left is None:
                         current_node.left = new_node
                         return
                     else:
                         current_node = current_node.left
-                elif new_node.data > current_node.data:
+                elif new_node.data >= current_node.data:
                     if current_node.right is None:
                         current_node.right = new_node
                         return
@@ -124,6 +124,13 @@ my_BST.insert(5)
 my_BST.insert(3)
 my_BST.insert(6)
 my_BST.insert(5)
+my_BST.insert(4)
+my_BST.insert(4)
+my_BST.insert(2)
+my_BST.insert(20)
+my_BST.insert(15)
+my_BST.insert(73)
+my_BST.insert(12)
 # print(my_BST.root.left.left.data)
 # my_BST.display()
 my_BST.lookup(7)
