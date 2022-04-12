@@ -3,6 +3,7 @@ Implementation of Binary Search Tree data structure in python.
 """
 
 
+# Node class
 class Node:
     def __init__(self, data):
         self.data = data
