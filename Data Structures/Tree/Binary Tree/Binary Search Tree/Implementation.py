@@ -11,6 +11,7 @@ class Node:
         self.right = None
 
 
+# Binary search tree implementation
 class BinarySearchTree:
     def __init__(self):
         self.root = None
@@ -121,18 +122,19 @@ class BinarySearchTree:
 
 my_BST = BinarySearchTree()
 my_BST.insert(10)
-my_BST.insert(5)
-my_BST.insert(3)
-my_BST.insert(6)
-my_BST.insert(5)
-my_BST.insert(4)
-my_BST.insert(4)
-my_BST.insert(2)
-my_BST.insert(20)
-my_BST.insert(15)
-my_BST.insert(73)
-my_BST.insert(12)
+# my_BST.insert(5)
+# my_BST.insert(3)
+# my_BST.insert(6)
+# my_BST.insert(5)
+# my_BST.insert(4)
+# my_BST.insert(4)
+# my_BST.insert(2)
+# my_BST.insert(20)
+# my_BST.insert(15)
+# my_BST.insert(73)
+# my_BST.insert(12)
 # print(my_BST.root.left.left.data)
 # my_BST.display()
-my_BST.lookup(7)
-my_BST.print_tree(my_BST.root)
+# my_BST.lookup(7)
+# my_BST.print_tree(my_BST.root)
+print(my_BST.root.data)
