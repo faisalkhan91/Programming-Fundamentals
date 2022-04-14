@@ -19,6 +19,7 @@ class BinarySearchTree:
     def __str__(self):
         return str(self.__dict__)
 
+    # Insert node into tree.
     def insert(self, value):
         new_node = Node(value)
         if self.root is None:
