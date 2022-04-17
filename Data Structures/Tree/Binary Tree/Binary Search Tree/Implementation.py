@@ -41,6 +41,7 @@ class BinarySearchTree:
                         current_node = current_node.right
         return self
 
+    # Method to delete the node in the tree.
     def delete(self):
         pass
 
