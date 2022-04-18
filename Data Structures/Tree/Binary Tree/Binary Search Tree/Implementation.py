@@ -46,16 +46,20 @@ class BinarySearchTree:
         pass
 
     def lookup(self, value):
+        if not self.root:
+            print("Binary tree is empty.")
+            return False
         current_node = self.root
         while current_node is not None:
             if value == current_node.data:
                 print("Found value!")
-                return
+                return current_node
             elif value <= current_node.data:
                 current_node = current_node.left
             elif value > current_node.data:
                 current_node = current_node.right
         print("Nothing found!")
+        return False
 
 
     # def display(self):
@@ -145,4 +149,5 @@ my_BST.insert(1)
 my_BST.insert(6)
 my_BST.insert(15)
 my_BST.insert(170)
+my_BST.lookup(9)
 my_BST.print_tree(my_BST.root)
