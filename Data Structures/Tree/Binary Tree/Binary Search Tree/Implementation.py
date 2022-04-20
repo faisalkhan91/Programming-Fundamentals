@@ -45,6 +45,7 @@ class BinarySearchTree:
     def delete(self):
         pass
 
+    # Method to perform a lookup.
     def lookup(self, value):
         if not self.root:
             print("Binary tree is empty.")
