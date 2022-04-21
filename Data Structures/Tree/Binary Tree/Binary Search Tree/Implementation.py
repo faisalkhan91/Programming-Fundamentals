@@ -45,9 +45,29 @@ class BinarySearchTree:
     def delete(self, value):
         current_node = self.root
         while current_node.data is not None:
-            if current_node.data == value:
-                if current_node.left is None:
-                    pass
+            if value < current_node.data:
+                if value == current_node.left.data:
+                    if current_node.left.left is None and current_node.left.right is None:
+                        current_node.left = None
+                        return
+                elif value == current_node.right.data:
+                    if current_node.left.left is None and current_node.left.right is None:
+                        current_node.right = None
+                        return
+                else:
+                    current_node = current_node.left
+            elif value >= current_node.data:
+                if value == current_node.left.data:
+                    if current_node.left.left is None and current_node.left.right is None:
+                        current_node.left = None
+                        return
+                elif value == current_node.right.data:
+                    if current_node.left.left is None and current_node.left.right is None:
+                        current_node.right = None
+                        return
+                else:
+                    current_node = current_node.right
+        return self
 
 
     # Method to perform a lookup.
@@ -166,4 +186,5 @@ my_BST.insert(2)
 my_BST.insert(15)
 my_BST.insert(22)
 my_BST.insert(14)
+my_BST.delete(2)
 my_BST.print_tree(my_BST.root)
