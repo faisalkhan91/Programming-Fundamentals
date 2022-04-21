@@ -42,8 +42,13 @@ class BinarySearchTree:
         return self
 
     # Method to delete the node in the tree.
-    def delete(self):
-        pass
+    def delete(self, value):
+        current_node = self.root
+        while current_node.data is not None:
+            if current_node.data == value:
+                if current_node.left is None:
+                    pass
+
 
     # Method to perform a lookup.
     def lookup(self, value):
@@ -143,12 +148,22 @@ my_BST = BinarySearchTree()
 # print(my_BST.root.left.left.data)
 # my_BST.display()
 # my_BST.lookup(9)
-my_BST.insert(9)
-my_BST.insert(4)
-my_BST.insert(20)
-my_BST.insert(1)
+# my_BST.insert(9)
+# my_BST.insert(4)
+# my_BST.insert(20)
+# my_BST.insert(1)
+# my_BST.insert(6)
+# my_BST.insert(15)
+# my_BST.insert(170)
+# my_BST.lookup(9)
+my_BST.insert(10)
 my_BST.insert(6)
+my_BST.insert(20)
+my_BST.insert(4)
+my_BST.insert(5)
+my_BST.insert(3)
+my_BST.insert(2)
 my_BST.insert(15)
-my_BST.insert(170)
-my_BST.lookup(9)
+my_BST.insert(22)
+my_BST.insert(14)
 my_BST.print_tree(my_BST.root)
