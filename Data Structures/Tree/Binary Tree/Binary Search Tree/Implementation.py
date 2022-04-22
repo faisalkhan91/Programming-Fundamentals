@@ -43,31 +43,22 @@ class BinarySearchTree:
 
     # Method to delete the node in the tree.
     def delete(self, value):
+        if self.root is None:
+            print("The tree is empty.")
+            return False
         current_node = self.root
-        while current_node.data is not None:
+        parent_node = None
+        while current_node is not None:
             if value < current_node.data:
-                if value == current_node.left.data:
-                    if current_node.left.left is None and current_node.left.right is None:
-                        current_node.left = None
-                        return
-                elif value == current_node.right.data:
-                    if current_node.left.left is None and current_node.left.right is None:
-                        current_node.right = None
-                        return
-                else:
-                    current_node = current_node.left
-            elif value >= current_node.data:
-                if value == current_node.left.data:
-                    if current_node.left.left is None and current_node.left.right is None:
-                        current_node.left = None
-                        return
-                elif value == current_node.right.data:
-                    if current_node.left.left is None and current_node.left.right is None:
-                        current_node.right = None
-                        return
-                else:
-                    current_node = current_node.right
-        return self
+                parent_node = current_node
+                current_node = current_node.left
+            elif value > current_node.data:
+                parent_node = current_node
+                current_node = current_node.right
+            elif value == current_node.data:
+                if current_node.left is None and current_node.right is None:
+                    parent_node = None
+                    return
 
 
     # Method to perform a lookup.
@@ -80,7 +71,7 @@ class BinarySearchTree:
             if value == current_node.data:
                 print("Found value!")
                 return current_node
-            elif value <= current_node.data:
+            elif value < current_node.data:
                 current_node = current_node.left
             elif value > current_node.data:
                 current_node = current_node.right
@@ -188,6 +179,36 @@ my_BST.insert(22)
 my_BST.insert(14)
 my_BST.insert(7)
 my_BST.delete(2)
-my_BST.delete(5)
-my_BST.delete(3)
+# my_BST.delete(5)
+# my_BST.delete(3)
 my_BST.print_tree(my_BST.root)
+
+
+########################################################################################
+# First attempt for a method to remove a node from the tree.
+# def delete(self, value):
+#     current_node = self.root
+#     while current_node.data is not None:
+#         if value < current_node.data:
+#             if value == current_node.left.data:
+#                 if current_node.left.left is None and current_node.left.right is None:
+#                     current_node.left = None
+#                     return
+#             elif value == current_node.right.data:
+#                 if current_node.left.left is None and current_node.left.right is None:
+#                     current_node.right = None
+#                     return
+#             else:
+#                 current_node = current_node.left
+#         elif value >= current_node.data:
+#             if value == current_node.left.data:
+#                 if current_node.left.left is None and current_node.left.right is None:
+#                     current_node.left = None
+#                     return
+#             elif value == current_node.right.data:
+#                 if current_node.left.left is None and current_node.left.right is None:
+#                     current_node.right = None
+#                     return
+#             else:
+#                 current_node = current_node.right
+#     return self
