@@ -48,6 +48,7 @@ class BinarySearchTree:
             return False
         current_node = self.root
         parent_node = None
+
         while current_node is not None:
             if value < current_node.data:
                 parent_node = current_node
@@ -56,10 +57,33 @@ class BinarySearchTree:
                 parent_node = current_node
                 current_node = current_node.right
             elif value == current_node.data:
+                # If it is the leaf node (or a node with no child). Both the left and right will be None.
                 if current_node.left is None and current_node.right is None:
-                    parent_node = None
+                    print('Oh hello, case 1 is activated')
+                    if parent_node is None:
+                        current_node = None
+                    elif current_node.data < parent_node.data:
+                        parent_node.left = None
+                    elif current_node.data > parent_node.data:
+                        parent_node.right = None
                     return
-
+                # If there is one child node on the left.
+                elif current_node.left is not None and current_node.right is None:
+                    print('Oops, its case 2, case 2 is activated')
+                    if parent_node is None:
+                        current_node = None
+                    else:
+                        pass
+                # If there is one child node on the right.
+                elif current_node.left is None and current_node.right is not None:
+                    print('Oh yeah, its case 3, case 3 is activated')
+                    if parent_node is None:
+                        current_node = None
+                    else:
+                        pass
+                return
+        print(value, "is not found in the binary search tree.")
+        return False
 
     # Method to perform a lookup.
     def lookup(self, value):
@@ -169,16 +193,16 @@ my_BST = BinarySearchTree()
 # my_BST.lookup(9)
 my_BST.insert(10)
 my_BST.insert(6)
-my_BST.insert(20)
-my_BST.insert(4)
-my_BST.insert(5)
-my_BST.insert(3)
-my_BST.insert(2)
-my_BST.insert(15)
-my_BST.insert(22)
-my_BST.insert(14)
-my_BST.insert(7)
-my_BST.delete(2)
+# my_BST.insert(20)
+# my_BST.insert(4)
+# my_BST.insert(5)
+# my_BST.insert(3)
+# my_BST.insert(2)
+# my_BST.insert(15)
+# my_BST.insert(22)
+# my_BST.insert(14)
+# my_BST.insert(7)
+my_BST.delete(10)
 # my_BST.delete(5)
 # my_BST.delete(3)
 my_BST.print_tree(my_BST.root)
