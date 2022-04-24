@@ -76,6 +76,7 @@ class BinarySearchTree:
                         parent_node.left = current_node.left
                     elif current_node.data > parent_node.data:
                         parent_node.right = current_node.left
+                    return
                 # If there is one child node on the right.
                 elif current_node.left is None and current_node.right is not None:
                     print('Oh yeah, its case 3, case 3 is activated')
@@ -85,6 +86,16 @@ class BinarySearchTree:
                         parent_node.left = current_node.right
                     elif current_node.data > parent_node.data:
                         parent_node.right = current_node.right
+                    return
+                # If both the child are present.
+                elif current_node.left is not None and current_node.right is not None:
+                    print('We are in the endgame now, case 4 activated.')
+                    if parent_node is None:
+                        current_node = None
+                    else:
+                        parent_node.right = current_node.right
+                        parent_node.left = current_node.left
+
                 return
         print(value, "is not found in the binary search tree.")
         return False
@@ -208,7 +219,7 @@ my_BST.insert(14)
 my_BST.insert(7)
 # my_BST.delete(4)
 # my_BST.delete(14)
-# my_BST.delete(3)
+# my_BST.delete(20)
 my_BST.print_tree(my_BST.root)
 
 
