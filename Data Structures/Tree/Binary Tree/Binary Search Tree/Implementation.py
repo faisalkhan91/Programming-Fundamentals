@@ -94,7 +94,7 @@ class BinarySearchTree:
                         current_node = None
                     else:
                         parent_node.right = current_node.right
-                        parent_node.left = current_node.left
+                        parent_node.right.left = current_node.left
 
                 return
         print(value, "is not found in the binary search tree.")
@@ -219,7 +219,7 @@ my_BST.insert(14)
 my_BST.insert(7)
 # my_BST.delete(4)
 # my_BST.delete(14)
-# my_BST.delete(20)
+my_BST.delete(20)
 my_BST.print_tree(my_BST.root)
 
 
