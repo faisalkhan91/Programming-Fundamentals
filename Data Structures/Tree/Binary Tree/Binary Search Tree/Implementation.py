@@ -93,8 +93,10 @@ class BinarySearchTree:
                     if parent_node is None:
                         current_node = None
                     else:
-                        parent_node.right = current_node.right
-                        parent_node.right.left = current_node.left
+                        # parent_node.right = current_node.right
+                        # parent_node.right.left = current_node.left
+
+                        pass
 
                 return
         print(value, "is not found in the binary search tree.")
