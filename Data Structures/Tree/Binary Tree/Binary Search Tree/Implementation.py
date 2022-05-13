@@ -2,7 +2,6 @@
 Implementation of Binary Search Tree data structure in python.
 """
 
-# This is to test.
 # Node class
 class Node:
     def __init__(self, data):
@@ -10,6 +9,7 @@ class Node:
         self.left = None
         self.right = None
 
+    # Return data instead of object address.
     def __str__(self):
         return str(self.data)
 
