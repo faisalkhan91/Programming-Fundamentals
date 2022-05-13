@@ -24,18 +24,25 @@ class BinarySearchTree:
 
     # Insert node into tree.
     def insert(self, value):
-        new_node = Node(value)
+        new_node = Node(value)  # Create a new node.
+        # If there is no root node, make the new node as the root node.
         if self.root is None:
             self.root = new_node
         else:
-            current_node = self.root
+            current_node = self.root  # Set the starting node for the loop.
             while current_node is not None:
+                # If the value is less than current node's value, check to see if the current node has a left
+                # node. If no, add the new node as a left child to the current node. If yes, move on to the
+                # next node in the left.
                 if new_node.data < current_node.data:
                     if current_node.left is None:
                         current_node.left = new_node
                         return
                     else:
                         current_node = current_node.left
+                # Similar to above, if the value is higher than the current node's value, move to the right.
+                # If the right node is empty add the new node or else make the right nod as the new current
+                # node.
                 elif new_node.data >= current_node.data:
                     if current_node.right is None:
                         current_node.right = new_node
@@ -46,53 +53,69 @@ class BinarySearchTree:
 
     # Method to delete the node in the tree.
     def delete(self, value):
+        # Check to see if the tree is empty.
         if self.root is None:
             print("The tree is empty.")
             return False
-        current_node = self.root
-        parent_node = None
+        
+        current_node = self.root  # Set the current node as root for loop.
+        parent_node = None  # Create a variable to store the parent node in the loop.
 
         while current_node is not None:
+            # If the value to delete is less than the current node's value move to the left of the tree.
             if value < current_node.data:
                 parent_node = current_node
                 current_node = current_node.left
+            # If the value is greater than the value in the current node, move to the right of the tree.
             elif value > current_node.data:
                 parent_node = current_node
                 current_node = current_node.right
+            # If value matches a node in the tree, check the below cases.
             elif value == current_node.data:
                 # If it is the leaf node (or a node with no child). Both the left and right will be None.
                 if current_node.left is None and current_node.right is None:
-                    print('Oh hello, case 1 is activated')
+                    print('Value is in a leaf node.')
+                    # If there is no parent node that means there is only one value that can be deleted.
                     if parent_node is None:
                         current_node = None
+                    # If the current node is less than parent node, delete the left child.
                     elif current_node.data < parent_node.data:
                         parent_node.left = None
+                    # If the current node's data is greater than parent node, delete the right node.
                     elif current_node.data > parent_node.data:
                         parent_node.right = None
                     return
                 # If there is one child node on the left.
                 elif current_node.left is not None and current_node.right is None:
-                    print('Oops, its case 2, case 2 is activated')
+                    print('Value is in a node with only left child.')
+                    # If there is no parent node that means there is only one value that can be deleted.
                     if parent_node is None:
                         current_node = None
+                    # If the value of the current node is less than the parent nodes value, set the left
+                    # node of the parent to the current nodes left.
                     elif current_node.data < parent_node.data:
                         parent_node.left = current_node.left
+                    # If the value of the current node is greater than the parent's value, set the right
+                    # node of the parent to the current node's left.
                     elif current_node.data > parent_node.data:
                         parent_node.right = current_node.left
                     return
                 # If there is one child node on the right.
                 elif current_node.left is None and current_node.right is not None:
-                    print('Oh yeah, its case 3, case 3 is activated')
+                    print('Value is in a node with only right child.')
+                    # If there is no parent node that means there is only one value that can be deleted.
                     if parent_node is None:
                         current_node = None
+                    # Set the right node of the current node as the parent's left node.
                     elif current_node.data < parent_node.data:
                         parent_node.left = current_node.right
+                    # Set the left node of the current node as the parent's right node.
                     elif current_node.data > parent_node.data:
                         parent_node.right = current_node.right
                     return
                 # If both the child are present.
                 elif current_node.left is not None and current_node.right is not None:
-                    print('We are in the endgame now, case 4 activated.')
+                    print('Value is in the node with bothe child nodes.')
                     if parent_node is None:
                         current_node = None
                     else:
@@ -105,6 +128,7 @@ class BinarySearchTree:
                             current_node.data = replacement_node.data
                             replacement_node_parent.left = None
                 return
+        # If the value did not match any of the nodes, return False.
         print(value, "is not found in the binary search tree.")
         return False
 
