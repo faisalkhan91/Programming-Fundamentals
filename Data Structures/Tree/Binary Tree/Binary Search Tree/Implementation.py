@@ -254,10 +254,6 @@ my_BST.insert(12)
 my_BST.delete(3)
 my_BST.print_tree(my_BST.root)
 
-#
-# Test commit on codespace 3
-#
-
 ########################################################################################
 # First attempt for a method to remove a node from the tree.
 # def delete(self, value):
