@@ -1,20 +1,25 @@
 """
-Implementation of Binary Search Tree data structure in python.
+Implementation of Binary Search Tree data structure in python. There is no equivalent data structure implemented by
+default in python.
+
+The data structure has a root node connected to child nodes. Each node in a Binary Search Tree has declarations to
+store the value of the data, a pointer to the left child and a pointer to the right child.
 """
 
 
-# Node class
+# This is a node class for a BST to store data as well as the left and right pointers.
 class Node:
     def __init__(self, data):
-        self.data = data
-        self.left = None
-        self.right = None
+        self.data = data  # Store the value of the Node.
+        self.left = None  # Pointer to store the address of the left child node.
+        self.right = None  # Pointer to store the address of the right child node.
 
+    # Modification of the __str__ function to return value of data in string format when calling node object.
     def __str__(self):
         return str(self.data)
 
 
-# Binary search tree implementation
+# Class to implement the Binary Search Tree data structure and its methods.
 class BinarySearchTree:
     def __init__(self):
         self.root = None
