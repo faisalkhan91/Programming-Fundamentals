@@ -22,7 +22,7 @@ class Node:
 # Class to implement the Binary Search Tree data structure and its methods.
 class BinarySearchTree:
     def __init__(self):
-        self.root = None
+        self.root = None  # Store the value of the root node.
 
     def __str__(self):
         return str(self.__dict__)
