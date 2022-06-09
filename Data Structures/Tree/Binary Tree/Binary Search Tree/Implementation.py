@@ -14,7 +14,6 @@ class Node:
         self.left = None  # Pointer to store the address of the left child node.
         self.right = None  # Pointer to store the address of the right child node.
 
-
     # Modification of the __str__ function to return value of data in string format when calling node object.
     def __str__(self):
         return str(self.data)
@@ -25,147 +24,128 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None  # Store the value of the root node.
 
+    # Return the BST object in dictionary format
     def __str__(self):
         return str(self.__dict__)
 
-    # Insert node into tree.
+    # Method to insert a new node into the Binary Search Tree.
     def insert(self, value):
         new_node = Node(value)  # Create a new node.
-        # If there is no root node, make the new node as the root node.
+        # Check to see if the root node is empty, as in the BST is empty. If yes, insert new node as root node.
         if self.root is None:
-            self.root = new_node
+            self.root = new_node  # Make the node as root node.
+        # If the BST has a root node, traverse the tree based on the BST properties and insert the new node.
         else:
-            current_node = self.root  # Set the starting node for the loop.
+            current_node = self.root  # Set the current node as root node.
+            # We use a while loop to traverse the tree until an empty tree node is found that satisfies BST properties.
             while current_node is not None:
-                # If the value is less than current node's value, check to see if the current node has a left
-                # node. If no, add the new node as a left child to the current node. If yes, move on to the
-                # next node in the left.
-                if new_node.data < current_node.data:
-                    if current_node.left is None:
-                        current_node.left = new_node
-                        return
+                if new_node.data < current_node.data:  # Check if the value is less than the data of the current node.
+                    if current_node.left is None:  # Check to see if the left child of current node is empty
+                        current_node.left = new_node  # Insert the new node as left child if empty.
+                        return  # To stop processing the loop.
                     else:
-                        current_node = current_node.left
-                # Similar to above, if the value is higher than the current node's value, move to the right.
-                # If the right node is empty add the new node or else make the right nod as the new current
-                # node.
-                elif new_node.data >= current_node.data:
-                    if current_node.right is None:
-                        current_node.right = new_node
-                        return
+                        current_node = current_node.left  # Make the current node as the left node.
+                elif new_node.data >= current_node.data:  # Check to see if the value is greater than or equal to.
+                    if current_node.right is None:  # Check to see if the right child of current node is empty.
+                        current_node.right = new_node  # Insert the new node as right child if empty.
+                        return  # To stop processing the loop.
                     else:
-                        current_node = current_node.right
+                        current_node = current_node.right  # Make the current node as the right node.
         return self
 
-    # Method to delete the node in the tree.
+    # Method to delete a node in the Binary Search Tree.
     def delete(self, value):
-        # Check to see if the tree is empty.
+        # Check to see if the root node is empty, if yes, return False to indicate empty BST.
         if self.root is None:
             print("The tree is empty.")
             return False
-        
-        current_node = self.root  # Set the current node as root for loop.
-        parent_node = None  # Create a variable to store the parent node in the loop.
 
+        current_node = self.root  # Set current node as root.node.
+        parent_node = None  # This declaration will track the previous or parent node of the current node.
+
+        # Loop using while loop until the end of the tree.
         while current_node is not None:
-            # If the value to delete is less than the current node's value move to the left of the tree.
-            if value < current_node.data:
-                parent_node = current_node
-                current_node = current_node.left
-            # If the value is greater than the value in the current node, move to the right of the tree.
-            elif value > current_node.data:
-                parent_node = current_node
-                current_node = current_node.right
-            # If value matches a node in the tree, check the below cases.
-            elif value == current_node.data:
+            if value < current_node.data:  # If value is less that current node data, move left.
+                parent_node = current_node  # Set parent node as the current node.
+                current_node = current_node.left  # Set current node to the left child of the current node.
+            elif value > current_node.data:  # If value is greater than current node data, move right.
+                parent_node = current_node  # Set parent node as the current node.
+                current_node = current_node.right  # Set current node to the right child of the current node.
+            elif value == current_node.data:  # Verify the conditions below if there is a value match.
                 # If it is the leaf node (or a node with no child). Both the left and right will be None.
                 if current_node.left is None and current_node.right is None:
-                    print('Value is in a leaf node.')
-                    # If there is no parent node that means there is only one value that can be deleted.
-                    if parent_node is None:
-                        current_node = None
-                    # If the current node is less than parent node, delete the left child.
-                    elif current_node.data < parent_node.data:
-                        parent_node.left = None
-                    # If the current node's data is greater than parent node, delete the right node.
-                    elif current_node.data > parent_node.data:
-                        parent_node.right = None
-                    return
+                    print('Value is found on a node with no child (Leaf node).')
+                    if parent_node is None:  # Check to see if the node found is the root node.
+                        current_node = None  # Set the root node to None, makes the tree empty.
+                    elif current_node.data < parent_node.data:  # Check to see if the value is on the left node.
+                        parent_node.left = None  # Make the left node as None.
+                    elif current_node.data > parent_node.data:  # Check to see if the value is on the right node.
+                        parent_node.right = None  # Make the right node as None.
+                    return  # Stop processing the loop.
                 # If there is one child node on the left.
                 elif current_node.left is not None and current_node.right is None:
-                    print('Value is in a node with only left child.')
-                    # If there is no parent node that means there is only one value that can be deleted.
-                    if parent_node is None:
-                        current_node = None
-                    # If the value of the current node is less than the parent nodes value, set the left
-                    # node of the parent to the current nodes left.
-                    elif current_node.data < parent_node.data:
+                    print('Value is found on a node with a left child.')
+                    if parent_node is None:  # Check to see if the node found is the root node.
+                        current_node = None  # Set the root node to None, makes the tree empty.
+                    elif current_node.data < parent_node.data:  # Check to see if the value is on the left node.
+                        # Replace the parents left child with the left child of current node.
                         parent_node.left = current_node.left
-                    # If the value of the current node is greater than the parent's value, set the right
-                    # node of the parent to the current node's left.
-                    elif current_node.data > parent_node.data:
+                    elif current_node.data > parent_node.data:  # Check to see if the value is on the right node.
+                        # Replace the parents right child with the left child of the current node.
                         parent_node.right = current_node.left
-                    return
+                    return  # Stop processing the loop.
                 # If there is one child node on the right.
                 elif current_node.left is None and current_node.right is not None:
-                    print('Value is in a node with only right child.')
-                    # If there is no parent node that means there is only one value that can be deleted.
-                    if parent_node is None:
-                        current_node = None
-                    # Set the right node of the current node as the parent's left node.
-                    elif current_node.data < parent_node.data:
+                    print('Value is found on a node with a right child.')
+                    if parent_node is None:  # Check to see if the node found is the root node.
+                        current_node = None  # Set the root node to None, makes the tree empty.
+                    elif current_node.data < parent_node.data:  # Check to see if the value is on the left node.
+                        # Replace the parents left child with the right child of the current node.
                         parent_node.left = current_node.right
-                    # Set the left node of the current node as the parent's right node.
-                    elif current_node.data > parent_node.data:
+                    elif current_node.data > parent_node.data:  # Check to see if the value is on the right node.
+                        # Replace the parents right child with the right child of the current node.
                         parent_node.right = current_node.right
-                    return
+                    return  # Stop processing the loop.
                 # If both the child are present.
                 elif current_node.left is not None and current_node.right is not None:
-                    print('Value is in the node with bothe child nodes.')
-                    if parent_node is None:
-                        current_node = None
+                    print('Value is found on a node with a left child and a right child.')
+                    if parent_node is None:  # Check to see if the node found is the root node.
+                        current_node = None  # Set the root node to None, makes the tree empty.
                     else:
                         replacement_node = current_node.right
                         replacement_node_parent = None
                         while replacement_node.left is not None:
                             replacement_node_parent = replacement_node
                             replacement_node = replacement_node.left
-
-                            current_node.data = replacement_node.data
-                            replacement_node_parent.left = None
+                        print(replacement_node, " was found as a replacement for ", current_node.data)
+                        current_node.data = replacement_node.data
+                        print(replacement_node_parent)
+                            # current_node.data = replacement_node.data
+                            # replacement_node_parent.left = None
                 return
-        # If the value did not match any of the nodes, return False.
         print(value, "is not found in the binary search tree.")
         return False
 
-    # Method to perform a lookup.
+    # Method to perform a lookup of a value in the Binary Search Tree.
     def lookup(self, value):
-        if not self.root:
+        if not self.root:  # Check to see if the BST is empty.
             print("Binary tree is empty.")
             return False
-        current_node = self.root
+        current_node = self.root  # Set the current node as the root node.
+        # Traverse the tree using the while loop until the value is found.
         while current_node is not None:
             if value == current_node.data:
                 print("Found value!")
-                return current_node
+                return current_node  # Return the node with the value.
             elif value < current_node.data:
                 current_node = current_node.left
             elif value > current_node.data:
                 current_node = current_node.right
         print("Nothing found!")
-        return False
+        return False  # Return False if nothing is found.
 
-
-    # def display(self):
-    #     current_node = self.root
-    #     print("Root:", self.root.data)
-    #     level = 1
-    #     while current_node is not None:
-    #         print(level, "st left node:", current_node.left)
-    #         print(level, "st right node:", current_node.right)
-    #         current_node = current_node
-
-
+    # Reference to the function below. It is used to visualize the methods of the class BinarySearchTree.
+    # https://stackoverflow.com/questions/34012886/print-binary-tree-level-by-level-in-python
     # This function is to print the tree.
     def print_tree(self, root, val="data", left="left", right="right"):
         def display(root, val=val, left=left, right=right):
@@ -257,8 +237,9 @@ my_BST.insert(12)
 # my_BST.insert(7)
 # my_BST.delete(4)
 # my_BST.delete(14)
-my_BST.delete(3)
+my_BST.delete(20)
 my_BST.print_tree(my_BST.root)
+
 
 ########################################################################################
 # First attempt for a method to remove a node from the tree.
