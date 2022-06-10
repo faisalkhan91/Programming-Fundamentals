@@ -34,6 +34,7 @@ class BinarySearchTree:
         # Check to see if the root node is empty, as in the BST is empty. If yes, insert new node as root node.
         if self.root is None:
             self.root = new_node  # Make the node as root node.
+            # self.print_tree(self.root)
         # If the BST has a root node, traverse the tree based on the BST properties and insert the new node.
         else:
             current_node = self.root  # Set the current node as root node.
@@ -42,12 +43,14 @@ class BinarySearchTree:
                 if new_node.data < current_node.data:  # Check if the value is less than the data of the current node.
                     if current_node.left is None:  # Check to see if the left child of current node is empty
                         current_node.left = new_node  # Insert the new node as left child if empty.
+                        # self.print_tree(self.root)
                         return  # To stop processing the loop.
                     else:
                         current_node = current_node.left  # Make the current node as the left node.
                 elif new_node.data >= current_node.data:  # Check to see if the value is greater than or equal to.
                     if current_node.right is None:  # Check to see if the right child of current node is empty.
                         current_node.right = new_node  # Insert the new node as right child if empty.
+                        # self.print_tree(self.root)
                         return  # To stop processing the loop.
                     else:
                         current_node = current_node.right  # Make the current node as the right node.
@@ -109,23 +112,25 @@ class BinarySearchTree:
                 # If both the child are present.
                 elif current_node.left is not None and current_node.right is not None:
                     print('Value is found on a node with a left child and a right child.')
-                    if parent_node is None:  # Check to see if the node found is the root node.
-                        current_node = None  # Set the root node to None, makes the tree empty.
-                    else:
-                        replacement_node = current_node.right
-                        replacement_node_parent = current_node
-                        while replacement_node.left is not None:
-                            replacement_node_parent = replacement_node
-                            replacement_node = replacement_node.left
-                        print(replacement_node, " was found as a replacement for ", current_node.data)
-                        current_node.data = replacement_node.data
-                        print(replacement_node)
+                    # Set the replacement node start as the right child of current node.
+                    replacement_node = current_node.right
+                    # Set the replacement node parent as the current node.
+                    replacement_node_parent = current_node
+                    while replacement_node.left is not None:  # Loop until there is no leftmost node of the right child.
+                        replacement_node_parent = replacement_node
+                        replacement_node = replacement_node.left
+                    print(replacement_node, "was found as a replacement for", current_node.data)
+                    # Copy the value of the replacement node to the node to be replaced.
+                    current_node.data = replacement_node.data
 
-                        if replacement_node == current_node.right:
-                            current_node.right = replacement_node.right
-                        elif replacement_node.data < replacement_node_parent.data:
-                            replacement_node_parent.left = replacement_node.right
-
+                    # If the replacement node ends up just being the right child, replace with the right child, this
+                    # also takes care of the right child's right subtree.
+                    if replacement_node == current_node.right:
+                        current_node.right = replacement_node.right
+                    # If the replacement node is a left node, the right subtree of this node, if present, becomes the
+                    # left subtree of the parent node.
+                    elif replacement_node.data < replacement_node_parent.data:
+                        replacement_node_parent.left = replacement_node.right
                 return
         print(value, "is not found in the binary search tree.")
         return False
@@ -221,8 +226,8 @@ my_BST.insert(25)
 my_BST.insert(30)
 my_BST.insert(35)
 my_BST.insert(27)
-# my_BST.lookup(9)
-# my_BST.delete(20)
+my_BST.lookup(9)
+my_BST.delete(20)
 my_BST.insert(79)
 my_BST.delete(73)
 my_BST.delete(20)
