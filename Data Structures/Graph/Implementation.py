@@ -22,22 +22,44 @@ class Graph:
         self.adjacency_list[node_1] = temp
 
     def show_connections(self):
-        pass
+        all_nodes = self.adjacency_list.keys()
+        for node in all_nodes:
+            node_connections = self.adjacency_list[node]
+            connections = ""
+            for vertex in node_connections:
+                connections += vertex + " "
+            print(node + '-->' + connections)
 
 
 # Initialization
 my_graph = Graph()
-my_graph.add_vertex(10)
-my_graph.add_vertex(11)
-my_graph.add_vertex(15)
-my_graph.add_vertex(12)
-my_graph.add_vertex(3)
-my_graph.add_edge(10, 11)
-my_graph.add_edge(11, 15)
-my_graph.add_edge(15, 3)
-my_graph.add_edge(15, 12)
-my_graph.add_edge(12, 3)
-my_graph.add_edge(12, 15)
-my_graph.add_edge(3, 15)
-my_graph.add_edge(3, 12)
+# my_graph.add_vertex(10)
+# my_graph.add_vertex(11)
+# my_graph.add_vertex(15)
+# my_graph.add_vertex(12)
+# my_graph.add_vertex(3)
+# my_graph.add_edge(10, 11)
+# my_graph.add_edge(11, 15)
+# my_graph.add_edge(15, 3)
+# my_graph.add_edge(15, 12)
+# my_graph.add_edge(12, 3)
+# my_graph.add_edge(12, 15)
+# my_graph.add_edge(3, 15)
+# my_graph.add_edge(3, 12)
+my_graph.add_vertex('0')
+my_graph.add_vertex('1')
+my_graph.add_vertex('2')
+my_graph.add_vertex('3')
+my_graph.add_vertex('4')
+my_graph.add_vertex('5')
+my_graph.add_vertex('6')
+my_graph.add_edge('3', '1')
+my_graph.add_edge('3', '4')
+my_graph.add_edge('4', '2')
+my_graph.add_edge('4', '5')
+my_graph.add_edge('1', '2')
+my_graph.add_edge('1', '0')
+my_graph.add_edge('0', '2')
+my_graph.add_edge('6', '5')
 print(my_graph.adjacency_list)
+my_graph.show_connections()
