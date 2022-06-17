@@ -7,6 +7,7 @@ having its pros and cons.
 """
 
 
+# Graph class
 class Graph:
     def __init__(self):
         self.number_of_nodes = 0
