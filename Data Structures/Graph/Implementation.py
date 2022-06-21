@@ -7,28 +7,44 @@ having its pros and cons.
 """
 
 
-# Graph class
+# Definition of the graph class data structure
 class Graph:
+    # Initialization of the constructor.
     def __init__(self):
-        self.number_of_nodes = 0
-        self.adjacency_list = {}
+        self.number_of_nodes = 0  # Variable to keep track of vertices in the graph.
+        self.adjacency_list = {}  # Initialization of the dictionary to store the vertices and edges.
 
+    # Method to add vertices to the graph. Keys in graph are unique by default.
     def add_vertex(self, node):
-        self.adjacency_list[node] = []
-        self.number_of_nodes += 1
+        self.adjacency_list[node] = []  # Set the key in the dictionary (adjacency list) to empty list (array).
+        self.number_of_nodes += 1  # Increment the tracker by 1.
 
+    # Initial attempt to add edges to the graph
+    def add_edge_initial(self, node_1, node_2):
+        temp = list(self.adjacency_list.get(node_1))  # Store the list of the first node in a temporary declaration.
+        temp.append(node_2)  # Append the new node to the list.
+        self.adjacency_list[node_1] = temp  # Make the new list as the value of the key.
+        temp = list(self.adjacency_list.get(node_2))  # Same as above
+        temp.append(node_1)
+        self.adjacency_list[node_2] = temp
+
+    # Since the graph is undirected we need to add edges to both the nodes. So node 1 and node 2 will have to have the
+    # vertices to be added to their respective adjacency list.
     def add_edge(self, node_1, node_2):
-        temp = list(self.adjacency_list.get(node_1))
-        temp.append(node_2)
-        self.adjacency_list[node_1] = temp
+        if node_1 not in self.adjacency_list[node_2]:
+            self.adjacency_list[node_1].append(node_2)  # Append the vertex to the first nodes list.
+            self.adjacency_list[node_2].append(node_1)  # Append the vertex to the second nodes list.
+        else:
+            print("This edge already exists.")
 
+    # Method to print all the connections of the graph.
     def show_connections(self):
-        all_nodes = self.adjacency_list.keys()
+        all_nodes = self.adjacency_list.keys()  # Get all the nodes in the graph.
         for node in all_nodes:
-            node_connections = self.adjacency_list[node]
+            node_connections = self.adjacency_list[node]  # Get all the edges for respective node in the adjacent list.
             connections = ""
             for vertex in node_connections:
-                connections += vertex + " "
+                connections += vertex + " "  # Create a string 'connections' with all the edge connections in the list.
             print(node + '-->' + connections)
 
 
