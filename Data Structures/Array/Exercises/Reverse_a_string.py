@@ -36,7 +36,7 @@ def reverse_string_3(string_input):
     return ''.join(reversed(list(string_input)))
 
 
-# Declarations
+# Declaration
 to_reverse = 'hello'
 # reverse_string(to_reverse)
 # string = reverse_string_2(to_reverse)

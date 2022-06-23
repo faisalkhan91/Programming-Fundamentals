@@ -8,7 +8,7 @@ Given a number, a factorial is the product of that number with every whole numbe
 """
 
 
-# Function definitions
+# Function definition
 
 # Initial attempt to write a method to calculate factorial using recursion
 def find_factorial_recursively_initial(input_number):
@@ -35,7 +35,7 @@ def find_factorial_iteratively(input_number):
     return factorial
 
 
-# Declarations
+# Declaration
 number = 5
 print(find_factorial_recursively(number))  # Print recursive function output.
 print(find_factorial_iteratively(number))  # Print iterative function output.

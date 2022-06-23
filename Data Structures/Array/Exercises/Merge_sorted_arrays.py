@@ -6,7 +6,8 @@ For Example:
 """
 
 
-# Function Definitions
+# Function Definition
+
 # Initial attempt to write a function that returns a sorted array. The output is NOT CORRECT.
 def merge_sorted_arrays(array_1, array_2):
     merged = []
