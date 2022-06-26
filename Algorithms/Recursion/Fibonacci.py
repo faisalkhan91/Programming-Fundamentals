@@ -13,11 +13,28 @@ Here we will use recursion and iteration separately to implement the solution.
 
 # Function definition
 
-def fibonacci_recursive():
-    pass
+def fibonacci_recursive(number_input):
+    if number_input < 1:
+        return 0
+    elif number_input == 1:
+        return 1
+    return fibonacci_recursive(number_input-1) + fibonacci_recursive(number_input-2)
 
 
-def fibonacci_iterative():
-    pass
+def fibonacci_iterative(number_input):
+    first = 0
+    second = 1
+    fibonacci = 0
+
+    for i in range(1, number_input):
+        fibonacci = first + second
+        first = second
+        second = fibonacci
+
+    return fibonacci
+
 
 # Declaration
+number = 10
+print(fibonacci_iterative(number))
+print(fibonacci_recursive(number))
