@@ -13,28 +13,46 @@ Here we will use recursion and iteration separately to implement the solution.
 
 # Function definition
 
-def fibonacci_recursive(number_input):
-    if number_input < 1:
+# Initial attempt to code a method to calculate fibonacci sequence recursively. Time complexity is O(2^n).
+def fibonacci_recursive_initial(n):
+    if n < 1:  # If the index number is less than 1, i.e. 0 return 0
         return 0
-    elif number_input == 1:
+    elif n == 1:  # If the index number is equal to 1, return 1.
         return 1
-    return fibonacci_recursive(number_input-1) + fibonacci_recursive(number_input-2)
+    return fibonacci_recursive_initial(n-1) + fibonacci_recursive_initial(n-2)  # Add the numbers.
 
 
-def fibonacci_iterative(number_input):
-    first = 0
-    second = 1
-    fibonacci = 0
+# Andrei's solution for finding fibonacci sequence at a given index. Time complexity is BigO(2^n), i.e. exponential
+# time complexity.
+def fibonacci_recursive(n):
+    if n < 2:  # If n is 0, return 0 and if n is 1, return 1.
+        return n
+    return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)  # Generate fibonacci for n-1 and n-2 and add it.
 
-    for i in range(1, number_input):
-        fibonacci = first + second
-        first = second
-        second = fibonacci
+
+# Initial attempt to write a solution to fibonacci sequence problem using iteration.
+def fibonacci_iterative_initial(n):
+    first = 0  # First number in the sequence.
+    second = 1  # Second number in the sequence.
+    fibonacci = 0  # Variable to store the value.
+
+    for i in range(1, n):  # Iterate n number of times.
+        fibonacci = first + second  # Calculate the fibonacci sequence.
+        first = second  # Make the first number as the second or next number in sequence.
+        second = fibonacci  # Make the second number as the new number in the sequence.
 
     return fibonacci
 
 
+# Implementation of Andrei's iterative method to solve the fibonacci sequence.
+def fibonacci_iterative(n):
+    fibonacci = [0, 1]  # Store the first 2 numbers in the sequence in the array.
+    for i in range(2, n+1):  # Iterate from 2 to n+1 times since the addition below is trailing by 1.
+        fibonacci.append(fibonacci[i-2] + fibonacci[i-1])
+    return fibonacci[n]
+
+
 # Declaration
-number = 10
-print(fibonacci_iterative(number))
-print(fibonacci_recursive(number))
+index = 10
+print(fibonacci_iterative(index))
+print(fibonacci_recursive(index))
