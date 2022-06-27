@@ -7,7 +7,8 @@ For example, if we have a method name fibonacci_recursive,
 fibonacci_recursive(6) should return 8, i.e. sum of the numbers in the sequence until index 6. Likewise,
 fibonacci_recursive(7) should return 13.
 
-Here we will use recursion and iteration separately to implement the solution.
+Here we will use recursion and iteration separately to implement the solution. Also, note that the recursive solution
+has a time complexity of BigO(2^n).
 """
 
 
