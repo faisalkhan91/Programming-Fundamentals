@@ -206,6 +206,18 @@ class BinarySearchTree:
         for line in lines:
             print(line)
 
+    # Method for tree traversal. We assign the result of the recursive call to the dictionary keys to store the value
+    # and make the dictionary data structure recursive along with the recursive method.
+    def traverse(self, current_node=None):
+        if not current_node:
+            current_node = self.root
+        tree = {'data': current_node.data}
+        if current_node.left:
+            tree.update({'left': self.traverse(current_node.left)})
+        if current_node.right:
+            tree.update({'right': self.traverse(current_node.right)})
+        return tree
+
 
 # Initialization
 
@@ -226,6 +238,7 @@ my_BST.insert(25)
 my_BST.insert(30)
 my_BST.insert(35)
 my_BST.insert(27)
+print(my_BST.traverse())
 my_BST.lookup(9)
 my_BST.delete(20)
 my_BST.insert(79)
@@ -268,3 +281,18 @@ my_BST.print_tree(my_BST.root)
 #             else:
 #                 current_node = current_node.right
 #     return self
+
+# Function to traverse the tree. Initial attempt to write the traversal function but the values are not stored.
+# def traverse(self, current_node):
+#     if current_node == self.root:
+#         tree = {'root': current_node.data}
+#     print(tree)
+#     if current_node.left is not None:
+#         tree.update({'left': current_node.left.data})
+#         print(tree)
+#         self.traverse(current_node.left)
+#     if current_node.right is not None:
+#         tree.update({'right': current_node.right.data})
+#         print(tree)
+#         self.traverse(current_node.right)
+#     return tree
