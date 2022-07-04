@@ -12,6 +12,7 @@ an optimized algorithm that will stop the inner loop if no swap is made.
 # Function definition
 
 # Classical bubble sort algorithm implementation.
+# Test
 def bubble_sort(array):
     for i in range(len(array)):
         for j in range(len(array)-1):
