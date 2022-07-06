@@ -11,10 +11,12 @@ an optimized algorithm that will stop the inner loop if no swap is made.
 
 # Function definition
 
-# Classical bubble sort algorithm implementation.
-def bubble_sort(array):
-    for i in range(len(array)):
-        for j in range(len(array)-1):
+# This is the classical bubble sort algorithm implementation. Time complexity of the algorithm is O(n^2), and the space
+# complexity is O(n). len(array)-1 is because last element does not need to be sorted.
+def bubble_sort_classic(array):
+    for i in range(len(array)-1):  # Number of times to go through the array, which is the length of the array.
+        for j in range(len(array)-1):  # Compare each adjacent element in the array in each cycle of the previous loop.
+            # Perform swap if the current array element is bigger than the next one.
             if array[j] > array[j+1]:
                 temp = array[j]
                 array[j] = array[j+1]
@@ -22,7 +24,25 @@ def bubble_sort(array):
     return array
 
 
+# This is the optimized bubble sort algorithm where swapping is tracked using a boolean variable. If no swap has
+# occurred in previous iteration then the array is sorted and the method stops processing.
+def bubble_sort_optimized(array):
+    for i in range(len(array)-1):  # Number of times to go through the array, which is the length of the array.
+        swap = False  # Boolean to track the swap.
+        for j in range(len(array)-1):  # Compare each adjacent element in the array in each cycle of the previous loop.
+            # Perform swap if the current array element is bigger than the next one.
+            if array[j] > array[j+1]:
+                temp = array[j]
+                array[j] = array[j+1]
+                array[j+1] = temp
+                swap = True
+        if swap is False:
+            break
+    return array
+
+
 # Declaration
 
 to_sort = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
-print(bubble_sort(to_sort))
+print("Bubble sort classic method:", bubble_sort_classic(to_sort))
+print("Bubble sort optimized method:", bubble_sort_optimized(to_sort))
