@@ -25,7 +25,7 @@ def bubble_sort_classic(array):
 
 
 # This is the optimized bubble sort algorithm where swapping is tracked using a boolean variable. If no swap has
-# occurred in previous iteration then the array is sorted and the method stops processing.
+# occurred in previous iteration then the array is sorted and the method stops processing. Time complexity is O(n).
 def bubble_sort_optimized(array):
     for i in range(len(array)-1):  # Number of times to go through the array, which is the length of the array.
         swap = False  # Boolean to track the swap.
