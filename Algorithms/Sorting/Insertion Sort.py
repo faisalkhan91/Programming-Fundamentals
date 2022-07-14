@@ -8,16 +8,13 @@ Implementation of the insertion sort algorithm in python.
 
 def insertion_sort(array):
     for i in range(1, len(array)):
-        j = i
-        while 0 <= j <= i:
-            if array[i] > array[j]:
-                temp = array[i]
-                array[i] = array[j]
+        index = i
+        for j in reversed(range(1, i)):
+            if array[j-1] > array[j]:
+                temp = array[j-1]
+                array[j-1] = array[j]
                 array[j] = temp
     return array
-
-
-
 
 
 # Declaration
