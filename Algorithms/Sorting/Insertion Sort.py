@@ -1,13 +1,14 @@
 """
 Implementation of the insertion sort algorithm in python.
 
+Time complexity of Insertion Sort Algorithm is O(n^2) and the algorithm is fast when the array is already sorted.
 """
 
 
 # Function Definition
 
 def insertion_sort(array):
-    for i in range(1, len(array)):
+    for i in range(1, len(array)+1):
         index = i
         for j in reversed(range(1, i)):
             if array[j-1] > array[j]:
