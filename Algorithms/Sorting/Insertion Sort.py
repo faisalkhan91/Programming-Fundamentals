@@ -7,10 +7,11 @@ Time complexity of Insertion Sort Algorithm is O(n^2) and the algorithm is fast 
 
 # Function Definition
 
+# Reference:
+# https://stackoverflow.com/questions/72987595/implementation-of-insertion-sort-algorithm-in-python/72989757#72989757
 def insertion_sort(array):
-    for i in range(1, len(array)+1):
-        index = i
-        for j in reversed(range(1, i)):
+    for i in range(1, len(array)):
+        for j in range(1, i+1):
             if array[j-1] > array[j]:
                 temp = array[j-1]
                 array[j-1] = array[j]
