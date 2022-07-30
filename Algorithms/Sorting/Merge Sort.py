@@ -22,7 +22,7 @@ def merge_sort(array):
 
 
 def merge(left, right):
-    pass
+    print(left, right) # Print
 
 
 # Declaration
