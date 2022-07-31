@@ -22,7 +22,22 @@ def merge_sort(array):
 
 
 def merge(left, right):
-    print(left, right) # Print
+    if len(left) or len(right) < 2:
+        return left or right
+
+    i, j = 0, 0
+    output = []
+
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            output.append(left[i])
+        elif right[j] < left[i]:
+            output.append(right[j])
+
+    output.extend(left[i:])
+    output.extend((right[j:]))
+
+    return output
 
 
 # Declaration
