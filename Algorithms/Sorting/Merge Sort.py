@@ -28,4 +28,4 @@ def merge(left, right):
 # Declaration
 
 to_sort = [2, 5, 3, 4, 1]
-print()
+print(merge_sort(to_sort))
