@@ -10,12 +10,19 @@ Time Complexity of merge sort algorithm is O(nlogn) and Space Complexity is O(n)
 # Function definition
 
 def merge_sort(array):
+    # Base Case
+    if len(array) < 2:
+        return array
+    
+    middle = len(array) // 2
+    left = array[:middle]
+    right = array[middle:]
 
-    pass
+    return merge(left, right)
 
 
 def merge(left, right):
-    pass
+    print(left, right) # Print
 
 
 # Declaration
