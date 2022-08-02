@@ -21,6 +21,9 @@ def merge_sort(array):
     left = merge_sort(array[:middle])  # Left side of the array from the middle.
     right = merge_sort(array[middle:])  # Right side of the array.
 
+    # print(left)
+    # print(right)
+
     # Recursive case
     return merge(left, right)  # Call merge method to sort and merge the subsets or the array.
 
@@ -45,6 +48,8 @@ def merge(left, right):
     # Add the remaining items left in the array after either the left or the right array is exhausted.
     sorted_list.extend(left[left_index:])
     sorted_list.extend((right[right_index:]))
+
+    # print(left, right)
 
     return sorted_list  # Return the sorted list.
 
