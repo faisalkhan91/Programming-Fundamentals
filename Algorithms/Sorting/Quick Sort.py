@@ -11,7 +11,15 @@ The time complexity of Quick Sort algorithm is O(nlogn). Space complexity is O(l
 # Function Definition
 
 def quick_sort(array):
-    pass
+    pivot = array[0]
+
+    for i in range(1, len(array)):
+        if array[i] < pivot:
+            temp = array[i]
+            array[i] = pivot
+            array[0] = temp
+
+    return array
 
 
 # Declaration
