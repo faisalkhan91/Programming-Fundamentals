@@ -10,30 +10,41 @@ The time complexity of Quick Sort algorithm is O(nlogn). Space complexity is O(l
 
 # Function Definition
 
+
+def partition(array, pivot, left, right):
+    pivot_value = array[pivot]
+    partition_index = left
+
+    for i in range(left, right):
+        if array[i] < pivot_value:
+            swap(array, i, partition_index)
+            partition_index += 1
+    swap(array, right, partition_index)
+    return partition_index
+
+
+def swap(array, first_index, second_index):
+    temp = array[first_index]
+    array[first_index] = array[second_index]
+    array[second_index] = temp
+
+
 def quick_sort(array, left, right):
 
-    if len(array) < 2:
-        return array
+    pivot = 0
+    partition_index = 0
 
-    pivot = array[0]
-    pivot_index = 0
+    if left < right:
+        pivot = right
+        partition_index = partition(array, pivot, left, right)
 
-    for i in range(1, len(array)):
-        if array[i] < pivot:
-            temp = array[i]
-            array[i] = pivot
-            array[i-1] = temp
-            pivot_index = i-1
-        elif array[i] >= pivot:
-            pass
+        quick_sort(array, left, partition_index-1)
+        quick_sort(array, partition_index+1, right)
 
-        left = array[:pivot_index]
-        right = array[pivot_index:]
-
-    return quick_sort(left), quick_sort(right)
+    return array
 
 
 # Declaration
 
 to_sort = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
-print(quick_sort(to_sort))
+print(quick_sort(to_sort, 0, len(to_sort)-1))
