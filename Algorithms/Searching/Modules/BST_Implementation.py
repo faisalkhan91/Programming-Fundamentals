@@ -252,6 +252,8 @@ def main():
     my_BST.delete(5)
     my_BST.delete(10)
     my_BST.print_tree(my_BST.root)
+    print("Root: ", my_BST.root)
+    # return my_BST
 
 
 # Initialization
