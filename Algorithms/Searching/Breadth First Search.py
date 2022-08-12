@@ -13,18 +13,38 @@ import sys
 # tree_file_directory = '../../Data Structures/Tree/Binary Tree/Binary Search Tree'
 # sys.path.append(os.path.abspath(tree_file_directory))
 
-from Modules import *
+from Modules.BST_Implementation import *
 
 
-class Traversal(Node):
+class Traversal(BinarySearchTree):
+
     def breadth_first_search(self):
-        #current_node = self.root
+        current_node = self.root
         result = []
-        queue = []
-        print("hello--------------------", )#current_node)
+        queue = [current_node]
+
+        while len(queue) > 0:
+            current_node = queue.append(queue.pop())
+            print(current_node.data)
+            result.append(current_node.data)
+            if current_node.left:
+                queue.append(current_node.left)
+            if current_node.right:
+                queue.append(current_node.right)
+
 
 
 # Initialization
 
 traverse = Traversal()
+
+traverse.insert(9)
+traverse.insert(4)
+traverse.insert(20)
+traverse.insert(1)
+traverse.insert(6)
+traverse.insert(15)
+traverse.insert(170)
+traverse.print_tree(traverse.root)
+
 traverse.breadth_first_search()

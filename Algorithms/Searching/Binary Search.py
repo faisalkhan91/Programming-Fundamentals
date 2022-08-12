@@ -5,6 +5,7 @@ Implementation of Binary Search algorithm in python. Time complexity of a Binary
 
 # Function Definition
 
+# Reference: https://stackoverflow.com/questions/73315133/efficiency-analysis-of-binary-search-implementation-in-python
 # Method to perform binary search operation.
 def binary_search(array, search):
     low = 0  # Starting index
