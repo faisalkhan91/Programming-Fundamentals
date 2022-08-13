@@ -37,17 +37,36 @@ class Traversal(BinarySearchTree):
     def breadth_first_search(self):
         current_node = self.root
         result = []
+        # queue = []
+        # queue.append(current_node)
+        # The above 2 statements can be combined as shown below.
         queue = [current_node]
 
         while len(queue) > 0:
-            current_node = queue.append(queue.pop())
-            print(current_node.data)
+            current_node = queue.pop(0)
+            # print(current_node.data)
             result.append(current_node.data)
             if current_node.left:
                 queue.append(current_node.left)
             if current_node.right:
                 queue.append(current_node.right)
 
+        return result
+
+    def breadth_first_search_recursive(self, queue, result):
+
+        # Base case
+        if len(queue) < 1:
+            return result
+        current_node = queue.pop(0)
+        result.append(current_node.data)
+        if current_node.left:
+            queue.append(current_node.left)
+        if current_node.right:
+            queue.append(current_node.right)
+
+        # Recursive case
+        return self.breadth_first_search_recursive(queue, result)
 
 
 # Initialization
@@ -63,4 +82,5 @@ traverse.insert(15)
 traverse.insert(170)
 traverse.print_tree(traverse.root)
 
-traverse.breadth_first_search()
+print(traverse.breadth_first_search())
+print(traverse.breadth_first_search_recursive(queue=[traverse.root], result=[]))
