@@ -14,6 +14,22 @@ import sys
 # sys.path.append(os.path.abspath(tree_file_directory))
 
 from Modules.BST_Implementation import *
+'''
+BST_Implementation is a copy of the Binary Search Tree implementation from the Data Structures section. It has been
+modified with a main method that has the operations execute locally so it doesn't run from this file while imported.
+
+The Implementation contains:
+
+Class
+- Node : This contains information for each node and its child. This is used as an object in BinarySearchTree class.
+- BinarySearchTree : This manipulates each node to create a BST data structure.
+    -- Methods --
+    --> Insert
+    --> Delete
+    --> Lookup
+    --> Print Tree
+    --> Traverse : This method creates a string not similar as to the one we will implement.
+'''
 
 
 class Traversal(BinarySearchTree):
