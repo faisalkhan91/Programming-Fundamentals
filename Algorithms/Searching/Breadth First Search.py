@@ -5,11 +5,10 @@ by level from left to right starting from the root node. We keep track of all th
 Time complexity is O(n).
 """
 
-import os
-import sys
-
-# This is to import from a different directory, but since I have copied this file to Modules which is in the same path
-# as this file it won't be needed to use this method.
+# The commented code below is to import from a different directory, but since I have copied this file to Modules which
+# is in the same path as this file it won't be needed to use this method.
+# import os
+# import sys
 # tree_file_directory = '../../Data Structures/Tree/Binary Tree/Binary Search Tree'
 # sys.path.append(os.path.abspath(tree_file_directory))
 
