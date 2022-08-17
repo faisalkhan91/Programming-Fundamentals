@@ -31,38 +31,43 @@ Class
 '''
 
 
+# This is a class that inherits BinarySearchTree class from the BST_Implementation file.
 class Traversal(BinarySearchTree):
 
+    # Implementation of Breadth First Search (Iterative) method to traverse the tree level by level.
     def breadth_first_search(self):
-        current_node = self.root
-        result = []
+        current_node = self.root  # Get the root node or starting node.
+        result = []  # This list contains the order of all the nodes visited.
         # queue = []
         # queue.append(current_node)
         # The above 2 statements can be combined as shown below.
-        queue = [current_node]
+        queue = [current_node]  # This list keeps track of all the nodes on a level to track their child nodes later.
 
-        while len(queue) > 0:
-            current_node = queue.pop(0)
+        while len(queue) > 0:  # As long as there is something in the queue.
+            current_node = queue.pop(0)  # Return and remove the first item in the queue.
             # print(current_node.data)
-            result.append(current_node.data)
-            if current_node.left:
-                queue.append(current_node.left)
-            if current_node.right:
-                queue.append(current_node.right)
+            result.append(current_node.data)  # Add the value of the current node to the result list.
+            if current_node.left:  # Look if there is left child.
+                queue.append(current_node.left)  # Add to the queue to visit later.
+            if current_node.right:  # Look if there is a right child.
+                queue.append(current_node.right)  # Add to the queue to visit later.
 
-        return result
+        return result  # Return the result.
 
+    # Implementation of the BFS method using recursion. We need to pass queue and result as a parameter since that way
+    # it will not reset itself in every function call.
     def breadth_first_search_recursive(self, queue, result):
 
         # Base case
-        if len(queue) < 1:
+        if len(queue) < 1:  # When length of the queue is 0.
             return result
-        current_node = queue.pop(0)
-        result.append(current_node.data)
-        if current_node.left:
-            queue.append(current_node.left)
-        if current_node.right:
-            queue.append(current_node.right)
+        current_node = queue.pop(0)  # Return and remove the first item in the queue.
+        # print(current_node.data)
+        result.append(current_node.data)  # Add the value of the current node to the result list.
+        if current_node.left:  # Look if there is left child.
+            queue.append(current_node.left)  # Add to the queue to visit later.
+        if current_node.right:  # Look if there is a right child.
+            queue.append(current_node.right)  # Add to the queue to visit later.
 
         # Recursive case
         return self.breadth_first_search_recursive(queue, result)
@@ -81,5 +86,5 @@ traverse.insert(15)
 traverse.insert(170)
 traverse.print_tree(traverse.root)
 
-print(traverse.breadth_first_search())
-print(traverse.breadth_first_search_recursive(queue=[traverse.root], result=[]))
+print("BFS using iteration:", traverse.breadth_first_search())
+print("BFS using recursion:", traverse.breadth_first_search_recursive(queue=[traverse.root], result=[]))
