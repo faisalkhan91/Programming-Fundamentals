@@ -6,3 +6,7 @@ Code samples for Big O notation, Data Structures and Algorithms that constitute 
 Algorithm
 
 Data Structure
+- Array
+- Hash Table
+
+
