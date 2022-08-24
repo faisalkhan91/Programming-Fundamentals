@@ -17,19 +17,23 @@ class Solution(BinarySearchTree):
     def isValidBST(self, root: Optional[Node]) -> bool:
         current_node = root
         queue = [current_node]
+        minimum = -2**40
+        maximum = 2**40
         while len(queue) > 0:
             current_node = queue.pop(0)
             print("Current node popped:", current_node.data)
             if current_node.left:
                 print("adding left child to queue", current_node.left.data)
-                if current_node.left.data >= current_node.data and current_node.left.data >= root.data:
+                if current_node.left.data >= current_node.data or current_node.left.data >= root.data or current_node.left.data <= minimum:
                     return False
                 queue.append(current_node.left)
+                maximum = current_node.data - 1
             if current_node.right:
                 print("adding right child to queue", current_node.right.data)
-                if current_node.right.data <= current_node.data and current_node.right.data <= root.data:
+                if current_node.right.data <= current_node.data or current_node.right.data <= root.data or current_node.right.data >= maximum:
                     return False
                 queue.append(current_node.right)
+                minimum = current_node.data + 1
         return True
 
 
