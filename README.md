@@ -8,5 +8,6 @@ Algorithm
 Data Structure
 - Array
 - Hash Table
-
+- Tree
+- Graph
 
