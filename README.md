@@ -10,4 +10,5 @@ Data Structure
 - Hash Table
 - Tree
 - Graph
+- Linked List
 
