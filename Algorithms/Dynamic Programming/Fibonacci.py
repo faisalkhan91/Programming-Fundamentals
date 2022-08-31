@@ -5,16 +5,15 @@ Implementation of fibonacci series problem using memoization or caching.
 
 # Function definitions
 
-def fibonacci(index):
+def fibonacci(n):
+    
+    if n < 2:
+        return n
 
-    cached = 
-    if index < 2:
-        return index
+    return fibonacci(n-1) + fibonacci(n-2)
 
-
-    return fibonacci(index-1) + fibonacci(index-2)
 
 # Declarations
 
-GIVEN_INDEX = 7
-print(fibonacci(GIVEN_INDEX))
+given_index = 7
+print(fibonacci(given_index))
