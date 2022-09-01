@@ -6,29 +6,37 @@ the calculated value for each index in the fibonacci sequence. This will have ad
 
 # Function definitions
 
-def fibonacci(n):
+def fibonacci(n, e):
+    e[0] += 1
     if n < 2:
         return n
-    return fibonacci(n-1) + fibonacci(n-2)
+    return fibonacci(n-1, e) + fibonacci(n-2, e), e
 
 
 def fibonacci_memoized():
     cached = {}
+    count = [0]
 
     def fib(n):
+        count[0] += 1
         if n in cached:
             return cached[n]
         elif n < 2:
             cached[n] = n
             return n
+        elif n >= 2:
+            cached[n] = fib(n-1) + fib(n-2)
+            return cached[n]
 
-    return fib
+    return fib, count
 
 
 # Declarations
 
-given_index = 7
-print("Traditional recursive Fibonacci sequence solution:", fibonacci(given_index))
+given_index = 8
 
-fib_calculation = fibonacci_memoized()
-print("Memoized recursive Fibonacci sequence solution:", fib_calculation(given_index))
+result = fibonacci(given_index, [0])
+print("Traditional recursive Fibonacci sequence solution:", result, "Execution:", result)
+
+fib_calculation, c = fibonacci_memoized()
+print("Memoized recursive Fibonacci sequence solution:", fib_calculation(given_index), "Execution:", c[0])
