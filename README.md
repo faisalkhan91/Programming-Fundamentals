@@ -6,6 +6,7 @@ Code samples for Big O notation, Data Structures and Algorithms that constitute 
 Algorithm
 - Recursion
 - Sorting
+- Searching
 - Dynamic Programming
 
 Data Structure
