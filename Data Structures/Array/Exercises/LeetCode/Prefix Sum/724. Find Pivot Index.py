@@ -7,19 +7,17 @@ https://leetcode.com/problems/find-pivot-index/?envType=study-plan&id=level-1
 class Solution:
     def pivotIndex(self, nums):
         pivot = 0
-        left = nums[:pivot]
-        right = nums[pivot+1:]
-
-        print("Pivot", pivot, "Left", left, "Right", right)
+        left = sum(nums[:pivot])  # Starting sum of left side
+        right = sum(nums[pivot+1:])  # Starting sum of the right side
 
         for i in range(len(nums)):
-            if sum(left) == sum(right):
+            if left == right:  # Return if the left and right are equal.
                 return pivot
-            pivot += 1
-            left = nums[:pivot]
-            right = nums[pivot + 1:]
+            if pivot < len(nums) - 1:  # Check pivot index to make sure it does not exceed the length of the array.
+                pivot += 1
+            left = left + nums[pivot-1]  # Add the number before pivot to the array.
+            right = right - nums[pivot]  # Subtract pivot value from the array.
         return -1
-
 
 
 execute = Solution()
