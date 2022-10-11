@@ -8,6 +8,8 @@ Two strings s and t are isomorphic if the characters in s can be replaced to get
 
 
 class Solution:
+    # Attempt to solve the isomorphic problem with one hash table. This can also be done with 2 hash maps as shown in
+    # the solution for the problem on leetcode. Time complexity is O(n).
     def isIsomorphic(self, s: str, t: str) -> bool:
         dict_s = {}  # Create a hash map to store all the key value pairs.
         for i in range(len(s)):
