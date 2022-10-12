@@ -10,7 +10,9 @@ characters without disturbing the relative positions of the remaining characters
 
 
 class Solution:
-    # Time complexity is O(n).
+    # Time complexity is O(n). This is a two pointer method to solve the problem, not dynamic programming. The dynamic
+    # programming solution is referenced here:
+    # https://stackoverflow.com/questions/74035067/python-solution-for-392-is-subsequence/74036291#74036291
     def isSubsequence(self, s: str, t: str) -> bool:
         if len(s) == 0:
             return True
