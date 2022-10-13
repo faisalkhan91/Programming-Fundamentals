@@ -11,15 +11,16 @@ https://leetcode.com/problems/merge-two-sorted-lists/?envType=study-plan&id=leve
 #         self.next = next
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        merged = ListNode()
-        while list1 or list2:
-            if list1.val >= list2.val:
-                merged.next = list2
-                merged = merged.next
-                list2 = list2.next
-            else:
+        # Merged is the pointer moving to the next node after each node is added. Head is the pointer to the start as we
+        # need to return the starting node.
+        merged = head = ListNode()  # Create a starting node.
+        while list1 and list2:  # As long as there are nodes present in both the linked list keep iterating.
+            if list1.val < list2.val:
                 merged.next = list1
-                merged = merged.next
                 list1 = list1.next
-
-        return merged
+            else:
+                merged.next = list2
+                list2 = list2.next
+            merged = merged.next  # Move the cursor.
+        merged.next = list1 or list2  # If any node(s) left, add it to the merged list.
+        return head.next  # Return from next node as the first node was created by us.
