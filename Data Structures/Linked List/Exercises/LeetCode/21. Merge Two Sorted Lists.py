@@ -10,6 +10,7 @@ https://leetcode.com/problems/merge-two-sorted-lists/?envType=study-plan&id=leve
 #         self.val = val
 #         self.next = next
 class Solution:
+    # Time complexity is O(m+n)
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         # Merged is the pointer moving to the next node after each node is added. Head is the pointer to the start as we
         # need to return the starting node.
