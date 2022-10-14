@@ -10,6 +10,7 @@ https://leetcode.com/problems/reverse-linked-list/?envType=study-plan&id=level-1
 #         self.val = val
 #         self.next = next
 class Solution:
+    # Time complexity is O(n).
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         reversed = None  # Set reversed to None
         while head:  # as long as there are nodes present.
