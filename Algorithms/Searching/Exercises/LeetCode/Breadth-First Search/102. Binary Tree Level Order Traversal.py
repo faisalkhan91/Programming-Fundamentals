@@ -14,7 +14,7 @@ class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         while not root:
             return []
-
+        print("When you are stuck!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         result = []
         queue = [root]
 
@@ -32,7 +32,7 @@ class Solution:
 
         return result
 
-    
+
 ##################################################################################################
 # Initial attempt, works like BFS but does not give answer of all the nodes in a level.
 # Definition for a binary tree node.
