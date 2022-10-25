@@ -1,6 +1,8 @@
 """
 102. Binary Tree Level Order Traversal
 https://leetcode.com/problems/binary-tree-level-order-traversal/?envType=study-plan&id=level-1
+
+Explanation : https://www.youtube.com/watch?v=6ZnyEApgFYg
 """
 
 
@@ -14,24 +16,29 @@ class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         while not root:
             return []
-        print("When you are stuck!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        result = []
+
         queue = [root]
+        result = [[queue[0].val]]
 
         while queue:
-            node = queue.pop(0)
-            result = queue.val
+            nodes = queue
             level_nodes = []
-
-            for i in node:
+            print("******************************************")
+            print(queue)
+            for node in nodes:
+                print(len(nodes))
+                print("###############################")
+                print(node, end="\n")
+                level = queue.pop(0)
+                level_nodes.append(level.val)
                 if node.left:
-                    level_nodes.append(node.left)
+                    queue.append(node.left)
                 if node.right:
-                    level_nodes.append(node.right)
-            print(level)
-
+                    queue.append(node.right)
+            print(level_nodes)
+            result.append(level_nodes)
+            print(result)
         return result
-
 
 ##################################################################################################
 # Initial attempt, works like BFS but does not give answer of all the nodes in a level.
