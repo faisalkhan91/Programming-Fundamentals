@@ -3,6 +3,7 @@
 https://leetcode.com/problems/binary-tree-level-order-traversal/?envType=study-plan&id=level-1
 
 Explanation : https://www.youtube.com/watch?v=6ZnyEApgFYg
+https://stackoverflow.com/questions/74188555/python-leetcode-bst-level-order-traversal
 """
 
 
