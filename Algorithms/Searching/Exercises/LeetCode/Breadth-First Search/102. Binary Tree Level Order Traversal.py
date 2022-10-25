@@ -14,6 +14,7 @@ Explanation : https://www.youtube.com/watch?v=6ZnyEApgFYg
 #         self.right = right
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        """ Time complexity of this method is O(n). Space complexity of this method is O(n)."""
         while not root:  # Check if the tree is empty and return nothing.
             return []
 
