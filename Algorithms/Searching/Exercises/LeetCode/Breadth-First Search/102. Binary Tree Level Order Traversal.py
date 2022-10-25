@@ -14,30 +14,23 @@ Explanation : https://www.youtube.com/watch?v=6ZnyEApgFYg
 #         self.right = right
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        while not root:
+        while not root:  # Check if the tree is empty and return nothing.
             return []
 
-        queue = [root]
-        result = [[queue[0].val]]
+        queue = [root]  # Add root to the queue.
+        result = []  # List to store the traversal values.
 
-        while queue:
-            nodes = queue
-            level_nodes = []
-            print("******************************************")
-            print(queue)
-            for node in nodes:
-                print(len(nodes))
-                print("###############################")
-                print(node, end="\n")
-                level = queue.pop(0)
-                level_nodes.append(level.val)
+        while queue:  # Loop while there is nodes in queue. This is for each level.
+            level_nodes = []  # List to store the values of the nodes in the current level.
+            temp = []  # List to store the child nodes. This will be added back to queue.
+            for node in queue:  # Loop for all the current nodes in the queue for a given level.
+                level_nodes.append(node.val)  # Store the value of the current node in the queue.
                 if node.left:
-                    queue.append(node.left)
+                    temp.append(node.left)  # Add the child nodes on the left to the queue.
                 if node.right:
-                    queue.append(node.right)
-            print(level_nodes)
-            result.append(level_nodes)
-            print(result)
+                    temp.a bppend(node.right)  # Add the child nodes on the right to the queue.
+            queue = temp  # Replace the current nodes with nodes in the next level of the queeue.
+            result.append(level_nodes)  # Append the values of the nodes in the current level.
         return result
 
 ##################################################################################################
