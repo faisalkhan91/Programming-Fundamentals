@@ -3,9 +3,8 @@
 https://leetcode.com/problems/binary-tree-level-order-traversal/?envType=study-plan&id=level-1
 
 Explanation : https://www.youtube.com/watch?v=6ZnyEApgFYg
-https://stackoverflow.com/questions/74188555/python-leetcode-bst-level-order-traversal
+Reference: https://stackoverflow.com/questions/74188555/python-leetcode-bst-level-order-traversal
 """
-
 
 
 # Definition for a binary tree node.
@@ -31,8 +30,8 @@ class Solution:
                 if node.left:
                     temp.append(node.left)  # Add the child nodes on the left to the queue.
                 if node.right:
-                    temp.a bppend(node.right)  # Add the child nodes on the right to the queue.
-            queue = temp  # Replace the current nodes with nodes in the next level of the queeue.
+                    temp.append(node.right)  # Add the child nodes on the right to the queue.
+            queue = temp  # Replace the current nodes with nodes in the next level of the queue.
             result.append(level_nodes)  # Append the values of the nodes in the current level.
         return result
 
