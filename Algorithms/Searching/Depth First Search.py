@@ -62,7 +62,7 @@ class Traversal(BinarySearchTree):
         result.append(node.data)  # Push the data of the node to the list.
         if node.left:  # If there is a left node
             self.traverse_preorder(node.left, result)  # Recursive traverse the left node
-        if node.right:  # If there is a right node
+        if node.right:  # If there  is a right node
             self.traverse_preorder(node.right, result)  # Recursive traverse the right node
         return result
 
