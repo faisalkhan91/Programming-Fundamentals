@@ -25,3 +25,5 @@ Algorithm
 - Sorting
 - Searching
 - Dynamic Programming
+
+Copyright 2022
