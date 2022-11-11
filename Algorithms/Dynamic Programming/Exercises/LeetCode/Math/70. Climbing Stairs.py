@@ -71,6 +71,6 @@ class Solution:
         return ways_to_climb
 
 
-n = 25
+n = 20
 execute = Solution()
 print(execute.climbStairs(n))
