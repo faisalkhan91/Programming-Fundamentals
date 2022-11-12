@@ -38,7 +38,7 @@ class Solution:
             if n <= 2:
                 return n
 
-            ways_to_climb = [0] * (n + 1)
+            ways_to_climb = [0] * (n + 1)  # Initialize the array to 0.
             ways_to_climb[1] = 1
             ways_to_climb[2] = 2
 
@@ -60,11 +60,12 @@ class Solution:
             return n
 
         ways_to_climb = 0
-        two_below = 1
-        one_below = 2
+        two_below = 1  # We know that the 1st step can be taken in only one way.
+        one_below = 2  # We know that the 2nd step from 0 can be taken in 2 ways, 1 + 1 or 2.
 
+        # We can calculate from the 3rd step onwards, since we manually calculated 1st and 2nd step ways.
         for i in range(3, n + 1):
-            ways_to_climb = one_below + two_below
+            ways_to_climb = one_below + two_below  # Current step ways to climb is the addition of 1 and 2 step below.
             two_below = one_below
             one_below = ways_to_climb
 
