@@ -20,7 +20,7 @@ Code samples for Big O notation, Data Structures and Algorithms that constitute 
 - Queue
 - Stack
 
-Algorithm
+[Algorithm](https://github.com/faisalkhan91/Programming-Fundamentals/tree/main/Algorithms)
 - Recursion
 - Sorting
 - Searching
