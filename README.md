@@ -10,7 +10,7 @@ Code samples for Big O notation, Data Structures and Algorithms that constitute 
 - O(m*n)
 - O(n^2)
 
-Data Structure
+[Data Structure](https://github.com/faisalkhan91/Programming-Fundamentals/tree/main/Data%20Structures)
 - Array
 - Hash Table
 - Tree
