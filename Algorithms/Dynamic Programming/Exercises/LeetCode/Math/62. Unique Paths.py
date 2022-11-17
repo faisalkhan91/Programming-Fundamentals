@@ -21,3 +21,13 @@ class Solution:
             return store_paths
 
         return paths(m, n)
+
+
+    ##############################
+    paths = 0
+    path_1 = 1
+    path_2 = 2
+
+    for i in range(m):
+        for j in range(n):
+            
