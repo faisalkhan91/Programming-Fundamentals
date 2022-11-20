@@ -26,4 +26,7 @@ Code samples for Big O notation, Data Structures and Algorithms that constitute 
 - Searching
 - Dynamic Programming
 
+Additional:
+- Kadanes Algorithm
+
 Copyright 2022.
