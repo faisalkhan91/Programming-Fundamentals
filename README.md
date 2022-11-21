@@ -28,5 +28,6 @@ Code samples for Big O notation, Data Structures and Algorithms that constitute 
 
 Additional:
 - Kadanes Algorithm
+- Floyd's Algorithm
 
 Copyright 2022.
