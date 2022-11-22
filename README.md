@@ -30,4 +30,7 @@ Additional:
 - Kadanes Algorithm
 - Floyd's Algorithm
 
+LeetCode:
+- Dynamic Programming
+
 Copyright 2022.
