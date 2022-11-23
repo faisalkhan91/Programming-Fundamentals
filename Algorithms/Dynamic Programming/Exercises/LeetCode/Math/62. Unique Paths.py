@@ -4,6 +4,7 @@ https://leetcode.com/problems/unique-paths/description/?envType=study-plan&id=le
 """
 
 class Solution:
+    # Brute force approach.
     def uniquePaths(self, m: int, n: int) -> int:
         completed_paths = [0]
         def routes(i, j):
@@ -24,6 +25,7 @@ execute = Solution()
 execute.uniquePaths(m, n)
 
 
+######## Not working solutions #########
 ################### Still working, trying alternative solution.
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
