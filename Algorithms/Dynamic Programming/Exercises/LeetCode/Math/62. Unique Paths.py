@@ -18,6 +18,21 @@ class Solution:
         routes(0, 0)
         return completed_paths[0]
 
+    def uniquePaths_bruteforce_2(self, m: int, n: int) -> int:
+        completed_paths = [0]
+        grid = [[0 for i in range(n)] for j in range(m)]
+        grid[m - 1][n - 1] = 1
+        def routes(i, j):
+            if i > m - 1 or j > n - 1:
+                return
+            if grid[i][j] == 1:
+                completed_paths[0] += 1
+                return
+            routes(i + 1, j)
+            routes(i, j + 1)
+        routes(0, 0)
+        return completed_paths[0]
+
 
 m = 2
 n = 3
