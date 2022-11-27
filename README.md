@@ -32,5 +32,6 @@ Additional:
 
 LeetCode:
 - Dynamic Programming
+- Arrays
 
 Copyright 2022.
