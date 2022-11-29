@@ -33,5 +33,6 @@ Additional:
 LeetCode:
 - Dynamic Programming
 - Arrays
+- Trees
 
 Copyright 2022.
