@@ -34,5 +34,6 @@ LeetCode:
 - Dynamic Programming
 - Arrays
 - Trees
+- Traversal
 
 Copyright 2022.
