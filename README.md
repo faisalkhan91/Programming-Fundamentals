@@ -37,6 +37,7 @@ LeetCode:
 - Traversal
  - Depth First Search
  - Breadth First Search
+- Graphs
 
 
 Copyright 2022.
