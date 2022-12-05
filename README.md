@@ -38,6 +38,7 @@ LeetCode:
  - Depth First Search
  - Breadth First Search
 - Graphs
+- Linked Lists
 
 
 Copyright 2022.
