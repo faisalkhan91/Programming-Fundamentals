@@ -39,6 +39,7 @@ LeetCode:
  - Breadth First Search
 - Graphs
 - Linked Lists
+- Stacks
 
 
 Copyright 2022.
