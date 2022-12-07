@@ -40,6 +40,6 @@ LeetCode:
 - Graphs
 - Linked Lists
 - Stacks
-
+- Queues
 
 Copyright 2022.
