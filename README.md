@@ -42,4 +42,5 @@ LeetCode:
 - Stacks
 - Queues
 
+This encompasses all the common fundamentals of programming. This repository is updated as needed.
 Copyright 2022.
