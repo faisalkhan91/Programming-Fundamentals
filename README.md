@@ -15,6 +15,7 @@ Code samples for Big O notation, Data Structures and Algorithms that constitute 
 - Hash Table
 - Tree
  - Binary Search Tree
+ - Heap
 - Graph
 - Linked List
  - Singly Linked List
