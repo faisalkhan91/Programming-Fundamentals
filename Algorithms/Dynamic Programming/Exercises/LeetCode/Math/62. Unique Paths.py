@@ -39,7 +39,6 @@ n = 3
 execute = Solution()
 execute.uniquePaths(m, n)
 
-
 ######## Not working solutions #########
 ################### Still working, trying alternative solution.
 class Solution:
