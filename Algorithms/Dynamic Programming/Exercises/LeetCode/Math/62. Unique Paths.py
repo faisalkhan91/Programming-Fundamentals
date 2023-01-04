@@ -3,19 +3,22 @@
 https://leetcode.com/problems/unique-paths/description/?envType=study-plan&id=level-1
 """
 
+
 class Solution:
-    # Brute force approach.
+    # Brute force approach. This fails once the grid becomes large enough. In this approach a nested method is used to
+    # calculate the routes and store the completed routes whenever the i and j indexes reach the m - 1 and n - 1 index.
     def uniquePaths(self, m: int, n: int) -> int:
-        completed_paths = [0]
+        completed_paths = [0]  # Stores
+
         def routes(i, j):
-            if i == m - 1 and j == n - 1:
-                completed_paths[0] += 1
+            if i == m - 1 and j == n - 1:  # If i and j are in the bottom right corner of the grid.
+                completed_paths[0] += 1  # Add to the path to the completed path.
                 return
-            if i > m - 1 or j > n - 1:
+            if i > m - 1 or j > n - 1:  # If i or j exceeded the grid length stop processing.
                 return
-            routes(i + 1, j)
-            routes(i, j + 1)
-        routes(0, 0)
+            routes(i + 1, j)  # Call the method to move down.
+            routes(i, j + 1)  # Call the method to move up.
+        routes(0, 0)  # Start with the 0 index.
         return completed_paths[0]
 
     # Brute force alternative approach.
@@ -23,6 +26,7 @@ class Solution:
         completed_paths = [0]
         grid = [[0 for i in range(n)] for j in range(m)]
         grid[m - 1][n - 1] = 1
+
         def routes(i, j):
             if i > m - 1 or j > n - 1:
                 return
@@ -39,58 +43,3 @@ m = 2
 n = 3
 execute = Solution()
 execute.uniquePaths(m, n)
-
-######## Not working solutions #########
-################### Still working, trying alternative solution.
-class Solution:
-    def uniquePaths(self, m: int, n: int) -> int:
-        store_paths = [0]
-
-        def paths(m, n):
-
-            if m == 0 and n == 0:
-                store_paths[0] += 1
-            if m < 0 or n < 0:
-                return
-            paths(m - 1, n)
-            paths(m, n - 1)
-
-            return store_paths
-
-        return paths(m, n)
-
-
-    ##############################
-    paths = 0
-    path_1 = 1
-    path_2 = 2
-
-    for i in range(m):
-        for j in range(n):
-
-    #############################
-
-    class Solution:
-        def uniquePaths(self, m: int, n: int) -> int:
-            completed_paths = [0]
-            check = []
-
-            def routes(i, j):
-                print(i, j)
-                print(check)
-
-                if i == m - 1 and j == n - 1:
-                    completed_paths[0] += 1
-                    return
-                if i > m - 1 or j > n - 1:
-                    return
-                if (i, j) not in check:
-                    check.append((i, j))
-                    routes(i + 1, j)
-                    routes(i, j + 1)
-                else:
-                    return
-
-            routes(0, 0)
-            print(len(check))
-            return completed_paths[0]
