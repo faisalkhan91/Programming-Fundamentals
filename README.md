@@ -34,7 +34,7 @@ Additional:
 - Kadanes Algorithm
 - Floyd's Algorithm
 
-LeetCode:
+There are topics solved under LeetCode, they are as follows:
 - Dynamic Programming
 - Arrays
 - Trees
