@@ -32,7 +32,7 @@ class Solution:
         def routes(i, j):
             if i > m - 1 or j > n - 1:  # If the indexes are out of range stop processing.
                 return
-            if grid[i][j] == 1:  # If the bottom right corner is reached save the path.
+            if grid[i][j] == 1:  # If the bottom right corner is reached, save the path.
                 completed_paths[0] += 1
                 return
             routes(i + 1, j)
