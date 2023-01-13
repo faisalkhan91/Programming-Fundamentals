@@ -28,7 +28,7 @@ Code samples for Big O notation, Data Structures and Algorithms that constitute 
 - Recursion
 - Sorting
 - Searching
-- Dynamic Programming
+- Dynamic Programming / Memoization
 
 Additional:
 - Kadanes Algorithm
