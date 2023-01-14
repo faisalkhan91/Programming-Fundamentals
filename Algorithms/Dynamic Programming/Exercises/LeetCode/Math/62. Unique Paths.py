@@ -40,8 +40,6 @@ class Solution:
         routes(0, 0)  # Start from the top left corner.
         return completed_paths[0]
 
-    # Memoization
-
 
 m = 2
 n = 3
