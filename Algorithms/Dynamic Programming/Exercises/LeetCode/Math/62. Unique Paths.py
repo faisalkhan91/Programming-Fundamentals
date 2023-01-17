@@ -40,7 +40,15 @@ class Solution:
         routes(0, 0)  # Start from the top left corner.
         return completed_paths[0]
 
-
+    # Reference: https://www.youtube.com/watch?v=IlEsdxuD4lY
+    def uniquePaths(self, m: int, n: int) -> int:
+        row = [1] * n
+        for i in range(m - 1):
+            new_row = [1] * n
+            for j in range(n - 2, -1, -1):
+                new_row[j] = new_row[j + 1] + row[j]
+            row = new_row
+        return row[0]
 
 m = 2
 n = 3
