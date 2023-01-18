@@ -42,13 +42,14 @@ class Solution:
 
     # Reference: https://www.youtube.com/watch?v=IlEsdxuD4lY
     def uniquePaths(self, m: int, n: int) -> int:
-        row = [1] * n
+        row = [1] * n  # Setting all the cells in the row to 1.
         for i in range(m - 1):
-            new_row = [1] * n
+            new_row = [1] * n  # Initialize the new row to 1.
             for j in range(n - 2, -1, -1):
                 new_row[j] = new_row[j + 1] + row[j]
             row = new_row
         return row[0]
+
 
 m = 2
 n = 3
