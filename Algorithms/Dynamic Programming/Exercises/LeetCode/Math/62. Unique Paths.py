@@ -41,6 +41,8 @@ class Solution:
         return completed_paths[0]
 
     # Reference: https://www.youtube.com/watch?v=IlEsdxuD4lY
+    # This approach is basically calculating paths from each cell and summing them up as we move towards the start of
+    # grid.
     def uniquePaths(self, m: int, n: int) -> int:
         row = [1] * n  # Setting all the cells in the row to 1.
         for i in range(m - 1):
