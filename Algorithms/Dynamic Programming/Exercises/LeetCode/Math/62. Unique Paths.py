@@ -42,18 +42,15 @@ class Solution:
 
     # Reference: https://www.youtube.com/watch?v=IlEsdxuD4lY
     # This approach is basically calculating paths from each cell and summing them up as we move towards the start of
-    # grid.
+    # grid. This is a math approach.
     def uniquePaths(self, m: int, n: int) -> int:
         row = [1] * n  # Setting all the cells in the row to 1.
         for i in range(m - 1):
             new_row = [1] * n  # Initialize the new row to 1.
             for j in range(n - 2, -1, -1):
-                new_row[j] = new_row[j + 1] + row[j]
-            row = new_row
+                new_row[j] = new_row[j + 1] + row[j]  # Calculate the values of the new row based on the previous row.
+            row = new_row  # Set the calculated row as the previous row.
         return row[0]
-
-
-    
 
 
 m = 2
