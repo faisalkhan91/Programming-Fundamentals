@@ -52,6 +52,15 @@ class Solution:
             row = new_row  # Set the calculated row as the previous row.
         return row[0]
 
+    # In this solution we use dynamic programming to store the values of each path from the current cell.
+    def uniquePaths(self, m: int, n: int) -> int:
+        matrix = [[1 for i in range(n)] for j in range(m)]  # Declare the matrix with all values as 1.
+        for row in range(1, len(matrix)):  # Get the row
+            for column in range(1, len(matrix[row])):  # Get the column in each row
+                # Calculate the path from value from the row cell before and column cell above for each cell.
+                matrix[row][column] = matrix[row - 1][column] + matrix[row][column - 1]
+        return matrix[m - 1][n - 1]  # Return the end cell value.
+
 
 m = 2
 n = 3
