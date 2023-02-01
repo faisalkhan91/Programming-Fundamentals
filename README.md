@@ -50,5 +50,3 @@ There are topics solved under LeetCode, they are as follows:
 
 This encompasses all the common fundamentals of programming. This repository is updated as needed.
 Copyright 2023.
-
-Kindly follow if you like my stuff.
