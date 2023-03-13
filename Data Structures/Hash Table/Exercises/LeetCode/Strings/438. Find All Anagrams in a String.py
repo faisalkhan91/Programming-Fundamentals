@@ -3,7 +3,7 @@
 https://leetcode.com/problems/find-all-anagrams-in-a-string/?envType=study-plan&id=level-1
 """
 
-from collections import Counter
+from string import ascii_lowercase as abc
 
 
 class Solution:
@@ -15,12 +15,15 @@ class Solution:
         anagram_index = []
         for i in s_substrings:
             print(s_substrings[i], p)
-            if Counter(s_substrings[i]) == Counter(p):
+            for c in abc[:-1]:
+                if s_substrings[i].count(c) != p.count(c):
+                    break
                 anagram_index.append(i)
+                break
         return anagram_index
 
 
-s = "ababababab"
-p = "aab"
+s = "bae"
+p = "abc"
 execute = Solution()
 print(execute.findAnagrams(s, p))
