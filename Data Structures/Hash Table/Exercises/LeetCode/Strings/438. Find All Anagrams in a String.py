@@ -3,8 +3,6 @@
 https://leetcode.com/problems/find-all-anagrams-in-a-string/?envType=study-plan&id=level-1
 """
 
-from string import ascii_lowercase as abc
-
 
 class Solution:
     def findAnagrams(self, s: str, p: str):
@@ -14,16 +12,12 @@ class Solution:
             s_substrings[i] = s[i:len(p) + i]
         anagram_index = []
         for i in s_substrings:
-            print(s_substrings[i], p)
-            for c in abc[:-1]:
-                if s_substrings[i].count(c) != p.count(c):
-                    break
+            if sorted(s_substrings[i]) == sorted(p):
                 anagram_index.append(i)
-                break
         return anagram_index
 
 
-s = "bae"
+s = "cbaebabacd"
 p = "abc"
 execute = Solution()
 print(execute.findAnagrams(s, p))
