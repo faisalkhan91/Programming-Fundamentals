@@ -27,25 +27,24 @@ class Solution:
         routes(n, m)
         return len(ways_to_climb)
 
-    class Solution:
-        def climbStairs_bottom_up(self, n: int) -> int:
-            """
-            This is using bottom_up approach, and we build up to the n number by calculating the difference of 1 step
-            and 2 step with respect to the previous steps. Time Complexity is O(n) and Space Complexity is O(n).
-            :param n:
-            :return:
-            """
-            if n <= 2:
-                return n
+    def climbStairs_bottom_up(self, n: int) -> int:
+        """
+        This is using bottom_up approach, and we build up to the n number by calculating the difference of 1 step
+        and 2 step with respect to the previous steps. Time Complexity is O(n) and Space Complexity is O(n).
+        :param n:
+        :return:
+        """
+        if n <= 2:
+            return n
 
-            ways_to_climb = [0] * (n + 1)  # Initialize the array to 0.
-            ways_to_climb[1] = 1
-            ways_to_climb[2] = 2
+        ways_to_climb = [0] * (n + 1)  # Initialize the array to 0.
+        ways_to_climb[1] = 1
+        ways_to_climb[2] = 2
 
-            for i in range(3, n + 1):
-                ways_to_climb[i] = ways_to_climb[i - 1] + ways_to_climb[i - 2]
+        for i in range(3, n + 1):
+            ways_to_climb[i] = ways_to_climb[i - 1] + ways_to_climb[i - 2]
 
-            return ways_to_climb[n]
+        return ways_to_climb[n]
 
     def climbStairs_bottom_up_optimized(self, n: int) -> int:
         """
