@@ -33,3 +33,41 @@ class Solution:
             if longest > max_string:
                 max_string = longest
         return max_string
+
+
+
+
+#----------------------------------------------------------------#
+
+    def characterReplacement(self, s: str, k: int) -> int:
+
+        substring_frequency = {}
+        count = 1
+        max = 0
+        max_dict = {}
+
+        for index in range(len(s) - 1):
+            # if s[index] in substring_frequency and s[index] == s[index - 1]:
+            #     substring_frequency[s[index]][s[index]] += 1
+            # else:
+            #     substring_frequency[s[index]] = {s[index] + str(index): 1}
+
+            print(index, len(s))
+            if s[index] == s[index + 1]:
+                count += 1
+            else:
+                if s[index] not in substring_frequency:
+                    substring_frequency[s[index]] = {}
+                    substring_frequency[s[index]].update({s[index] + str(index): count})
+                else:
+                    substring_frequency[s[index]].update({s[index] + str(index): count})
+                count = 1
+                if index + 1 == len(s) - 1:
+                    substring_frequency[s[index + 1]].update({s[index + 1] + str(index): count})
+            if count > max:
+                max = count
+                max_dict.update()
+
+        print(substring_frequency)
+
+        return 0
