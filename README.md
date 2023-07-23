@@ -60,8 +60,8 @@ There are topics solved under LeetCode, they are as follows:
 - Arrays
 - Trees
 - Traversal
- - Depth First Search
- - Breadth First Search
+ - Depth-First Search
+ - Breadth-First Search
 - Graphs
 - Linked Lists
 - Stacks
