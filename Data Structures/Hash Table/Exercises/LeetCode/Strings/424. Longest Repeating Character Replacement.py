@@ -71,3 +71,28 @@ class Solution:
         print(substring_frequency)
 
         return 0
+
+
+
+    #-------------------------------------------------------------------#
+
+    class Solution:
+        def characterReplacement(self, s: str, k: int) -> int:
+            first = 0
+            second = 1
+            count = 1
+            max = 0
+            while second > first and second < len(s):
+                if s[first] == s[second]:
+                    count += 1
+                    second += 1
+                elif s[first] != s[second] and k != 0:
+                    count += 1
+                    k -= 1
+                else:
+                    first += 1
+
+                if max < count:
+                    max = count
+                print(first, second, s[first:second], count)
+            return max
