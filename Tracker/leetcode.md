@@ -29,7 +29,7 @@ Linked List:
 - [142. Linked List Cycle II](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/142.%20Linked%20List%20Cycle%20II.py)
 - [206. Reverse Linked List](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/206.%20Reverse%20Linked%20List.py)
 - [21. Merge Two Sorted Lists](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/21.%20Merge%20Two%20Sorted%20Lists.py)
-- [76. Middle of the Linked List](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/876.%20Middle%20of%20the%20Linked%20List.py)
+- [876. Middle of the Linked List](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/876.%20Middle%20of%20the%20Linked%20List.py)
 
 Tree:
 - [235. Lowest Common Ancestor of a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/235.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree.py)
