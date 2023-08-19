@@ -38,3 +38,24 @@ class Solution:
 #                 print(min(long_string[i], short_string[i]))
 #
 #         return str1[:GCD]
+
+# This solution passes the initial test cases but fails to recognize the dividable factor. For example, it fails at the
+# test inputs of str1 = "ABCDEF", str2 = "ABC".
+#
+# def gcdOfStrings(self, str1: str, str2: str) -> str:
+#
+#     GCD = 0
+#     char_list = {}
+#     i = 0
+#     j = 0
+#
+#     while len(str1) - i > 0 and len(str2) - i > 0:
+#         if str1[i] in char_list:
+#             char_list[str1[i]] = char_list[str1[i]] + 1
+#         else:
+#             char_list[str1[i]] = 1
+#         if str1[i] == str2[i] and char_list[str1[i]] % 2 != 0:
+#             GCD += 1
+#         i += 1
+#
+#     return str1[:GCD]
