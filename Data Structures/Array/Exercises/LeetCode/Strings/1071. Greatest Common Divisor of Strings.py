@@ -59,3 +59,28 @@ class Solution:
 #         i += 1
 #
 #     return str1[:GCD]
+
+# This soluition only works partially and fails for test cases such as,
+# str1 = "TAUXXTAUXXTAUXXTAUXXTAUXX", str2 = "TAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXX"
+#
+# def gcdOfStrings(self, str1: str, str2: str) -> str:
+#     str1_freq = Counter(str1)
+#     str2_freq = Counter(str2)
+#
+#     if str1 + str2 != str2 + str1:
+#         return ""
+#
+#     GCD = 0
+#
+#     for i in str1_freq:
+#         if str1_freq[i] == 1 or str2_freq[i] == 1:
+#             GCD += 1
+#         elif str1_freq[i] > str2_freq[i]:
+#             GCD = GCD + (str1_freq[i] // str2_freq[i])
+#         else:
+#             GCD = GCD + (str2_freq[i] // str1_freq[i])
+#
+#     # if (max(len(str1), len(str2)) % GCD) != 0:
+#     #     GCD = GCD + (max(len(str1), len(str2)) % GCD)
+#
+#     return str1[:GCD]
