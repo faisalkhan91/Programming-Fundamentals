@@ -9,6 +9,7 @@ class Solution:
     def gcdOfStrings(self, str1: str, str2: str) -> str:
         """
         In this solution the string is checked if it s divisible by calculating the factor.
+        Reference: https://www.youtube.com/watch?v=i5I_wrbUdzM
         :param str1:
         :param str2:
         :return: str[i], ""
