@@ -22,4 +22,4 @@ class Solution:
 flowerbed = [0,0,1,0,1]
 n = 1
 execute = Solution()
-print(execute.canPlaceFlowers())
+print(execute.canPlaceFlowers(flowerbed, n))
