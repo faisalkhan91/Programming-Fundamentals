@@ -16,25 +16,25 @@ class Solution:
         :return: Boolean
         """
 
-        left, right = -1, 1
-        plot = 0
-        eligible_plots = 0
-        check_left, check_right = False, False
+        left, right = -1, 1  # Left and right pointer, left is left of the first element.
+        plot = 0  # Current element.
+        eligible_plots = 0  # Number of eligible plots.
+        check_left, check_right = False, False  # Markers to check the left and right conditions.
         length = len(flowerbed)
 
         while right <= length:
-            if flowerbed[plot] == 0:
+            if flowerbed[plot] == 0:  # If the plot is empty.
                 if left >= 0 and flowerbed[left] == 0:
                     check_left = True
-                elif left == -1:
+                elif left == -1:  # If there is no left element.
                     check_left = True
 
                 if right <= length - 1 and flowerbed[right] == 0:
                     check_right = True
-                elif right > length - 1:
+                elif right > length - 1:  # if there is no right element.
                     check_right = True
 
-                if check_left and check_right:
+                if check_left and check_right:  # If both left and right are True.
                     eligible_plots += 1
                     flowerbed[plot] = 1
             left += 1
