@@ -28,3 +28,25 @@ class Solution:
 nums = [2,1,5,0,4,6]
 execute = Solution()
 print(execute.increasingTriplet())
+
+
+#########################################################################
+
+# def increasingTriplet(self, nums: List[int]) -> bool:
+#     first = nums[0]
+#     second = nums[1]
+#
+#     for i in range(2, len(nums)):
+#         print(first, second, nums[i])
+#         if first > second or first > nums[i]:
+#             first = second
+#             second = nums[i]
+#         elif second > nums[i]:
+#             if first < second:
+#                 pass
+#             else:
+#                 second = nums[i]
+#         elif first < second < nums[i]:
+#             return True
+#
+#     return False
