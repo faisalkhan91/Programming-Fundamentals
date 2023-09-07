@@ -9,6 +9,7 @@ Array / String:
 - [151. Reverse Words in a String](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Strings/151.%20Reverse%20Words%20in%20a%20String.py)
 - [238. Product of Array Except Self](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Prefix%20Sum/238.%20Product%20of%20Array%20Except%20Self.py)
 - [334. Increasing Triplet Subsequence](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Greedy/334.%20Increasing%20Triplet%20Subsequence.py)
+- [443. String Compression](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Strings/443.%20String%20Compression.py)
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
