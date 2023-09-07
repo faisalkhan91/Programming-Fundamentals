@@ -5,32 +5,29 @@ https://leetcode.com/problems/increasing-triplet-subsequence/description/?envTyp
 
 
 class Solution:
-    def increasingTriplet(self, nums: List[int]) -> bool:
-        first = 0
-        second = 1
-        triplet = 0
+    def increasingTriplet(self, nums) -> bool:
 
-        while triplet < 2 and second < len(nums) - 1:
-            print(nums[first], nums[second])
-            if nums[first] < nums[second]:
-                triplet += 1
-                second += 1
-                first += 1
-            else:
-                first += 1
-                second = first + 1
+        left = float('inf')  # Set the left as infinity.
+        right = float('inf')  # Set right as infinity.
 
-        print(triplet)
+        for i in range(len(nums)):
+            if left < right < nums[i]:  # If the triplet is found return True
+                return True
+            elif nums[i] < left:  # If the number is less than left, make left the current number.
+                left = nums[i]
+            elif left < nums[i] < right:  # If the number greater than left but less than right.
+                right = nums[i]
 
-        return True if triplet >= 2 else False
+        return False  # Return False if no triplet is found.
 
 
 nums = [2,1,5,0,4,6]
 execute = Solution()
-print(execute.increasingTriplet())
-
+print(execute.increasingTriplet(nums))
 
 #########################################################################
+# This solution was the first attempt, in which the numbers were swapped based on the conditions below but it failed to
+# pass all the test cases.
 
 # def increasingTriplet(self, nums: List[int]) -> bool:
 #     first = nums[0]
