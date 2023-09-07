@@ -6,6 +6,11 @@ https://leetcode.com/problems/increasing-triplet-subsequence/description/?envTyp
 
 class Solution:
     def increasingTriplet(self, nums) -> bool:
+        """
+        In this solution we find the left and right and a number greater than both that is in sequence.
+        :param nums:
+        :return: boolean
+        """
 
         left = float('inf')  # Set the left as infinity.
         right = float('inf')  # Set right as infinity.
