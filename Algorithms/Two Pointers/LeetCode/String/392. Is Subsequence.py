@@ -29,6 +29,24 @@ class Solution:
         else:
             return False
 
+    def isSubsequence2(self, s: str, t: str) -> bool:
+        """
+        Alternative solution that uses two pointer to track the traversal of the given subsequence.
+        Time complexity O(n). Space Complexity O(1).
+        :param s:
+        :param t:
+        :return:
+        """
+
+        subsequence_pointer = 0
+        subsequence_length = len(s)
+
+        for i in range(len(t)):
+            if subsequence_pointer < subsequence_length and t[i] == s[subsequence_pointer]:
+                subsequence_pointer += 1
+
+        return True if subsequence_pointer == subsequence_length else False
+
 
 s = "b"
 t = "abc"
