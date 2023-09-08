@@ -6,7 +6,7 @@ Prefix Sum
 
 String
 - [205. Isomorphic Strings](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Hash%20Table/Exercises/LeetCode/Strings/205.%20Isomorphic%20Strings.py)
-- [392. Is Subsequence](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Dynamic%20Programming/Exercises/LeetCode/String/392.%20Is%20Subsequence.py)
+- [392. Is Subsequence](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/String/392.%20Is%20Subsequence.py)
 
 Linked List
 - [21. Merge Two Sorted Lists](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/21.%20Merge%20Two%20Sorted%20Lists.py)
