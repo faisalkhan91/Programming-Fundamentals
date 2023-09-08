@@ -12,8 +12,8 @@ Array / String:
 - [443. String Compression](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Strings/443.%20String%20Compression.py)
 
 Two Pointers:
-- [283. Move Zeroes](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/283.%20Move%20Zeroes.py)
-- 
+- [283. Move Zeroes](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/Array/283.%20Move%20Zeroes.py)
+- [392. Is Subsequence](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/String/392.%20Is%20Subsequence.py)
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
