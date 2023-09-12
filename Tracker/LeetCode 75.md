@@ -14,6 +14,8 @@ Array / String:
 Two Pointers:
 - [283. Move Zeroes](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/Array/283.%20Move%20Zeroes.py)
 - [392. Is Subsequence](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/String/392.%20Is%20Subsequence.py)
+- [11. Container With Most Water](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/Array/11.%20Container%20With%20Most%20Water.py)
+
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
