@@ -15,6 +15,7 @@ Two Pointers:
 - [283. Move Zeroes](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/Array/283.%20Move%20Zeroes.py)
 - [392. Is Subsequence](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/String/392.%20Is%20Subsequence.py)
 - [11. Container With Most Water](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/Array/11.%20Container%20With%20Most%20Water.py)
+- [1679. Max Number of K-Sum Pairs](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/Array/1679.%20Max%20Number%20of%20K-Sum%20Pairs.py)
 
 
 Binary Search Tree:
