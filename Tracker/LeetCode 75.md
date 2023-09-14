@@ -17,6 +17,8 @@ Two Pointers:
 - [11. Container With Most Water](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/Array/11.%20Container%20With%20Most%20Water.py)
 - [1679. Max Number of K-Sum Pairs](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Two%20Pointers/LeetCode/Array/1679.%20Max%20Number%20of%20K-Sum%20Pairs.py)
 
+Sliding Window:
+- [643. Maximum Average Subarray I](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Sliding%20Window/LeetCode/Array/643.%20Maximum%20Average%20Subarray%20I.py)
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
