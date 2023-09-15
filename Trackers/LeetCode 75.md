@@ -12,13 +12,13 @@ Array / String:
 - [443. String Compression](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Strings/443.%20String%20Compression.py)
 
 Two Pointers:
-- [283. Move Zeroes](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Techniques/Two%20Pointers/LeetCode/Array/283.%20Move%20Zeroes.py)
-- [392. Is Subsequence](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Techniques/Two%20Pointers/LeetCode/String/392.%20Is%20Subsequence.py)
-- [11. Container With Most Water](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Techniques/Two%20Pointers/LeetCode/Array/11.%20Container%20With%20Most%20Water.py)
-- [1679. Max Number of K-Sum Pairs](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Techniques/Two%20Pointers/LeetCode/Array/1679.%20Max%20Number%20of%20K-Sum%20Pairs.py)
+- [283. Move Zeroes](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Two%20Pointers/LeetCode/Array/283.%20Move%20Zeroes.py)
+- [392. Is Subsequence](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Two%20Pointers/LeetCode/String/392.%20Is%20Subsequence.py)
+- [11. Container With Most Water](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Two%20Pointers/LeetCode/Array/11.%20Container%20With%20Most%20Water.py)
+- [1679. Max Number of K-Sum Pairs](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Two%20Pointers/LeetCode/Array/1679.%20Max%20Number%20of%20K-Sum%20Pairs.py)
 
 Sliding Window:
-- [643. Maximum Average Subarray I](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Techniques/Sliding%20Window/LeetCode/Array/643.%20Maximum%20Average%20Subarray%20I.py)
+- [643. Maximum Average Subarray I](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Sliding%20Window/LeetCode/Array/643.%20Maximum%20Average%20Subarray%20I.py)
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
