@@ -34,7 +34,6 @@ Graph/BFS/DFS
 - [733. Flood Fill](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/733.%20Flood%20Fill.py)
 - [200. Number of Islands](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/200.%20Number%20of%20Islands.py)
 
-
 Dynamic Programming
 - [509. Fibonacci Number](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Dynamic%20Programming/Exercises/LeetCode/Math/509.%20Fibonacci%20Number.py)
 - [70. Climbing Stairs](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Dynamic%20Programming/Exercises/LeetCode/Math/70.%20Climbing%20Stairs.py)
