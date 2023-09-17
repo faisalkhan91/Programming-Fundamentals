@@ -7,10 +7,11 @@ https://leetcode.com/problems/maximum-average-subarray-i/description/?envType=st
 class Solution:
     def findMaxAverage(self, nums, k: int) -> float:
         """
-        This solution uses the sliding window technique.
+        This solution uses the sliding window technique. We calculate the current average and compare it with the max
+        average.
         :param nums:
         :param k:
-        :return:
+        :return: max_avg
         """
 
         left = 0
@@ -29,6 +30,27 @@ class Solution:
             right += 1
 
         return max_avg
+
+    def findMaxAverage_optimized(self, nums, k: int) -> float:
+        """
+        In this solutions the sliding window technique is used to check the maximum sum in the given array for a given
+        range k. It is an optimization of the above solution.
+        :param nums:
+        :param k:
+        :return: max_avg
+        """
+
+        left = 0
+        right = k
+        current_sum = max_sum = sum(nums[left:right])
+
+        while right < len(nums):
+            current_sum = current_sum + nums[right] - nums[left]  # Shift the window right
+            max_sum = max(max_sum, current_sum)  # Check if this particular windows sum is greater than previous max.
+            left += 1
+            right += 1
+
+        return max_sum / k
 
     def findMaxAverage_initial(self, nums, k: int) -> float:
         """
