@@ -7,7 +7,8 @@ https://leetcode.com/problems/max-consecutive-ones-iii/description/?envType=stud
 class Solution:
     def longestOnes(self, nums, k: int) -> int:
         """
-        This solution uses the sliding window technique.
+        This solution uses the sliding window technique. In this solution, the window size is increased and decreased
+        based on k.
         :param nums:
         :param k:
         :return:
