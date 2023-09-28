@@ -6,28 +6,31 @@ https://leetcode.com/problems/max-consecutive-ones-iii/description/?envType=stud
 
 class Solution:
     def longestOnes(self, nums, k: int) -> int:
+        """
+        This solution uses the sliding window technique.
+        :param nums:
+        :param k:
+        :return:
+        """
 
-        if 1 not in nums:
-            return 0
+        left = 0  # Left side of the window.
+        right = 0  # Right side of the window.
 
-        left = 0
-        max_ones = 0
-
-        for right, num in enumerate(nums):
-            if num == 0:
+        while right < len(nums):
+            # If the window has added a 0, reduce the value of k.
+            if nums[right] == 0:
                 k -= 1
-            elif nums[left] == 0:
-                k += 1
-                left += 1
-            elif k <= 0:
-                left += 1
+            # If the value of k is less than 0, the maximum current window size has reached. When this happens, left and
+            # right pointers are moved simultaneously, akin to sliding a window.
+            if k < 0:
+                if nums[left] == 0:  # If there are any 0's leaving the window, k is incremented.
+                    k += 1
+                left += 1  # Since the value of k is less than 0, we increment left.
+            right += 1
 
-            max_ones = max(max_ones, right - left)
-            print(left, right, max_ones, nums[left:right])
+        return right - left
 
-        return max_ones
-
-nums = []
-k = 0
+nums = [1,1,1,0,0,0,1,1,1,1,0]
+k = 2
 execute = Solution()
-print(execute.longestOnes())
+print(execute.longestOnes(nums, k))
