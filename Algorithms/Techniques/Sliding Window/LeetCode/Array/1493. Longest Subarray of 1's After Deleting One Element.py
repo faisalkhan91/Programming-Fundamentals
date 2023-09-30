@@ -12,6 +12,8 @@ class Solution:
         previous location of the left pointer, i.e., the element after the last zero. We track the length of the sliding
         window and return the maximum length encountered as this is the window with the largest substring with 1's after
         deleting a 0.
+
+        Time Complexity: O(n), Space Complexity: O(1)
         :param nums:
         :return: max_substring
         """
