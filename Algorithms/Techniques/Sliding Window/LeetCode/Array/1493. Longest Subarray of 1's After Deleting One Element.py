@@ -6,16 +6,25 @@ https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/
 
 class Solution:
     def longestSubarray(self, nums) -> int:
-        left = 0
-        right = 0
-        last_zero = 0
-        max_subarray = 0
+        """
+        In this solution, sliding window with 3 pointers is used, the left, right and last_zero, respectively. The left
+        pointer keeps track of the current zero or the latest zero encountered, the last_zero keeps track of the
+        previous location of the left pointer, i.e., the element after the last zero. We track the length of the sliding
+        window and return the maximum length encountered as this is the window with the largest substring with 1's after
+        deleting a 0.
+        :param nums:
+        :return: max_substring
+        """
+        left = 0  # Current zero pointer.
+        right = 0  # Array traversal pointer.
+        last_zero = 0  # Element after the last zero pointer.
+        max_subarray = 0  # Largest sliding window encountered.
         length = len(nums)
 
         while right < length:
-            if nums[right] == 0:
-                last_zero = left
-                left = right + 1
+            if nums[right] == 0:  # If the right pointer encounters a 0.
+                last_zero = left  # Note down the position of the last zero.
+                left = right + 1  # Make the left pointer note down the current zero.
             max_subarray = max(max_subarray, right - last_zero)
             right += 1
 
