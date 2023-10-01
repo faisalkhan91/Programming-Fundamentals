@@ -67,5 +67,5 @@ There are topics solved under LeetCode, they are as follows:
 - Stacks
 - Queues
 
-This encompasses all the common fundamentals of programming. This repository is updated as needed.
+This encompasses all the common fundamentals of programming. This repository will be updated to reflect my progress.\n
 Copyright 2023.
