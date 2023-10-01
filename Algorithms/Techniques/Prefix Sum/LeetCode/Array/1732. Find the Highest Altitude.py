@@ -10,10 +10,11 @@ class Solution:
         This solution uses prefix sum technique, i.e. the altitude is calculated using the formula:
         gain[i + 1] = gain[i + 1] + gain[i]
         This gives the resulting peak altitude at each point, and the max altitude is returned from the list.
+        Time Complexity = O(n), Space Complexity = O(n).
         :param gain
         :return: Maximum value of the calculated altitudes.
         """
-        gain.insert(0, 0)
+        gain.insert(0, 0)  # Add 0 at the beginning.
         for i in range(len(gain) - 1):
             gain[i + 1] = gain[i + 1] + gain[i]
         return max(gain)
