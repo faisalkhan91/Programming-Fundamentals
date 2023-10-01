@@ -25,6 +25,7 @@ Sliding Window:
 
 Prefix Sum:
 - [1732. Find the Highest Altitude](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Prefix%20Sum/LeetCode/Array/1732.%20Find%20the%20Highest%20Altitude.py)
+- [724. Find Pivot Index](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Prefix%20Sum/LeetCode/Array/724.%20Find%20Pivot%20Index.py)
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)

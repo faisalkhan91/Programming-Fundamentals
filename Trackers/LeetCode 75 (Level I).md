@@ -2,7 +2,7 @@ LeetCode 75 (Level I - Old Version):
 
 Prefix Sum
 - [1480. Running Sum of 1d Array](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Prefix%20Sum/1480.%20Running%20Sum%20of%201d%20Array.py)
-- [724. Find Pivot Index](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Prefix%20Sum/724.%20Find%20Pivot%20Index.py)
+- [724. Find Pivot Index](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Prefix%20Sum/LeetCode/Array/724.%20Find%20Pivot%20Index.py)
 
 String
 - [205. Isomorphic Strings](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Hash%20Table/Exercises/LeetCode/Strings/205.%20Isomorphic%20Strings.py)

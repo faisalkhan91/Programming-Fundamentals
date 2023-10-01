@@ -17,7 +17,7 @@ Searching:
 Array:
 - [121. Best Time to Buy and Sell Stock](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Greedy/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.py)
 - [1480. Running Sum of 1d Array](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Prefix%20Sum/1480.%20Running%20Sum%20of%201d%20Array.py)
-- [724. Find Pivot Index](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Array/Exercises/LeetCode/Prefix%20Sum/724.%20Find%20Pivot%20Index.py)
+- [724. Find Pivot Index](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Prefix%20Sum/LeetCode/Array/724.%20Find%20Pivot%20Index.py)
 
 Hash Table:
 - [409. Longest Palindrome](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Hash%20Table/Exercises/LeetCode/Greedy/409.%20Longest%20Palindrome.py)
