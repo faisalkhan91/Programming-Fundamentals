@@ -18,6 +18,11 @@ class Solution:
             gain[i + 1] = gain[i + 1] + gain[i]
         return max(gain)
 
+    def largestAltitude_simple(self, gain) -> int:
+        for i in range(1, len(gain)):
+            gain[i] += gain[i - 1]
+        return max(max(gain), 0)
+
     def largestAltitude_sort(self, gain) -> int:
         """
         Same as above, just sorting technique is used instead of max.
