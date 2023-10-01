@@ -24,7 +24,7 @@ Sliding Window:
 - [1493. Longest Subarray of 1's After Deleting One Element](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Sliding%20Window/LeetCode/Array/1493.%20Longest%20Subarray%20of%201's%20After%20Deleting%20One%20Element.py)
 
 Prefix Sum:
-- [1732. Find the Highest Altitude]()
+- [1732. Find the Highest Altitude](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Techniques/Prefix%20Sum/LeetCode/Array/1732.%20Find%20the%20Highest%20Altitude.py)
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
