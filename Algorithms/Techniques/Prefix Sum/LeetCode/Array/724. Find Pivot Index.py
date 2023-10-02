@@ -1,6 +1,10 @@
 """
 724. Find Pivot Index
 https://leetcode.com/problems/find-pivot-index/?envType=study-plan&id=level-1
+
+Pivot Index:
+The pivot index is the index where the sum of all the numbers strictly to the left of the index is equal to the sum of
+all the numbers strictly to the index's right.
 """
 
 
@@ -17,6 +21,44 @@ class Solution:
                 pivot += 1
             left = left + nums[pivot-1]  # Add the number before pivot to the array.
             right = right - nums[pivot]  # Subtract pivot value from the array.
+        return -1
+
+
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+
+        left = 0
+        right = len(nums) - 1
+        left_sum = nums[left]
+        right_sum = nums[right]
+
+        while left < right:
+            if left_sum < right_sum:
+                left += 1
+                left_sum += nums[left]
+            elif left_sum > right_sum:
+                right -= 1
+                right_sum += nums[right]
+            elif left_sum == right_sum:
+                return left + 1
+
+        return -1
+
+
+class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+        total_sum = sum(nums)
+        left_sum = 0
+        print(left_sum, total_sum)
+        for left in range(len(nums) - 1):
+            left_sum += nums[left]
+            total_sum -= nums[left]
+            print(left_sum, total_sum, left)
+            if left_sum == total_sum - nums[left + 1]:
+                return left + 1
+            elif left_sum == sum(nums):
+                return 0
+
         return -1
 
 
