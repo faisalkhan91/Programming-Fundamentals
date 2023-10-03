@@ -29,6 +29,8 @@ class Solution:
         iterate through the array. If the sum from the left matches the sum from the right we send the value of left as
         the pivot index. In each loop we subtract the right sie first and then check the condition, if the condition is
         not true we increment left_sum.
+
+        Time Complexity: O(n), Space Complexity: O(1)
         :param nums:
         :return: left (pivot)
         """
