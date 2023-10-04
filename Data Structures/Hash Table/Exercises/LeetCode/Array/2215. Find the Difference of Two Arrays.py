@@ -5,15 +5,30 @@ https://leetcode.com/problems/find-the-difference-of-two-arrays/description/?env
 
 
 class Solution:
-    def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
+    def findDifference(self, nums1, nums2):
+        """
+        In this solution, Hashset is used to store the values of the numbers.
+        :param nums1:
+        :param nums2:
+        :return:
+        """
+        nums1 = set(nums1)
+        nums2 = set(nums2)
+        tmp1 = []
+        tmp2 = []
 
-        nums1_map = Counter(nums1)
-        nums2_map = Counter(nums2)
+        for i in nums1:
+            if i not in nums2:
+                tmp1.append(i)
 
-        print(nums1_map, nums2_map)
+        for i in nums2:
+            if i not in nums1:
+                tmp2.append(i)
 
-        for i in range(len(nums1_map)):
-            if nums1_map[i] in nums2_map:
-                pass
-            else:
+        return [tmp1, tmp2]
 
+
+nums1 = [1,2,3]
+nums2 = [2,4,6]
+execute = Solution()
+print(execute.findDifference(nums1, nums2))
