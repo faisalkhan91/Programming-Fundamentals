@@ -13,6 +13,8 @@ class Solution:
         In this solution a Hashmap and a Hashset are used to compare the number of occurrences. The Hashmap is used to
         count the occurrences of the values and the Hashset is used to check if the occurrences are unique. True is
         returned if the occurrences are unique, false otherwise.
+
+        Time Complexity: O(n), Space Complexity: O(1).
         """
         arr_map = Counter(arr)  # Count the occurrences.
         frequency_set = set(arr_map.values())  # Check the uniqueness of the occurrences.
