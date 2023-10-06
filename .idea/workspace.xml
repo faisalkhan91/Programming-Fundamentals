@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba348b0b-b80e-4b02-8858-143cf542d0a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Data Structures/Hash Table/Exercises/LeetCode/Array/1207. Unique Number of Occurrences.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures/Hash Table/Exercises/LeetCode/Array/2215. Find the Difference of Two Arrays.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures/Hash Table/Exercises/LeetCode/Array/2215. Find the Difference of Two Arrays.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
