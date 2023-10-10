@@ -25,9 +25,8 @@ class Solution:
             return True
         return False
 
-        def closeStrings_oneliner(self, word1: str, word2: str) -> bool:
-            return True if (sorted(list(Counter(word1).values())) == sorted(list(Counter(word2).values())) and set(
-                word1) == set(word2)) else False
+    def closeStrings(self, word1: str, word2: str) -> bool:
+        return sorted(list(Counter(word1).values())) == sorted(list(Counter(word2).values())) and set(word1) == set(word2)
 
 
 word1 = "abc"
