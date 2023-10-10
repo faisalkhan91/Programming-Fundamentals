@@ -1,6 +1,12 @@
 """
 1657. Determine if Two Strings Are Close
 https://leetcode.com/problems/determine-if-two-strings-are-close/description/?envType=study-plan-v2&envId=leetcode-75
+
+Two strings are considered close if you can attain one from the other using the following operations:
+    Operation 1: Swap any two existing characters.
+        For example, abcde -> aecdb
+    Operation 2: Transform every occurrence of one existing character into another existing character, and do the same with the other character.
+        For example, aacabb -> bbcbaa (all a's turn into b's, and all b's turn into a's)
 """
 
 from collections import Counter
