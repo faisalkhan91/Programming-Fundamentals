@@ -5,21 +5,26 @@ https://leetcode.com/problems/equal-row-and-column-pairs/description/?envType=st
 
 
 class Solution:
-    def equalPairs(self, grid: List[List[int]]) -> int:
-        column_map = []
+    def equalPairs(self, grid) -> int:
+        """
+        In this solution, the transpose of the grid is created and the columns are stored in the column_map list. The
+        rows and columns are compared to see if they form an equal pair, the count of the equal pairs is returned.
+        """
+        column_map = []  # To store the column transpose.
         temp = []
         count = 0
+        length = len(grid)
 
-        for row in range(len(grid)):
-            for column in range(len(grid)):
-                temp.append(grid[column][row])
-                if len(temp) % len(grid) == 0:
+        for row in range(length):
+            for column in range(length):
+                temp.append(grid[column][row])  # Append the current elements in a column to the temp list.
+                if len(temp) % length == 0:  # If the end of the column is reached, add the column to column_map.
                     column_map.append(temp)
-                    temp = []
+                    temp = []  # Reset temp
 
         for row in grid:
             for column in column_map:
-                if row == column:
+                if row == column:  # To check if the rows and columns are equal.
                     count += 1
 
         return count
