@@ -5,19 +5,24 @@ https://leetcode.com/problems/equal-row-and-column-pairs/description/?envType=st
 
 
 class Solution:
-    def equalPairs(self, grid) -> int:
-        row_map = {}
-        column_map = {}
+    def equalPairs(self, grid: List[List[int]]) -> int:
+        column_map = []
+        temp = []
+        count = 0
 
-        # for i in range(len(grid)):
-        #     for j in range(len(grid[i])):
-        #         row_map[ij] = (grid[i], grid[j])
+        for row in range(len(grid)):
+            for column in range(len(grid)):
+                temp.append(grid[column][row])
+                if len(temp) % len(grid) == 0:
+                    column_map.append(temp)
+                    temp = []
 
         for row in grid:
-            row_map[str(row[0])] = 1
+            for column in column_map:
+                if row == column:
+                    count += 1
 
-        print(row_map)
-        return 0
+        return count
 
 
 grid = [[3,2,1],[1,7,6],[2,7,7]]
