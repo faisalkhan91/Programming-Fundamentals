@@ -11,16 +11,14 @@ class Solution:
         rows and columns are compared to see if they form an equal pair, the count of the equal pairs is returned.
         """
         column_map = []  # To store the column transpose.
-        temp = []
         count = 0
         length = len(grid)
 
         for row in range(length):
+            col = []  # Reset column.
             for column in range(length):
-                temp.append(grid[column][row])  # Append the current elements in a column to the temp list.
-                if len(temp) % length == 0:  # If the end of the column is reached, add the column to column_map.
-                    column_map.append(temp)
-                    temp = []  # Reset temp
+                col.append(grid[column][row])  # Append the current elements in a column to the col list.
+            column_map.append(col)
 
         for row in grid:
             for column in column_map:
