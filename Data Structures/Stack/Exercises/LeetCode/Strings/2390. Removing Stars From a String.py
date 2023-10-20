@@ -6,15 +6,21 @@ https://leetcode.com/problems/removing-stars-from-a-string/description/?envType=
 
 class Solution:
     def removeStars(self, s: str) -> str:
-        s = list(s)
-        i = len(s) - 1
+        """
+        In this solution, stack is used to store the characters from the string and pop the last character when a * is
+        encountered.
+        """
 
-        while i > 0:
-            if s[i] == '*':
-                s.pop()
-                s.pop()
-                i -= 2
+        non_star = []  # The List is declared as stack. This will hold the resulting string.
+        for char in s:
+            if char == '*':
+                non_star.pop()  # Pop the last character when a * is encountered.
             else:
-                i -= 1
+                non_star.append(char)  # Keep adding the characters to the stack.
 
-        print(s)
+        return ''.join(non_star)
+
+
+s = "leet**cod*e"
+execute = Solution()
+print(execute.removeStars(s))
