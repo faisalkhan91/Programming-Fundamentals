@@ -33,5 +33,9 @@ Hash Map / Set:
 - [1657. Determine if Two Strings Are Close](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Hash%20Table/Exercises/LeetCode/Strings/1657.%20Determine%20if%20Two%20Strings%20Are%20Close.py)
 - [2352. Equal Row and Column Pairs](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Hash%20Table/Exercises/LeetCode/Array/2352.%20Equal%20Row%20and%20Column%20Pairs.py)
 
+Stack:
+- [2390. Removing Stars From a String](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Stack/Exercises/LeetCode/Strings/2390.%20Removing%20Stars%20From%20a%20String.py)
+- 
+
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
