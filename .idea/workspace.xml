@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba348b0b-b80e-4b02-8858-143cf542d0a4" name="Changes" comment="" />
+    <list default="true" id="ba348b0b-b80e-4b02-8858-143cf542d0a4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures/Stack/Exercises/LeetCode/Strings/2390. Removing Stars From a String.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures/Stack/Exercises/LeetCode/Strings/2390. Removing Stars From a String.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trackers/LeetCode 75.md" beforeDir="false" afterPath="$PROJECT_DIR$/Trackers/LeetCode 75.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
