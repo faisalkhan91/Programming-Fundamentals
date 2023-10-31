@@ -21,3 +21,23 @@ class Solution:
                 substring = ''
 
         return decoded
+
+
+    def decodeString(self, s: str) -> str:
+        frequencies = []
+        decoded = []
+        sub_str = ''
+        for char in s:
+            if char == "]":
+                num = int(frequencies.pop())
+                decoded.append(sub_str * num)
+                sub_str = ''
+            elif char == "[":
+                decoded.append(sub_str)
+                sub_str = ''
+            elif char.isalpha():
+                sub_str += char
+            elif char.isnumeric():
+                frequencies.append(char)
+            print(decoded)
+        return ''.join(decoded)
