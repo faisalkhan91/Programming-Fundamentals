@@ -41,3 +41,59 @@ class Solution:
                 frequencies.append(char)
             print(decoded)
         return ''.join(decoded)
+
+    class Solution:
+        def decodeString(self, s: str) -> str:
+            frequencies = []
+            decoded = []
+            ans = []
+            alpha_str = ''
+            num_str = ''
+            for char in s:
+                if char == "]":
+                    num = frequencies.pop()
+                    prev = decoded.pop
+                    ans.append(alpha_str * num)
+                    alpha_str = ''
+                elif char == "[":
+                    frequencies.append(int(num_str))
+                    if alpha_str != '':
+                        decoded.append(alpha_str)
+                    num_str = ''
+                    alpha_str = ''
+                elif char.isalpha():
+                    alpha_str += char
+                elif char.isnumeric():
+                    num_str += char
+                print(decoded)
+            return ''.join(ans)
+
+        class Solution:
+            def decodeString(self, s: str) -> str:
+                frequencies = []
+                decoded = []
+                alpha_str = ''
+                num_str = ''
+                prev = ''
+                for char in s:
+                    if char == "]":
+                        num = frequencies.pop()
+                        if frequencies:
+                            prev = decoded.pop()
+                            curr = prev + alpha_str * num
+                        else:
+                            curr = alpha_str * num
+                        decoded.append(curr)
+                        alpha_str = ''
+                    elif char == "[":
+                        frequencies.append(int(num_str))
+                        if alpha_str != '':
+                            decoded.append(alpha_str)
+                        num_str = ''
+                        alpha_str = ''
+                    elif char.isalpha():
+                        alpha_str += char
+                    elif char.isnumeric():
+                        num_str += char
+                    print(decoded)
+                return ''.join(decoded)
