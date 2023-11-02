@@ -6,94 +6,38 @@ https://leetcode.com/problems/decode-string/description/?envType=study-plan-v2&e
 
 class Solution:
     def decodeString(self, s: str) -> str:
-        decoded = ''
-        coding = 0
-        substring = ''
+        """
+        In this solution, stack is used to store the substrings and the frequency of the sub strings. The current value
+        of the frequency and also the current substring are stored in the stack (decoding) once a "[" is encountered.
+        This is such that it decodes the inner brackets before the outer one. Once a "]" is encountered, the previous
+        substring is popped from the stack as well as the previous frequency. The current substring is merged with the
+        previous decoded substring retrieved from the stack.
+        :param s:
+        :return: decoded substring
+        """
 
-        for i in range(len(s)):
-            if s[i].isalpha():
-                substring += s[i]
-            if s[i].isnumeric():
-                coding = int(s[i])
-            if s[i] == ']':
-                for j in range(coding):
-                    decoded += substring
-                substring = ''
+        decoding = []  # Stack to store the frequencies and previous substrings.
+        curr_num = ''
+        curr_str = ''
 
-        return decoded
-
-
-    def decodeString(self, s: str) -> str:
-        frequencies = []
-        decoded = []
-        sub_str = ''
         for char in s:
-            if char == "]":
-                num = int(frequencies.pop())
-                decoded.append(sub_str * num)
-                sub_str = ''
-            elif char == "[":
-                decoded.append(sub_str)
-                sub_str = ''
-            elif char.isalpha():
-                sub_str += char
-            elif char.isnumeric():
-                frequencies.append(char)
-            print(decoded)
-        return ''.join(decoded)
+            if char.isnumeric():
+                curr_num += char  # Keep adding the char as the number can be 3 digits.
+            elif char == '[':
+                decoding.append(int(curr_num))  # If another "[", store the current frequency.
+                decoding.append(curr_str)  # If another "[", store the current substring.
+                curr_num = ''  # Reset the frequency.
+                curr_str = ''  # Reset the substring.
+            elif char == ']':
+                prev_str = decoding.pop()  # Get the previous substring.
+                prev_num = decoding.pop()  # Get the previous frequency.
+                curr_str = prev_str + curr_str * prev_num  # Extend the current substring with the decoded substring.
+            else:
+                curr_str += char  # Add the characters to the current substring.
 
-    class Solution:
-        def decodeString(self, s: str) -> str:
-            frequencies = []
-            decoded = []
-            ans = []
-            alpha_str = ''
-            num_str = ''
-            for char in s:
-                if char == "]":
-                    num = frequencies.pop()
-                    prev = decoded.pop
-                    ans.append(alpha_str * num)
-                    alpha_str = ''
-                elif char == "[":
-                    frequencies.append(int(num_str))
-                    if alpha_str != '':
-                        decoded.append(alpha_str)
-                    num_str = ''
-                    alpha_str = ''
-                elif char.isalpha():
-                    alpha_str += char
-                elif char.isnumeric():
-                    num_str += char
-                print(decoded)
-            return ''.join(ans)
+        return curr_str
 
-        class Solution:
-            def decodeString(self, s: str) -> str:
-                frequencies = []
-                decoded = []
-                alpha_str = ''
-                num_str = ''
-                prev = ''
-                for char in s:
-                    if char == "]":
-                        num = frequencies.pop()
-                        if frequencies:
-                            prev = decoded.pop()
-                            curr = prev + alpha_str * num
-                        else:
-                            curr = alpha_str * num
-                        decoded.append(curr)
-                        alpha_str = ''
-                    elif char == "[":
-                        frequencies.append(int(num_str))
-                        if alpha_str != '':
-                            decoded.append(alpha_str)
-                        num_str = ''
-                        alpha_str = ''
-                    elif char.isalpha():
-                        alpha_str += char
-                    elif char.isnumeric():
-                        num_str += char
-                    print(decoded)
-                return ''.join(decoded)
+
+s = "3[a2[c]]"
+execute = Solution()
+print(execute.decodeString(s))
