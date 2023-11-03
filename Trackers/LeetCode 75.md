@@ -38,5 +38,8 @@ Stack:
 - [735. Asteroid Collision](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Stack/Exercises/LeetCode/Array/735.%20Asteroid%20Collision.py)
 - [394. Decode String](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Stack/Exercises/LeetCode/Strings/394.%20Decode%20String.py)
 
+Queue:
+- [933. Number of Recent Calls](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Queue/Exercises/LeetCode/Array/933.%20Number%20of%20Recent%20Calls.py)
+
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
