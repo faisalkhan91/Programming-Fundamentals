@@ -7,17 +7,14 @@ https://leetcode.com/problems/number-of-recent-calls/description/?envType=study-
 class RecentCounter:
 
     def __init__(self):
-        self.ping_count = []
+        self.pings = []
 
     def ping(self, t: int) -> int:
-        self.ping_count.append(t)
-        range1 = [t - 3000, t]
-        count = 0
+        self.pings.append(t)
+        while self.pings and t - self.pings[0] > 3000:
+            self.pings.pop(0)
 
-        for i in self.ping_count:
-            if i in range1:
-                count += 1
-        return count
+        return len(self.pings)
 
 
 # Your RecentCounter object will be instantiated and called as such:
