@@ -40,6 +40,7 @@ Stack:
 
 Queue:
 - [933. Number of Recent Calls](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Queue/Exercises/LeetCode/Array/933.%20Number%20of%20Recent%20Calls.py)
+- [649. Dota2 Senate](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Queue/Exercises/LeetCode/Strings/649.%20Dota2%20Senate.py)
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
