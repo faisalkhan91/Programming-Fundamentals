@@ -3,6 +3,8 @@
 https://leetcode.com/problems/dota2-senate/description/?envType=study-plan-v2&envId=leetcode-75
 """
 
+from collections import deque
+
 
 class Solution:
     def predictPartyVictory(self, senate: str) -> str:
@@ -25,3 +27,8 @@ class Solution:
                 dire.append(dire.popleft() + length)
 
         return "Radiant" if radiant else "Dire"
+
+
+senate = "RD"
+execute = Solution()
+print(execute.predictPartyVictory(senate))
