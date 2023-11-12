@@ -7,21 +7,21 @@ https://leetcode.com/problems/dota2-senate/description/?envType=study-plan-v2&en
 class Solution:
     def predictPartyVictory(self, senate: str) -> str:
 
-        queue = deque()
+        radiant, dire = deque(), deque()
+        length = len(senate)
 
-        if len(senate) <= 1:
-            return "Dire" if senate == "D" else "Radiant"
-        if senate[0] != senate[1]:
-            queue.append(senate[0])
-        else:
-            queue.append(senate[0])
-            queue.append(senate[1])
+        for i in range(length):
+            if senate[i] == "R":
+                radiant.append(i)
+            else:
+                dire.append(i)
 
-        for senator in senate[2:]:
-            queue.append(senator)
+        while radiant and dire:
+            if radiant[0] < dire[0]:
+                dire.popleft()
+                radiant.append(radiant.popleft() + length)
+            else:
+                radiant.popleft()
+                dire.append(dire.popleft() + length)
 
-            if queue[0] != senator:
-                queue.popleft()
-            print(queue)
-
-        return "Dire" if queue[0] == "D" else "Radiant"
+        return "Radiant" if radiant else "Dire"
