@@ -1,5 +1,5 @@
 # Programming-Fundamentals
-Code samples for Big O notation, Data Structures and Algorithms that constitute the basics of understanding coding principles.
+Code samples for Big O notation, Data Structures, and Algorithms that constitute the basics of understanding coding principles.
 
 This is structured as below:
 
@@ -67,5 +67,5 @@ There are topics solved under LeetCode, they are as follows:
 - Stacks
 - Queues
 
-This encompasses all the common fundamentals of programming. This repository is updated as needed.
-Copyright 2023.
+This encompasses all the common fundamentals of programming. This repository will be updated to reflect my progress.
+Copyright © 2023.
