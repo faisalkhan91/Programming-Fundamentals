@@ -11,6 +11,11 @@ https://leetcode.com/problems/odd-even-linked-list/description/?envType=study-pl
 #         self.next = next
 class Solution:
     def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        """
+        In this solution the two-pointer technique is used to traverse the linked list.
+        :param head:
+        :return:
+        """
 
         if not head: return head
         odd = head
@@ -21,7 +26,6 @@ class Solution:
             even.next = even.next.next
             odd = odd.next
             even = even.next
-
         odd.next = placeholder
 
         return head
