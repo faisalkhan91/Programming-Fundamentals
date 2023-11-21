@@ -45,6 +45,7 @@ Queue:
 Linked List:
 - [2095. Delete the Middle Node of a Linked List](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/Two%20Pointer/2095.%20Delete%20the%20Middle%20Node%20of%20a%20Linked%20List.py)
 - [328. Odd Even Linked List](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/Two%20Pointer/328.%20Odd%20Even%20Linked%20List.py)
+- [206. Reverse Linked List]()
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
