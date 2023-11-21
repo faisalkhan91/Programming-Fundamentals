@@ -1,6 +1,6 @@
 """
 206. Reverse Linked List
-https://leetcode.com/problems/reverse-linked-list/?envType=study-plan&id=level-1
+https://leetcode.com/problems/reverse-linked-list/?envType=study-plan-v2&envId=leetcode-75
 """
 
 
