@@ -10,7 +10,7 @@ String
 
 Linked List
 - [21. Merge Two Sorted Lists](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/21.%20Merge%20Two%20Sorted%20Lists.py)
-- [206. Reverse Linked List](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/206.%20Reverse%20Linked%20List.py)
+- [206. Reverse Linked List](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/Recursion/206.%20Reverse%20Linked%20List.py)
 - [876. Middle of the Linked List](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/876.%20Middle%20of%20the%20Linked%20List.py)
 - [142. Linked List Cycle II](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/142.%20Linked%20List%20Cycle%20II.py)
 
