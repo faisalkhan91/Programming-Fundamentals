@@ -11,10 +11,15 @@ https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description/?env
 #         self.next = next
 class Solution:
     def pairSum(self, head: Optional[ListNode]) -> int:
-        reversed = None
-        non_reversed = None
+
+        list_stack = []
+
         while head:
-            current_node = head
+            list_stack.append(head.val)
             head = head.next
-            current_node.next = reversed
-            reversed = current_node
+
+        for i in range(len(list_stack) // 2):
+            tail_twin = list_stack.pop()
+            list_stack[i] += tail_twin
+
+        return max(list_stack)
