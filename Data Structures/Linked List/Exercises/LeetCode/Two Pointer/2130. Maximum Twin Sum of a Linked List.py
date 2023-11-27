@@ -21,14 +21,14 @@ class Solution:
         :return: Maximum sum of a twin pair.
         """
 
-        list_stack = []
+        list_stack = []  # Declare stack.
 
         while head:
-            list_stack.append(head.val)
+            list_stack.append(head.val)  # Iterate over the list and add values to the stack.
             head = head.next
 
-        for i in range(len(list_stack) // 2):
-            tail_twin = list_stack.pop()
+        for i in range(len(list_stack) // 2):  # Iterate only until the mid of the stack.
+            tail_twin = list_stack.pop()  # Remove elements from the end and add it to the twin pair in the stack.
             list_stack[i] += tail_twin
 
         return max(list_stack)
@@ -51,15 +51,15 @@ class Solution:
         fast = head
         twin_sum = []
 
-        while fast and fast.next:
-            twin_sum.append(slow.val)
+        while fast and fast.next:  # Iterate until the middle of the list.
+            twin_sum.append(slow.val) # Insert the values form the linked list into the stack.
             slow = slow.next
             fast = fast.next.next
 
-        twin_sum.reverse()
+        twin_sum.reverse()  # Reverse the stack.
         i = 0
 
-        while slow:
+        while slow:  # Iterate the remaining values in the list and add it to the twin pair in the stack.
             twin_sum[i] += slow.val
             slow = slow.next
             i += 1
