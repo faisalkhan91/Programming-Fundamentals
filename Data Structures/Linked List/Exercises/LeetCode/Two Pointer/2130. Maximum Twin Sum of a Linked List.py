@@ -12,11 +12,13 @@ https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description/?env
 class Solution:
     def pairSum(self, head: Optional[ListNode]) -> int:
         """
-        This solution primarily uses stack to solve the problem. The linked list is iterated over and all the values
+        This solution primarily uses stack to solve the problem. The linked list is iterated over, and all the values
         are added to the stack. Then we iterate over the stack and pop the elements from the end of the stack and add it
         to the front twin pair in the stack. Then the max value in the stack is returned.
-        :param head:
-        :return:
+
+        Time Complexity: O(n). Space Complexity: O(n).
+        :param head: Given Linked List
+        :return: Maximum sum of a twin pair.
         """
 
         list_stack = []
@@ -32,6 +34,19 @@ class Solution:
         return max(list_stack)
 
     def pairSum_two_pointer(self, head: Optional[ListNode]) -> int:
+        """
+        In this solution, two pointers technique is utilized and more specifically the slow and fast pointer technique.
+        The slow pointer iterates at 1x the speed while the fast pointer is operated at 2x the speed. Thus, a slow
+        pointer reaches the middle of the linked list when the fast pointer has iterated over the whole linked list.
+        The elements in the slow pointer are stored in a list and reversed once mid is reached. Then the rest of the
+        remaining linked list is iterated with the slow pointer, and each new element is added with the twin pair in the
+        list.
+
+        Time Complexity: O(n). Space Complexity: O(1).
+
+        :param head: Given Linked List
+        :return: Maximum sum of a twin pair.
+        """
         slow = head
         fast = head
         twin_sum = []
