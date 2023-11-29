@@ -49,7 +49,7 @@ Linked List:
 - [2130. Maximum Twin Sum of a Linked List](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Linked%20List/Exercises/LeetCode/Two%20Pointer/2130.%20Maximum%20Twin%20Sum%20of%20a%20Linked%20List.py)
 
 Binary Tree - DFS:
--[104. Maximum Depth of Binary Tree]()
+-[104. Maximum Depth of Binary Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/104.%20Maximum%20Depth%20of%20Binary%20Tree.py)
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
