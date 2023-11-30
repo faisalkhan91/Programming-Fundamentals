@@ -11,19 +11,11 @@ https://leetcode.com/problems/maximum-depth-of-binary-tree/description/?envType=
 #         self.left = left
 #         self.right = right
 class Solution:
-    def maxDepth(self, root: Optional[TreeNode], count_list=[], counter=0) -> int:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
 
-        current_node = root
+        left = self.maxDepth(root.left) + 1
+        right = self.maxDepth(root.right) + 1
 
-        if current_node.left:
-            counter += 1
-            self.maxDepth(current_node.left, count_list, counter)
-        else:
-            count_list.append(counter)
-        if current_node.right:
-            counter += 1
-            self.maxDepth(current_node.right, count_list, counter)
-        else:
-            count_list.append(counter)
-
-        return max(count_list)
+        return max(left, right)
