@@ -40,7 +40,7 @@ class Solution:
         Time Complexity: O(n). Space Complexity: O(n).
 
         :param node: Binary Tree
-        :param leaves: All the leaves
+        :param leaves: All the leaf nodes.
         :return: leaves
         """
         if not node.left and not node.right:
