@@ -28,3 +28,31 @@ class Solution:
         if node.right:
             self.DFS(node.right, valid)
         return valid
+
+    ########################################################################
+
+    # Definition for a binary tree node.
+    # class TreeNode:
+    #     def __init__(self, val=0, left=None, right=None):
+    #         self.val = val
+    #         self.left = left
+    #         self.right = right
+    class Solution:
+        def goodNodes(self, root: TreeNode) -> int:
+
+            good_nodes = 0
+            good_nodes = self.DFS(root, good_nodes)
+
+            return good_nodes
+
+        def DFS(self, node, valid):
+            if not node.left or not node.right:
+                return valid
+            if node.val <= node.left.val or node.val <= node.right.val:
+                valid += 1
+            if node.left:
+                left = self.DFS(node.left, valid)
+            if node.right:
+                right = self.DFS(node.right, valid)
+            valid = left + right
+            return valid
