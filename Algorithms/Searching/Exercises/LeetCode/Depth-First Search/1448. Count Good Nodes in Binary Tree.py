@@ -56,3 +56,32 @@ class Solution:
                 right = self.DFS(node.right, valid)
             valid = left + right
             return valid
+
+    ################################################################################################
+
+    # Definition for a binary tree node.
+    # class TreeNode:
+    #     def __init__(self, val=0, left=None, right=None):
+    #         self.val = val
+    #         self.left = left
+    #         self.right = right
+    class Solution:
+        def goodNodes(self, root: TreeNode) -> int:
+
+            good_nodes = [0]
+            good_nodes = self.DFS(root, good_nodes)
+
+            return good_nodes
+
+        def DFS(self, node, valid, max=0):
+            if not node:
+                return
+            if node.val >= max:
+                valid[0] += 1
+                max = node.val
+
+            self.DFS(node.left, valid, max)
+            self.DFS(node.right, valid, max)
+            print(valid)
+            return valid[0]
+
