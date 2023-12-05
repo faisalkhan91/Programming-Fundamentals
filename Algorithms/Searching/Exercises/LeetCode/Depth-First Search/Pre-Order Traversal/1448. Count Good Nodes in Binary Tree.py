@@ -73,5 +73,4 @@ class Solution:
         self.preorder_dfs(node.right, valid, curr_max)
         return valid[0]
 
-
     #################################################################################
