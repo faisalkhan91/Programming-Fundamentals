@@ -13,23 +13,22 @@ https://leetcode.com/problems/path-sum-iii/description/?envType=study-plan-v2&en
 class Solution:
     def __init__(self):
         self.path = 0
-        self.path_sum = 0
 
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
         return self.DFS(root, targetSum)
 
-    def DFS(self, node, target):
+    def DFS(self, node, target, path_sum=0):
         if not node:
             return
 
-        if self.path_sum == target:
+        if path_sum == target:
             self.path += 1
-        if self.path_sum >= target:
-            self.path_sum = node.val
+        if path_sum >= target:
+            path_sum = node.val
         else:
-            self.path_sum += node.val
+            path_sum += node.val
 
-        self.DFS(node.left, target)
-        self.DFS(node.right, target)
+        self.DFS(node.left, target, path_sum)
+        self.DFS(node.right, target, path_sum)
 
         return self.path
