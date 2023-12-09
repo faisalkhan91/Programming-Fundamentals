@@ -17,18 +17,19 @@ class Solution:
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
         return self.DFS(root, targetSum)
 
-    def DFS(self, node, target, path_sum=0):
+    def DFS(self, node, target):
         if not node:
-            return
+            return 0
+        self.helper(node, target)
+        self.DFS(node.left, target)
+        self.DFS(node.right, target)
+        return self.path
 
+    def helper(self, node, target, path_sum=0):
+        if not node: return
+        path_sum += node.val
         if path_sum == target:
             self.path += 1
-        if path_sum >= target:
-            path_sum = node.val
-        else:
-            path_sum += node.val
+        self.helper(node.left, target, path_sum)
+        self.helper(node.right, target, path_sum)
 
-        self.DFS(node.left, target, path_sum)
-        self.DFS(node.right, target, path_sum)
-
-        return self.path
