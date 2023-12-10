@@ -15,6 +15,12 @@ class Solution:
         self.path = 0
 
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
+        """
+        Reference: https://www.youtube.com/watch?v=VDTZiggKlAE
+        :param root:
+        :param targetSum:
+        :return:
+        """
         return self.DFS(root, targetSum)
 
     def DFS(self, node, target):
@@ -25,11 +31,11 @@ class Solution:
         self.DFS(node.right, target)
         return self.path
 
-    def helper(self, node, target, path_sum=0):
+    def helper(self, node, target):
         if not node: return
-        path_sum += node.val
-        if path_sum == target:
+        target -= node.val
+        if target == 0:
             self.path += 1
-        self.helper(node.left, target, path_sum)
-        self.helper(node.right, target, path_sum)
+        self.helper(node.left, target)
+        self.helper(node.right, target)
 
