@@ -1,5 +1,5 @@
 [![](https://img.shields.io/github/stars/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/fork)
-![GitHub forks](https://img.shields.io/github/forks/faisalkhan91/Programming-Fundamentals?style=social)
+![](https://img.shields.io/github/forks/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/fork)
 ![GitHub watchers](https://img.shields.io/github/watchers/faisalkhan91/Programming-Fundamentals?style=social)
 ![GitHub followers](https://img.shields.io/github/followers/faisalkhan91?style=social)
 
