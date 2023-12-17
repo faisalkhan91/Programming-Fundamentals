@@ -1,4 +1,4 @@
-[![](https://img.shields.io/github/stars/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/starred)
+[![](https://img.shields.io/github/stars/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/bookmark)
 [![](https://img.shields.io/github/forks/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/fork)
 [![](https://img.shields.io/github/watchers/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/subscription)
 [![](https://img.shields.io/github/followers/faisalkhan91?style=social)](https://github.com/faisalkhan91)
