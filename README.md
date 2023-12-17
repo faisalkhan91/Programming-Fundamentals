@@ -1,3 +1,5 @@
+Fork or Star if you want to stay up to date with the repository.
+
 # Programming-Fundamentals
 Code samples for Big O notation, Data Structures, and Algorithms that constitute the basics of understanding coding principles.
 
