@@ -1,5 +1,3 @@
-Fork or Star if you want to stay up to date with the repository.
-
 ![GitHub stars](https://img.shields.io/github/stars/faisalkhan91/Programming-Fundamentals?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/faisalkhan91/Programming-Fundamentals?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/faisalkhan91/Programming-Fundamentals?style=social)
