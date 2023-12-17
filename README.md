@@ -1,7 +1,7 @@
-[![](https://img.shields.io/github/stars/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/fork)
+[![](https://img.shields.io/github/stars/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/star)
 [![](https://img.shields.io/github/forks/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/fork)
-[![][GitHub watchers](https://img.shields.io/github/watchers/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/fork)
-![GitHub followers](https://img.shields.io/github/followers/faisalkhan91?style=social)
+[![](https://img.shields.io/github/watchers/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/watch)
+[![](https://img.shields.io/github/followers/faisalkhan91?style=social)](https://github.com/faisalkhan91/followers)
 
 # Programming-Fundamentals
 Code samples for Big O notation, Data Structures, and Algorithms that constitute the basics of understanding coding principles.
