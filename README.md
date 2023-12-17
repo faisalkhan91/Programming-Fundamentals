@@ -1,8 +1,8 @@
 Fork or Star if you want to stay up to date with the repository.
 
-[fork my repository](https://github.com/faisalkhan91/Programming-Fundamentals/fork)
+[![Star on GitHub](https://img.shields.io/github/stars/jonsn0w/hyde.svg?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/fork)
 
-[watch this repo](https://github.com/faisalkhan91/Programming-Fundamentals/subscription)
+[![Watch on GitHub](https://img.shields.io/github/watchers/jonsn0w/hyde.svg?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/subscription)
 
 # Programming-Fundamentals
 Code samples for Big O notation, Data Structures, and Algorithms that constitute the basics of understanding coding principles.
