@@ -1,4 +1,5 @@
-![GitHub stars(https://img.shields.io/github/stars/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/fork)
+[!GitHub stars(https://img.shields.io/github/stars/faisalkhan91/Programming-Fundamentals?style=social)](https://github.com/faisalkhan91/Programming-Fundamentals/fork)
+[![](https://s18955.pcdn.co/wp-content/uploads/2018/02/github.png)](https://github.com/user/repository/subscription)
 ![GitHub forks](https://img.shields.io/github/forks/faisalkhan91/Programming-Fundamentals?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/faisalkhan91/Programming-Fundamentals?style=social)
 ![GitHub followers](https://img.shields.io/github/followers/faisalkhan91?style=social)
