@@ -40,8 +40,6 @@ class Solution:
         self.helper(node.right, target)
 
 
-
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -54,21 +52,22 @@ class Solution:
         self.cache = {}
 
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
-        return self.DFS(root, targetSum)
+        self.DFS(root, targetSum)
+        return self.path
 
     def DFS(self, node, target, current_path_sum = 0):
         if not node:
             return
         current_path_sum += node.val
         old_path_sum = current_path_sum - target
-        if current_path_sum in self.cache.keys():
+        if current_path_sum == target:
+            self.path += 1
+        if old_path_sum in self.cache:
+            self.path += self.cache[old_path_sum]
+        if current_path_sum in self.cache:
             self.cache[current_path_sum] += 1
         else:
             self.cache[current_path_sum] = 1
-        if old_path_sum in self.cache.keys():
-            self.path += self.cache[old_path_sum]
-        self.DFS(node.left, target)
-        self.DFS(node.right, target)
+        self.DFS(node.left, target, current_path_sum)
+        self.DFS(node.right, target, current_path_sum)
         self.cache[current_path_sum] -= 1
-        print(self.cache, self.path)
-        return self.path
