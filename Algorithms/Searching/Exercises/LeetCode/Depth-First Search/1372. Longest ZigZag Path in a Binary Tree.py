@@ -34,3 +34,34 @@ class Solution:
                 helper(node.right, zigzag)
 
         return DFS(root)
+
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def longestZigZag(self, root: Optional[TreeNode]) -> int:
+        self.longest_zigzag = 0
+
+        def DFS(node):
+            if not node:
+                return
+            helper(node)
+            DFS(node.left)
+            DFS(node.right)
+            return self.longest_zigzag
+
+        def helper(node, zigzag=0, state=True):
+            if not node:
+                self.longest_zigzag = max(zigzag, self.longest_zigzag)
+                return
+
+            if state:
+                helper(node.left, zigzag + node.val, False)
+            else:
+                helper(node.right, zigzag + node.val, True)
+
+        return DFS(root)
