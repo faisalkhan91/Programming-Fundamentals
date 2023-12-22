@@ -52,7 +52,9 @@ Binary Tree - DFS:
 - [104. Maximum Depth of Binary Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/104.%20Maximum%20Depth%20of%20Binary%20Tree.py)
 - [872. Leaf-Similar Trees](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/Pre-Order%20Traversal/872.%20Leaf-Similar%20Trees.py)
 - [1448. Count Good Nodes in Binary Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/Pre-Order%20Traversal/1448.%20Count%20Good%20Nodes%20in%20Binary%20Tree.py)
-- 
+- [437. Path Sum III](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/Memoization/437.%20Path%20Sum%20III.py)
+- [1372. Longest ZigZag Path in a Binary Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/Pre-Order%20Traversal/1372.%20Longest%20ZigZag%20Path%20in%20a%20Binary%20Tree.py)
+- [104. Maximum Depth of Binary Tree]()
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
