@@ -13,6 +13,13 @@ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/descriptio
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        """
+        This solution utilizes in-order depth first search traversal to search for the lowest common ancestor
+        :param root:
+        :param p:
+        :param q:
+        :return:
+        """
         def dfs(node):
             if not node:
                 return None
