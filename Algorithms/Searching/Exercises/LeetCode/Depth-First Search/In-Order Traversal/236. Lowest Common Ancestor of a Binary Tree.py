@@ -1,6 +1,10 @@
 """
 236. Lowest Common Ancestor of a Binary Tree
 https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/?envType=study-plan-v2&envId=leetcode-75
+
+Definition of LCA (https://en.wikipedia.org/wiki/Lowest_common_ancestor):
+The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as
+descendants (where we allow a node to be a descendant of itself).
 """
 
 
@@ -60,7 +64,7 @@ class Solution:
 class Solution:
     def lowestCommonAncestor_clean(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         """
-        Same as above, the code is return in more pythonic way.
+        Same as above, the code is return in more pythonic way. Also, the nested function is not utilized anymore.
 
         Time Complexity: O(n). Space Complexity: O(n).
 
