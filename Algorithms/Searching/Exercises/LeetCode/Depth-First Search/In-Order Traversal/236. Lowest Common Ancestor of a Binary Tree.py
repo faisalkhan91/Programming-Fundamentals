@@ -14,22 +14,31 @@ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/descriptio
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         """
-        This solution utilizes in-order depth first search traversal to search for the lowest common ancestor
-        :param root:
-        :param p:
-        :param q:
-        :return:
+        This solution utilizes in-order depth first search traversal to search for the lowest common ancestor in the
+        tree for the given nodes. The idea is that if the node is found, it is returned and stored in the left and right
+        variables. If both the values are there, then the current node is the parent of both the nodes and also the
+        lowest common ancestor. If there is no left value and there is a right value, then the right node is the lowest
+        common ancestor and vice versa if the left side has a value and the right side doesn't.
+
+        Note: This is an in-order DFS traversal as the left tree is searched first and then the right tree is searched.
+
+        Time Complexity: O(n). Space Complexity: O(n).
+
+        :param root: Head of Binary Search Tree.
+        :param p: The node for which the LCA needs to be found.
+        :param q: The node for which the LCA needs to be found.
+        :return: LCA of the Binary Tree.
         """
         def dfs(node):
             if not node:
                 return None
-            if node == p or node == q:
+            if node == p or node == q:  # If the given p or q is found, return the node.
                 return node
 
-            left = dfs(node.left)
-            right = dfs(node.right)
+            left = dfs(node.left)  # Store the left tree
+            right = dfs(node.right)  # Store the right tree.
 
-            if not left:
+            if not left:  # If left tree is none return right.
                 return right
             if not right:
                 return left
@@ -49,14 +58,24 @@ class Solution:
 #         self.right = None
 
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    def lowestCommonAncestor_clean(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        """
+        Same as above, the code is return in more pythonic way.
+
+        Time Complexity: O(n). Space Complexity: O(n).
+
+        :param root: Head of Binary Search Tree.
+        :param p: The node for which the LCA needs to be found.
+        :param q: The node for which the LCA needs to be found.
+        :return: LCA of the Binary Tree.
+        """
         if not root:
             return
         if root == p or root == q:
             return root
 
-        left = self.lowestCommonAncestor(root.left, p, q)
-        right = self.lowestCommonAncestor(root.right, p, q)
+        left = self.lowestCommonAncestor_clean(root.left, p, q)
+        right = self.lowestCommonAncestor_clean(root.right, p, q)
 
         if left and right:
             return root
