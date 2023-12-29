@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ba348b0b-b80e-4b02-8858-143cf542d0a4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithms/Searching/Exercises/LeetCode/Depth-First Search/In-Order Traversal/236. Lowest Common Ancestor of a Binary Tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithms/Searching/Exercises/LeetCode/Depth-First Search/In-Order Traversal/236. Lowest Common Ancestor of a Binary Tree.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-7a29c1521ef0-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.11799.298" />
+        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
       </set>
     </attachedChunks>
   </component>
