@@ -72,7 +72,6 @@ There are topics solved under LeetCode, they are as follows:
 - Stacks
 - Queues
 
-The aim of this repository is to contain all the common fundamentals of programming. This repository will be updated to reflect my progress.
-
+This repository aims to contain all the common fundamentals of programming. This repository will be updated to reflect my progress.
 
 Copyright © 2024.
