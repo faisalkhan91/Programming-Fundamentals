@@ -24,3 +24,22 @@ class Solution:
                 result.append(current_node.right.val)
                 queue.append(current_node.right)
         return result
+
+
+class Solution:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+
+        queue = [root]
+        result = []
+
+        while queue:
+            print(queue)
+            length = len(queue)
+            result.append(queue[length - 1])
+            for i in range(length - 1):
+                current_node = queue.pop(0)
+                if current_node.left:
+                    queue.append(current_node.left)
+                if current_node.right:
+                    queue.append(current_node.right)
+        return result
