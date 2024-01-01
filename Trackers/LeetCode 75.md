@@ -57,7 +57,7 @@ Binary Tree - DFS:
 - [236. Lowest Common Ancestor of a Binary Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/In-Order%20Traversal/236.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree.py)
 
 Binary Tree - BFS:
-- [199. Binary Tree Right Side View]()
+- [199. Binary Tree Right Side View](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Breadth-First%20Search/199.%20Binary%20Tree%20Right%20Side%20View.py)
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
