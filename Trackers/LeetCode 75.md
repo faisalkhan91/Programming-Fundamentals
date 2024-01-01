@@ -58,6 +58,7 @@ Binary Tree - DFS:
 
 Binary Tree - BFS:
 - [199. Binary Tree Right Side View](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Breadth-First%20Search/199.%20Binary%20Tree%20Right%20Side%20View.py)
+- [1161. Maximum Level Sum of a Binary Tree]()
 
 Binary Search Tree:
 - [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
