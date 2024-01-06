@@ -4,7 +4,7 @@
 [![](https://img.shields.io/github/followers/faisalkhan91?style=social)](https://github.com/faisalkhan91)
 
 # Programming-Fundamentals
-Code samples for Big O notation, Data Structures, and Algorithms that constitute the basics of understanding coding principles.
+Code samples for Big O notation, Data Structures, and Algorithms that constitute the basics of understanding the coding principles.
 
 This is structured as below:
 
