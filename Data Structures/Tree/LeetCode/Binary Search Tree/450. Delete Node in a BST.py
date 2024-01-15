@@ -13,8 +13,7 @@ https://leetcode.com/problems/delete-node-in-a-bst/description/?envType=study-pl
 class Solution:
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
 
-        current_node = root
-
+        current_node = previous_node = root
         while current_node:
             if key > current_node.val:
                 previous_node = current_node
@@ -29,7 +28,9 @@ class Solution:
                         current_node.left.right = current_node.right
                     elif current_node.left and not current_node.right:
                         previous_node.left = current_node.left
-                    else:
+                    elif current_node.right and not current_node.left:
                         previous_node.left = current_node.right
+                    else:
+                        root = None
                 return root
         return root
