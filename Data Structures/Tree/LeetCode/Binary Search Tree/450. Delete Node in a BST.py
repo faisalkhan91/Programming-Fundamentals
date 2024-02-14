@@ -12,57 +12,26 @@ https://leetcode.com/problems/delete-node-in-a-bst/description/?envType=study-pl
 #         self.right = right
 class Solution:
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
-
-        current_node = previous_node = root
-        while current_node:
-            if key > current_node.val:
-                previous_node = current_node
-                current_node = current_node.right
-            elif key < current_node.val:
-                previous_node = current_node
-                current_node = current_node.left
-            else:
-                if current_node.val == key:
-                    if current_node.left and current_node.right:
-                        previous_node.left = current_node.left
-                        current_node.left.right = current_node.right
-                    elif current_node.left and not current_node.right:
-                        previous_node.left = current_node.left
-                    elif current_node.right and not current_node.left:
-                        previous_node.left = current_node.right
-                    else:
-                        root = None
-                return root
-        return root
-
-
-
-#######################################################################################
-
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
+        """
+        Reference: https://www.youtube.com/watch?v=LFzAoJJt92M
+        :param root: Head of the tree.
+        :param key: Value of the node to be deleted if found.
+        :return: root
+        """
         if not root:
             return
-        if root.val < key:
-            self.deleteNode(root.right, key)
-        elif root.val > key:
-            self.deleteNode(root.right, key)
+
+        if key > root.val:
+            root.right = self.deleteNode(root.right, key)
+        elif key < root.val:
+            root.left = self.deleteNode(root.left, key)
         else:
-            if root.val == key:
-                if not root.right and root.left:
-                    return root.left
-                elif not root.left and root.right:
-                    return root.right
-                elif not root.right and root.left:
-                    return root.right
-                else:
-                    root.val = root.right.val
-                    root.right = None
-                    return root
+            if key == root.val:
+                if not root.left or not root.right:
+                    return root.left or root.right
+                curr = root.right
+                while curr.left:
+                    curr = curr.left
+                root.val = curr.val
+                root.right = self.deleteNode(root.right, root.val)
         return root
