@@ -28,7 +28,7 @@ Binary Search
 
 Binary Search Tree
 - [98. Validate Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/98.%20Validate%20Binary%20Search%20Tree.py)
-- [235. Lowest Common Ancestor of a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/235.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree.py)
+- [235. Lowest Common Ancestor of a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/Exercises/LeetCode/Binary%20Search%20Tree/235.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree.py)
 
 Graph/BFS/DFS
 - [733. Flood Fill](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Depth-First%20Search/733.%20Flood%20Fill.py)

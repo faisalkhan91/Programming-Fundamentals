@@ -61,5 +61,8 @@ Binary Tree - BFS:
 - [1161. Maximum Level Sum of a Binary Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Algorithms/Searching/Exercises/LeetCode/Breadth-First%20Search/1161.%20Maximum%20Level%20Sum%20of%20a%20Binary%20Tree.py)
 
 Binary Search Tree:
-- [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
-- [450. Delete Node in a BST](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/LeetCode/Binary%20Search%20Tree/450.%20Delete%20Node%20in%20a%20BST.py)
+- [700. Search in a Binary Search Tree](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/Exercises/LeetCode/Binary%20Search%20Tree/700.%20Search%20in%20a%20Binary%20Search%20Tree.py)
+- [450. Delete Node in a BST](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/Exercises/LeetCode/Binary%20Search%20Tree/450.%20Delete%20Node%20in%20a%20BST.py)
+
+Graphs - DFS:
+- [841. Keys and Rooms]()

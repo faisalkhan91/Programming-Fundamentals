@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ba348b0b-b80e-4b02-8858-143cf542d0a4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures/Tree/LeetCode/Binary Search Tree/235. Lowest Common Ancestor of a Binary Search Tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures/Tree/Exercises/LeetCode/Binary Search Tree/235. Lowest Common Ancestor of a Binary Search Tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures/Tree/LeetCode/Binary Search Tree/450. Delete Node in a BST.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures/Tree/Exercises/LeetCode/Binary Search Tree/450. Delete Node in a BST.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures/Tree/LeetCode/Binary Search Tree/700. Search in a Binary Search Tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures/Tree/Exercises/LeetCode/Binary Search Tree/700. Search in a Binary Search Tree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trackers/LeetCode 75 (Level I).md" beforeDir="false" afterPath="$PROJECT_DIR$/Trackers/LeetCode 75 (Level I).md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trackers/LeetCode 75.md" beforeDir="false" afterPath="$PROJECT_DIR$/Trackers/LeetCode 75.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +46,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Data Structures\Tree\Exercises" />
       <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Algorithms\Searching\Exercises\LeetCode\Depth-First Search\In-Order Traversal" />
       <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Algorithms\Searching\Exercises\LeetCode\Depth-First Search\Pre-Order Traversal" />
       <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Algorithms\Searching\Exercises\LeetCode\Depth-First Search\Memoization" />
       <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Data Structures\Linked List\Exercises\LeetCode\Recursion" />
-      <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Data Structures\Linked List\Exercises\LeetCode\Two Pointer" />
     </key>
   </component>
   <component name="SharedIndexes">
