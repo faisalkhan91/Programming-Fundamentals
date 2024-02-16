@@ -13,6 +13,8 @@ https://leetcode.com/problems/delete-node-in-a-bst/description/?envType=study-pl
 class Solution:
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
         """
+        Reference: https://www.youtube.com/watch?v=LFzAoJJt92M
+
         Recursion and Node Search:
             - The solution uses recursion to traverse the binary tree and find the target node that needs to be deleted.
             - During each recursive call, the value of the current node is compared with the target value.
@@ -33,7 +35,8 @@ class Solution:
             - Otherwise, it returns the modified binary tree after deletion.
         Remember that this approach ensures that the binary tree remains valid after node removal.
 
-        Reference: https://www.youtube.com/watch?v=LFzAoJJt92M
+        Time Complexity: O(h). Space Complexity: O(1).
+
         :param root: Head of the tree.
         :param key: Value of the node to be deleted if found.
         :return: root
