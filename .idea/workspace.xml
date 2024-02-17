@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba348b0b-b80e-4b02-8858-143cf542d0a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trackers/LeetCode 75 (Level I).md" beforeDir="false" afterPath="$PROJECT_DIR$/Trackers/LeetCode 75 (Level I).md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trackers/LeetCode 75.md" beforeDir="false" afterPath="$PROJECT_DIR$/Trackers/LeetCode 75.md" afterDir="false" />
-    </list>
+    <list default="true" id="ba348b0b-b80e-4b02-8858-143cf542d0a4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,11 +42,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Data Structures\Graph\Exercises\LeetCode\DFS" />
       <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Data Structures\Tree\Exercises" />
       <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Algorithms\Searching\Exercises\LeetCode\Depth-First Search\In-Order Traversal" />
       <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Algorithms\Searching\Exercises\LeetCode\Depth-First Search\Pre-Order Traversal" />
       <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Algorithms\Searching\Exercises\LeetCode\Depth-First Search\Memoization" />
-      <recent name="C:\Users\faisa\OneDrive\Documents\Projects\GitHub\Programming-Fundamentals\Data Structures\Linked List\Exercises\LeetCode\Recursion" />
     </key>
   </component>
   <component name="SharedIndexes">
