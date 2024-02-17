@@ -65,4 +65,4 @@ Binary Search Tree:
 - [450. Delete Node in a BST](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Tree/Exercises/LeetCode/Binary%20Search%20Tree/450.%20Delete%20Node%20in%20a%20BST.py)
 
 Graphs - DFS:
-- [841. Keys and Rooms]()
+- [841. Keys and Rooms](https://github.com/faisalkhan91/Programming-Fundamentals/blob/main/Data%20Structures/Graph/Exercises/LeetCode/DFS/841.%20Keys%20and%20Rooms.py)
